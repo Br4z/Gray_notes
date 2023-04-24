@@ -2,7 +2,7 @@
 id: 60xevl6oc2v4izqarnbrg3t
 title: Binary search
 desc: ''
-updated: 1680988070008
+updated: 1682126070710
 created: 1680828023752
 ---
 
@@ -18,18 +18,18 @@ binary_search(A, x)
     n <- length(A)
     if (x < A[1] or x > A[n])
         return None
-        else
-            // 1
-            left = 1
-            right = n
-            while (left ≤ right)
-                mid <- (left + right) / 2 // 3
-                if A[mid] = x // 5
-                    return mid
-                else if x > A[mid] // 4
-                    left <- mid + 1
-                else // 5
-                    right <-- mid - 1
+    else
+        // 1
+        left = 1
+        right = n
+        while (left ≤ right)
+            mid <- (left + right) / 2 // 3
+            if A[mid] = x // 5
+                return mid
+            else if x > A[mid] // 4
+                left <- mid + 1
+            else // 5
+                right <-- mid - 1
     return None // 2
 ```
 

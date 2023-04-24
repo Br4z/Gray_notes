@@ -2,7 +2,7 @@
 id: qt7lx14y933fibq5raumjc0
 title: 6-Quick sort
 desc: ''
-updated: 1680988843936
+updated: 1682039989298
 created: 1680979597729
 ---
 
@@ -36,6 +36,7 @@ Basa su funcionamiento en un procedimiento llamado **`PARTITION`**.
 
 - Poscondicion: `x = A[p]`, se intercambian de posición los datos en `A`, de tal forma que al final los elementos con índice menor a cierto $j$, son menores o iguales que `x`, y aquellos con índice mayor a $j$, son mayores o iguales que `x`.
 
+> En términos generales su complejidad es $\Theta(n)$ dado que recorre todo el arreglo (por la condición `j < i`).
 
 ### Ejemplos
 
@@ -336,3 +337,71 @@ Basa su funcionamiento en un procedimiento llamado **`PARTITION`**.
                  > Está trivialmente ordenado.
 
     Terminando con el arreglo `A = [1, 3, 4, 5, 6, 7, 8, 9]`.
+
+## Análisis de complejidad
+
+> El tiempo de ejecución depende de que tan balanceado queden las particiones.
+
+### Peor caso
+
+Que resulte una partición de $n - 1$ elementos y otra de 1. Además de que esto siga ocurriendo en las subparticiones.
+
+$$
+T(n) = T(n - 1) + \Theta(n) \\[10 pt]
+
+T(n) = \Theta(1) + \Theta(2) + \dots + \Theta(n) = \Theta \left (\sum_{i = 1}^{n} i \right ) = \Theta \left (\frac{n(n + 1)}{2} \right ) = \Theta(n^2)
+$$
+
+> $\Theta(n)$ es el costo asociado al `PARTITION`.
+
+### Mejor caso
+
+Que resulten 2 particiones, cada una de $\frac{n}{2}$ elementos.
+
+$$
+T(n) = 2T \left (\frac{n}{2} \right ) + \Theta(n) \\[10 pt]
+
+\text{usando el método maestro} \\[5 pt]
+
+f(n) = \Theta(n^{\log_2 2}) \quad T(n) = \Theta(n\lg n)
+$$
+
+### Caso promedio
+
+Considera una proporción 9 a 1
+
+$$
+T(n) = T \left (\frac{n}{10} \right ) + T \left (9\frac{n}{10} \right ) + \Theta(n) \\[10 pt]
+
+\text{vamos a inicializar el $\Theta(n)$ para facilitar los cálculos} \\[5 pt]
+
+T(n) = T \left (\frac{n}{10} \right ) + T \left (9\frac{n}{10} \right ) + n
+$$
+
+![Recurrence expansion](./assets/University/An%C3%A1lisis%20y%20dise%C3%B1o%20de%20algoritmos%20I/1_6-1%20Recurrence-expansion.jpg)
+
+Como $9\frac{n}{10} > \frac{n}{10}$ diremos que la primera expresión define la "profundidad" del árbol, por lo que la expresión final es
+
+$$
+T(n) = n\log_{\frac{10}{9}} n = \Theta(n\lg n)
+$$
+
+### Versiones aleatorias
+
+> Un algoritmo es aleatorio si su comportamiento no está determinado únicamente por su entrada, sino también por los valores producidos por un **generador de números aleatorios**.
+
+- 1
+
+    Permutar de forma aleatoria la entrada y luego llamar a `QUICKSORT`, esperando que el azar permita que el valor de `x` genere particiones balanceadas
+
+- 2
+
+    Utilizar `RANDOMIZED-PARTITION(A, p, r)`
+
+    ```
+    RANDOMIZED-PARTITION(A, p, r)
+
+        i <- RANDOM(p, r)
+        exchange A[p] <-> A[i]
+        partition(A, p, r)
+    ```

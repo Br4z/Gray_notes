@@ -1,6 +1,6 @@
 ---
 id: yjwjx1t24b45jazy30qtt7z
-title: 4-Equivalencias GA anualidad- GG presente
+title: 4-Equivalencias - GA anualidad y GG presente
 desc: ''
 updated: 1681672669849
 created: 1681612824743

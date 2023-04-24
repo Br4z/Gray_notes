@@ -2,21 +2,23 @@
 id: jhnvwja7ajs8cpo65902x4m
 title: Insertion sort
 desc: ''
-updated: 1680988064858
+updated: 1682186097068
 created: 1680827617976
 ---
 
 # Pseudocódigo
 
 ```
-for j <- 2 to length[A]
-    do key <- A[j]
-    i <- j - 1
+1 -    function insertion_sort(A)
+2 -        for j <- 2 to length[A]
+3 -            do key <- A[j]
+4 -            i <- j - 1
 
-    while i > 0 and A[i] > key
-        do A[i + 1] <- A[i]
-        i <- i - 1
-    A[i + 1] <- key
+5 -            while i > 0 and A[i] > key
+6 -                do A[i + 1] <- A[i]
+7 -                i <- i - 1
+
+8 -        A[i + 1] <- key
 ```
 
 # Descripción

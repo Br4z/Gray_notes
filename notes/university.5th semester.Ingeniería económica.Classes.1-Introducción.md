@@ -2,7 +2,7 @@
 id: 33lb70bhirrwadyqkkpfzu4
 title: 1-Introducción
 desc: ''
-updated: 1681681281253
+updated: 1682124642982
 created: 1679959921307
 ---
 
@@ -43,9 +43,9 @@ Es la profesión donde se aplica el conocimiento de las matemáticas y las cienc
 
 Dejando los aspectos más importantes no quedamos con que
 
-- Inversión: Capital.
-- Economía: Recursos, necesidades, grupos humanos.
-- Ingeniería: Desarrollar en forma económica, materiales y fuerzas de la naturaleza, beneficio de la humanidad.
+- Inversión: capital.
+- Economía: recursos, necesidades, grupos humanos.
+- Ingeniería: desarrollar en forma económica, materiales y fuerzas de la naturaleza, beneficio de la humanidad.
 
 
 - Los proyectos de inversión se dan hacia futuro y en el largo plazo.

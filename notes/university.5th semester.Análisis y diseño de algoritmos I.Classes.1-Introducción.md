@@ -2,15 +2,15 @@
 id: e746wt81joca7ycv8m00xp7
 title: 1-Introducción
 desc: ''
-updated: 1681502746772
+updated: 1682214609246
 created: 1679698445716
 ---
 
 # Conocimientos previos
 
-1. Un algoritmo es un **procedimiento computacional** que toma un valor o conjunto de valores como entrada y **produce** un valor o conjunto de valores como salida.
+- Un algoritmo es un **procedimiento computacional** que toma un valor o conjunto de valores como entrada y **produce** un valor o conjunto de valores como salida.
 
-2. Un algoritmo es una secuencia de instrucciones precisas (no ambiguas) para resolver un problema.
+- Un algoritmo es una secuencia de instrucciones precisas (no ambiguas) para resolver un problema.
 
 - El rango de entradas del algoritmo debe ser definido cuidadosamente.
 
@@ -18,16 +18,14 @@ created: 1679698445716
 
 - Pueden existir diferentes algoritmos para el mismo problema.
 
-- Algoritmos para el mismo problema puede ser muy diferentes con respecto a la eficiencia.
+- Algoritmos para el mismo problema pueden ser muy diferentes con respecto a la eficiencia.
 
 ![Design and analysis flow](./assets/University/An%C3%A1lisis%20y%20dise%C3%B1o%20de%20algoritmos%20I/1_1-1%20Design_and_analysis_flow.png)
 
-En el análisis nos va a importar responder las siguientes preguntas
+En el análisis nos va a importar responder las siguientes preguntas:
 
 - ¿Cuánto espacio requiere?
 - **¿Cuántas operaciones requiere?**
-
-> Haremos más hincapié en la segunda.
 
 # Pasos para el análisis de eficiencia de un algoritmo
 
@@ -35,7 +33,7 @@ En el análisis nos va a importar responder las siguientes preguntas
 
 2. Identificar la operación básica del algoritmo.
 
-3. Verificar si el número de veces que se ejecuta la operación básica depende exclusivamente del tamaño de la entrada. En caso contrario, se tendrán que analizar el peor (mejor) caso o el caso promedio.
+3. Verificar si el número de veces que se ejecuta la operación básica depende exclusivamente del tamaño de la entrada. En caso contrario, se tendrán que analizar el peor/mejor caso o el caso promedio.
 
 4. Definir una expresión matemática que represente el número de veces que la operación básica se ejecuta en el algoritmo.
 
@@ -45,31 +43,31 @@ En el análisis nos va a importar responder las siguientes preguntas
 
 - 1
     ```
-    Algoritmo Misterio (A[0 .. n-1])
-    // Entrada: Un arreglo A[0..n-1]
+    Algoritmo misterio(A)
+    // Entrada: un arreglo A -> [0, ..., n - 1]
     S ← 0
-    for i ← 0 to n-1 do
+    for i ← 0 to n - 1 do
         S ← A [i] + S
     return S
     ```
 
-    |                              **Criterio**                               |         **valor**         |
-    |:-----------------------------------------------------------------------:|:-------------------------:|
-    | Tamaño de entrada                                                       | $n$                       |
-    | Operación Básica                                                        | Línea 3                   |
-    | Depende exclusivamente del tamaño de entrada                            | Si                        |
-    | Expresión correspondiente al # veces que se ejecuta la operación básica | $\sum_{i = 0}^{n - 1} 1$  |
-    | Forma explícita de la expresión                                         | $n$                       |
-    | Orden de crecimiento                                                    | $O(n)$                    |
+    |                                Criterio                                 |          valor           |
+    |:-----------------------------------------------------------------------:|:------------------------:|
+    |                            Tamaño de entrada                            |           $n$            |
+    |                            Operación Básica                             |         Línea 3          |
+    |              Depende exclusivamente del tamaño de entrada               |            Si            |
+    | Expresión correspondiente al # veces que se ejecuta la operación básica | $\sum_{i = 0}^{n - 1} 1$ |
+    |                     Forma explícita de la expresión                     |           $n$            |
+    |                          Orden de crecimiento                           |          $O(n)$          |
 
 - 2
 
     ```
-    Algoritmo ElementosUnicos (A[0 .. n - 1])
+    Algoritmo elementos_unicos(A)
     // Determina si todos los elementos en un arreglo
     // son diferentes
-    // Entrada: Un arreglo A[0..n - 1]
-    // Salida: Retorna verdadero si todos los elementos
+    // Entrada: un arreglo A -> [0, ..., n - 1]
+    // Salida: verdadero si todos los elementos
     // de A son diferentes, falso en caso contrario.
     diferentes ← verdadero
     for i ← 0 to n - 2 do
@@ -79,19 +77,19 @@ En el análisis nos va a importar responder las siguientes preguntas
     return diferentes
     ```
 
-    |                              **Criterio**                               |                     **valor**                     |
+    |                                Criterio                                 |                       valor                       |
     |:-----------------------------------------------------------------------:|:-------------------------------------------------:|
-    | Tamaño de entrada                                                       | $n$                                               |
-    | Operación Básica                                                        | Línea 4                                           |
-    | Depende exclusivamente del tamaño de entrada                            | Si                                                |
+    |                            Tamaño de entrada                            |                        $n$                        |
+    |                            Operación Básica                             |                      Línea 4                      |
+    |              Depende exclusivamente del tamaño de entrada               |                        Si                         |
     | Expresión correspondiente al # veces que se ejecuta la operación básica | $\sum_{i = 0}^{n - 2} \sum_{j = i + 1}^{n - 1} 1$ |
-    | Forma explícita de la expresión                                         | $\frac{n(n - 1)}{2} = \frac{n^2 - n}{2}$          |
-    | Orden de crecimiento                                                    | $O(n^2)$                                          |
+    |                     Forma explícita de la expresión                     |     $\frac{n(n - 1)}{2} = \frac{n^2 - n}{2}$      |
+    |                          Orden de crecimiento                           |                     $O(n^2)$                      |
 
 
-    Para hallar la forma explícita de la expresión podemos reemplazar en la sumatoria o hallar el comportamiento, encontraremos que las veces que se hace la comparación está dada por la sumatoria $\sum_{i = 1}^{n - 1} i$, reemplazando el límite superior en la fórmula para la sumatoria de Gauss tenemos finalmente que $f(n) = \frac{n(n - 1)}{2}$, también pudimos hallar esta expresión resolviendo la sumatoria
+    Para hallar la forma explícita de la expresión podemos reemplazar en la sumatoria o ver el comportamiento. Encontraremos que las veces que se hace la comparación está dada por la sumatoria $\sum_{i = 1}^{n - 1} i$, reemplazando el límite superior en la fórmula para la sumatoria de Gauss tenemos finalmente que $T(n) = \frac{n(n - 1)}{2}$, también pudimos hallar esta expresión resolviendo la sumatoria.
 
-    > $f(n)$ es una función que dada una entrada de tamaño $n$ retorna cuantas instrucciones va a realizar el algoritmo.
+    > $T(n)$ es una función que dada una entrada de tamaño $n$ retorna cuantas instrucciones va a realizar el algoritmo.
 
     $$
     \sum_{j = i + 1}^{n - 1} 1 = (n - 1) - (i + 1) + 1 = n - i - 1 \quad \text{Reemplazando en la primera sumatoria} \\[10 pt]
@@ -99,9 +97,12 @@ En el análisis nos va a importar responder las siguientes preguntas
     \sum_{i = 0}^{n - 2} n - i - 1 = (n - 0 - 1) + (n - 1 - 1) \dots (n - (n - 2) - 1)
     $$
 
+---
+
 - Una instancia es una entrada válida para el algoritmo.
 
 - Correctitud
+
     Se dice que un algoritmo es **correcto**, si para cada instancia, el algoritmo termina con la salida correcta.
 
 # Algoritmos
@@ -137,17 +138,17 @@ En el análisis nos va a importar responder las siguientes preguntas
     }
     ```
 
-    Este algoritmo es correcto, puesto que prueba con todos los números anteriores al número ingresado, para ver si lo dividen. Si llega hasta el final sin que lo haga algún número, el contador será 0, la definición de un número primo.
+    Este algoritmo es correcto, puesto que prueba con todos los números anteriores al número ingresado, para ver si lo dividen. Si llega hasta el final sin que lo divida algún número, el contador será 0 (la definición de un número primo).
 
     > Obviamente, lo ideal es que la demostración sea formal.
 
 # Tipos de problemas solucionados utilizando algoritmos eficientes
 
-- Bioinformática: Identificar genes en secuencias de ADN (genoma humano 3200000000pb). Se almacena la información observada hasta el momento en bases de datos y se analizan con algoritmos que debe ser eficientes.
+- Bioinformática: identificar genes en secuencias de ADN (genoma humano 3200000000pb). Se almacena la información observada hasta el momento en bases de datos y se analizan con algoritmos que debe ser eficientes.
 
-- Búsquedas en Internet: Dada la cantidad de información indexada, responder de forma correcta la solicitud de una búsqueda en Internet.
+- Búsquedas en Internet: dada la cantidad de información indexada, responder de forma correcta la solicitud de una búsqueda en Internet.
 
-- Tratamiento de colisiones de objetos: Detectar una colisión entre dos cuerpos en un espacio 3D.
+- Tratamiento de colisiones de objetos: detectar una colisión entre dos cuerpos en un espacio 3D.
 
 # Nuestra meta
 

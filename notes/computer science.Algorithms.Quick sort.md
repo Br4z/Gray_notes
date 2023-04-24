@@ -2,14 +2,14 @@
 id: jrg14boj8uye0i8617w2f6c
 title: Quick sort
 desc: ''
-updated: 1680989037743
+updated: 1682126211693
 created: 1680902169493
 ---
 
 # Pseudocódigo
 
 ```
-PARTITION(A, p, r)
+function partition(A, p, r)
 
     x <- A[p]
     i <- p - 1
@@ -27,13 +27,13 @@ PARTITION(A, p, r)
         else return j
 
 
-QUICKSORT(A, p, r)
+function quick_sort(A, p, r)
     if p < r
 
-        q <- PARTITION(A, p, r)
+        q <- partition(A, p, r)
 
-        QUICKSORT(A, p, q)
-        QUICKSORT(A, q + 1, r)
+        quick_sort(A, p, q)
+        quick_sort(A, q + 1, r)
 ```
 
 > La indexacion comienza en 1.

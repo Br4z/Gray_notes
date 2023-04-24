@@ -2,7 +2,7 @@
 id: tg0avgf47zow7x54q8ts639
 title: 4-Funciones - Notación asintótica
 desc: ''
-updated: 1679865328558
+updated: 1682216735184
 created: 1679770959863
 ---
 
@@ -10,7 +10,7 @@ created: 1679770959863
 
 Siempre que se cumpla que $f(x) \geq g(x) \quad \forall x$ decimos que $f(x)$ es **cota superior** de $g(x)$.
 
-> Como nuestro interés está en funciones $T(n)$ que retornan instrucciones **positivas** (de otra forma no tendrían sentido), solo tendremos en cuenta el primer cuadrante.
+> Como nuestro interés está en funciones $T(n)$ que retornan instrucciones **positivas** (de otra forma no tendrían sentido), solo tendremos en cuenta el primer cuadrante del plano cartesiano.
 
 Dado que puede haber algunos valores (acotados) para los cuales $g(x) > f(x)$, ampliaremos la primera definición: para que una función sea cota superior de otra, debe serlo para **todos** los valores $x \geq k$ (pueden existir valore $x < k$ para los cuales no sea cota superior).
 
@@ -60,7 +60,7 @@ Ejemplo
 
 - Muestre que $x^3 \neq O(7x^2)$
 
-    $x^3 \leq c * 7x^2 \rightarrow x \leq 7c$, no se cumple porque $\exists x | x > 7c$.
+    $x^3 \leq c * 7x^2 \rightarrow x \leq 7c$, no se cumple porque $\exists x \; | \; x > 7c$.
 
 ---
 
@@ -74,7 +74,7 @@ Dentro del análisis para obtener la cota superior, se debe considerar el peor c
 
 ---
 
-- Considere $T_1(n) = O(n^2) \quad t_2 = O(n\log n)$
+- Considere $T_1(n) = O(n^2) \quad T_2 = O(n\log n)$
 
     - ¿Qué se puede esperar en cuanto al tiempo de ejecución de los algoritmos?
 
@@ -122,7 +122,7 @@ $$
 
 Ejemplo
 
-- $2n^2 = O(n)$, pero $2n^2 \neq o(n)$
+- $2n^2 = O(n^2)$, pero $2n^2 \neq o(n^2)$
 
     > Se dice que la primera es asintóticamente ajustada.
 

@@ -2,7 +2,7 @@
 id: nquhd7z3t530dq0ng797vvo
 title: 3-Correctitud de algoritmos
 desc: ''
-updated: 1680836041511
+updated: 1682216264043
 created: 1679699392356
 ---
 
@@ -20,19 +20,19 @@ Todo estado se debe caracterizar por cumplir una condición llamada **invariante
 
 Se define como la descripción de los siguientes parámetros:
 
-- Entrada: indica las precondiciones
+- Entrada: indica las precondiciones.
 
-- Salida: indica las poscondiciones
+- Salida: indica las poscondiciones.
 
-- Idea iterativa: muestra cómo deberían cambiar los estados, comenzando desde el inicial hasta llegar al final
+- Idea iterativa: muestra cómo deberían cambiar los estados, comenzando desde el inicial hasta llegar al final.
 
-- Estados: especifica la forma de cada estado en forma de tupla, además, se muestra cuál es el invariante de estado
+- Estados: especifica la forma de cada estado en forma de tupla, además, se muestra cuál es el invariante de estado.
 
-- Estado inicial: muestra los valores que forman el estado inicial
+- Estado inicial: muestra los valores que forman el estado inicial.
 
-- Estado final: muestra los valores que forman el estado final
+- Estado final: muestra los valores que forman el estado final.
 
-- Transformación de estados: de manera formal especifica cómo se realizan, en términos generales, los cambios de un estado al siguiente
+- Transformación de estados: de manera formal especifica cómo se realizan, en términos generales, los cambios de un estado al siguiente.
 
 > Podríamos decir que es la definición de un problema en términos de su precondición $Q$ y poscondición $R$.
 
@@ -46,13 +46,13 @@ Un algoritmo $A$ es correcto con respecto a una especificación si para cada con
 
 Para comprobar esto debemos fijarnos en los siguientes aspectos
 
-- Inicialización: Pruebe que el estado inicial $S_0$ cumple el invariante
+- Inicialización: Pruebe que el estado inicial $S_0$ cumple el invariante.
 
-- Mantenimiento de invariante: Prueba que la transformación conserva el invariante
+- Mantenimiento de invariante: Prueba que la transformación conserva el invariante.
 
-- Éxito: Si $S$ es un estado final y se cumple que el invariante $P \rightarrow R$
+- Éxito: Si $S$ es un estado final y se cumple que el invariante $P \rightarrow R$.
 
-- Terminación: $A$ termina
+- Terminación: $A$ termina.
 
 Ejemplos
 
@@ -72,23 +72,23 @@ Ejemplos
 
     - Especificación
 
-        - Entrada: $n \geq 0$
+        - Entrada: $n \geq 0$.
 
-        - Salida: $n!$
+        - Salida: $n!$.
 
-        - Idea iterativa: $(0,1) \rightarrow (1,1) \rightarrow (2,2) \rightarrow (3,6) \rightarrow \dots \rightarrow (n, n!)$
+        - Idea iterativa: $(0,1) \rightarrow (1,1) \rightarrow (2,2) \rightarrow (3,6) \rightarrow \dots \rightarrow (n, n!)$.
 
-        - Estados: $(i,r)$ donde $r = i!$
+        - Estados: $(i,r)$ donde $r = i!$.
 
-        - Estado inicial: $(0,1)$
+        - Estado inicial: $(0,1)$.
 
-        - Estadio final: $(n,n!)$
+        - Estadio final: $(n,n!)$.
 
-        - Transformación de estados: $(i,r) \rightarrow (i + 1,r * (i + 1))$
+        - Transformación de estados: $(i,r) \rightarrow (i + 1,r * (i + 1))$.
 
     - Correctitud
 
-        - Inicialización: $(0,1) \; \land \; 0! = 1$
+        - Inicialización: $(0,1) \; \land \; 0! = 1$.
 
         - Mantenimiento de invariante
 
@@ -125,23 +125,23 @@ Ejemplos
 
     - Especificación
 
-        - Entrada: $a \in \mathbb{Z},\; b \in \mathbb{N} \; \land \; b > 0$
+        - Entrada: $a \in \mathbb{Z},\; b \in \mathbb{N} \; \land \; b > 0$.
 
-        - Salida: $a * b$
+        - Salida: $a * b$.
 
-        - Idea iterativa: $(1,0) \rightarrow (2,a) \rightarrow (3,a + a) \rightarrow \dots \rightarrow (b + 1, \sum_{p = 0}^{i - 1} a)$
+        - Idea iterativa: $(1,0) \rightarrow (2,a) \rightarrow (3,a + a) \rightarrow \dots \rightarrow (b + 1, \sum_{p = 0}^{i - 1} a)$.
 
-        - Estados: $(i,r)$ donde $r = (i - 1) * a$
+        - Estados: $(i,r)$ donde $r = (i - 1) * a$.
 
-        - Estado inicial: $(0,1)$
+        - Estado inicial: $(0,1)$.
 
-        - Estadio final: $(b + 1, b * a)$
+        - Estadio final: $(b + 1, b * a)$.
 
-        - Transformación de estados: $(i,r) \rightarrow (i + 1, r + r)$
+        - Transformación de estados: $(i,r) \rightarrow (i + 1, r + r)$.
 
     - Correctitud
 
-        - Inicialización: $(1,0) \; \land \; 0 = \sum_{p = 0}^{1 - 1} a = 0$
+        - Inicialización: $(1,0) \; \land \; 0 = \sum_{p = 0}^{1 - 1} a = 0$.
 
         - Mantenimiento de invariante
 
@@ -157,7 +157,7 @@ Ejemplos
             (k + 1, r) \; \text{donde} \; r = \sum_{p = 1}^{k - 1} a + a = \sum_{p = 1}^{(k + 1) - 1} a
             $$
 
-        - Éxito: $invariante \; \land \; estado final \rightarrow R$
+        - Éxito: $\text{invariante } \land \text{ estado final} \rightarrow R$.
 
             El ciclo finaliza con $i = b + 1$
 
@@ -165,7 +165,7 @@ Ejemplos
             r = \sum_{p = 1}^{i - 1} a = \sum_{p = 1}^{(b + 1) - 1} a = \sum_{p = 1}^{b} a = a * b
             $$
 
-        - Terminación: En cada iteración `i` aumenta, por lo que en algún momento tendrá que alcanzar el valor de `b` y el algoritmo terminará
+        - Terminación: En cada iteración `i` aumenta, por lo que en algún momento tendrá que alcanzar el valor de `b` y el algoritmo terminará.
 
 ## Corrección de ciclos usando invariantes
 
@@ -191,7 +191,7 @@ Entendiendo que muchos algoritmos incorporan estructuras iterativas; es importan
 
     - [[computer science.Algorithms.Binary search]]
 
-        - Invariante: Si `x` corresponde a un elemento de `A` (sea `A[i]`), entonces $left \leq i \leq right$
+        - Invariante: Si `x` corresponde a un elemento de `A` (sea `A[i]`), entonces $\text{left} \leq i \leq \text{right}$
 
         - Inicializacion: antes de iterar por primera vez, `left` vale 1 y `right` vale `n`, por lo que si `x` hace parte de `A` debe estar en una posición entre `left` y `right`.
 
@@ -205,4 +205,4 @@ Entendiendo que muchos algoritmos incorporan estructuras iterativas; es importan
 
             - `x > A[mid]`: si `x` está en `A` debe estar en una posición superior a `mid` (`i > mid`), por lo que `i` estaría entre `mid + 1` y `right`, dado que `mid + 1` sería el nuevo valor de `left` significa que `x` está entre `left` y `right`.
 
-        - Terminación: Al llevar a cabo la última iteración (asumiendo que `x` no ha sido encontrado) la condición del ciclo no se cumple mas por lo que `left` es mayor que `right` lo cual implica que no puede existir una posición `i` en `A` tal que `left <= i <= right` y por ende `x` no puede estar en `A`. Es decir, al no ser encontrado X en A en el ciclo, implica que `x` no hace parte de `A`. Cumpliendo con el propósito del ciclo.
+        - Terminación: Al llevar a cabo la última iteración (asumiendo que `x` no ha sido encontrado) la condición del ciclo no se cumple mas por lo que `left` es mayor que `right` lo cual implica que no puede existir una posición `i` en `A` tal que `left <= i <= right` y por ende `x` no puede estar en `A`. Es decir, al no ser encontrado `x` en `A` en el ciclo, implica que `x` no hace parte de `A`. Cumpliendo con el propósito del ciclo.
