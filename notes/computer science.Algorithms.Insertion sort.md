@@ -9,16 +9,16 @@ created: 1680827617976
 # Pseudocódigo
 
 ```
-1 -    function insertion_sort(A)
-2 -        for j <- 2 to length[A]
-3 -            do key <- A[j]
-4 -            i <- j - 1
+    insertion_sort(A)
+1 -     for j <- 2 to length[A]
+2 -         key <- A[j]
+3 -         i <- j - 1
 
-5 -            while i > 0 and A[i] > key
-6 -                do A[i + 1] <- A[i]
-7 -                i <- i - 1
+4 -     while i > 0 and A[i] > key
+5 -         A[i + 1] <- A[i]
+6 -         i <- i - 1
 
-8 -        A[i + 1] <- key
+7 -     A[i + 1] <- key
 ```
 
 # Descripción

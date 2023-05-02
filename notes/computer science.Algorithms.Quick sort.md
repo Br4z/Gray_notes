@@ -2,41 +2,41 @@
 id: jrg14boj8uye0i8617w2f6c
 title: Quick sort
 desc: ''
-updated: 1682126211693
+updated: 1682984432476
 created: 1680902169493
 ---
 
 # Pseudocódigo
 
 ```
-function partition(A, p, r)
+     partition(A, p, r)
 
-    x <- A[p]
-    i <- p - 1
-    j <- r + 1
+1  -     x <- A[p]
+2  -     i <- p - 1
+3  -     j <- r + 1
 
-    while TRUE
-        repeat i <- i + 1
-        until A[i] >= x
+4  -     while TRUE
+5  -        repeat i <- i + 1
+6  -        until A[i] >= x
 
-        repeat j <- j - 1
-        until A[j] <= x
+7  -        repeat j <- j - 1
+8  -        until A[j] <= x
 
-        if i < j
-            exchange A[i] <-> A[j]
-        else return j
+9  -        if i < j
+10 -            exchange A[i] <-> A[j]
+11 -        else return j
 
 
-function quick_sort(A, p, r)
-    if p < r
+    quick_sort(A, p, r)
+1 -     if p < r
 
-        q <- partition(A, p, r)
+2 -         q <- partition(A, p, r)
 
-        quick_sort(A, p, q)
-        quick_sort(A, q + 1, r)
+3 -     quick_sort(A, p, q)
+4 -     quick_sort(A, q + 1, r)
 ```
 
-> La indexacion comienza en 1.
+> La indexación comienza en 1.
 
 # Descripción
 

@@ -2,7 +2,7 @@
 id: m40ot04dp9fcqn0jlq8q66a
 title: Books
 desc: ''
-updated: 1680919207593
+updated: 1682902081597
 created: 1679874848009
 ---
 
@@ -29,3 +29,8 @@ created: 1679874848009
 - [[personal.Books.Dead cold]]
 
     - Author: Sue Leather
+
+- [[personal.Books.Mucho más que un club de chicas]]
+
+    - Author: Elizabeth Eulberg
+    - Prequel: [[personal.Books.El club de los corazones solitarios]]

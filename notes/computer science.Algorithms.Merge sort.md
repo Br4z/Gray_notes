@@ -2,7 +2,7 @@
 id: 8wmvime0b1ivgv6zrscdt2q
 title: Merge sort
 desc: ''
-updated: 1681502746780
+updated: 1682984457275
 created: 1680827802827
 ---
 
@@ -10,46 +10,48 @@ created: 1680827802827
 
 ```
 // A: array to sort    p: position of the first element (to sort)    r: position of the last element (to sort)
-function merge_sort(A, p, r)
-    if p < r
-        q = floor((p + r) / 2)
-        merge_sort(A, p, q)
-        merge_sort(A, q + 1, r)
-        merge(A, p, q, r)
+    merge_sort(A, p, r)
+1 -     if p < r
+2 -         q = floor((p + r) / 2)
+3 -         merge_sort(A, p, q)
+4 -         merge_sort(A, q + 1, r)
+5 -         merge(A, p, q, r)
 
 
 // q: half position of the array
-function merge(A, p, q, r)
-    n_1 = q - p + 1 // First half + 1
-    n_2 = r - q // second half
+     merge(A, p, q, r)
+1  -     n_1 = q - p + 1 // First half + 1
+2  -     n_2 = r - q // second half
 
 
-    // Auxiliar arrays with an extra position
-    L = [1,..., n_1 + 1]
-    R = [1, ..., n_2 + 1]
+         // Auxiliar arrays with an extra position
+3  -     L = [1,..., n_1 + 1]
+4  -     R = [1,..., n_2 + 1]
 
-    for i = 1 to n_1
-        L[i] = A[p + i - 1]
+5  -     for i = 1 to n_1
+6  -         L[i] = A[p + i - 1]
 
-    for j = 1 to n_2
-        R[j] = A[q + j]
+7  -     for j = 1 to n_2
+8  -         R[j] = A[q + j]
 
-    L[n_1 + 1] = infinity
-    R[n_2 + 1] = infinity
+9  -     L[n_1 + 1] = infinity
+10 -     R[n_2 + 1] = infinity
 
-    i = 1
-    j = 1
+11 -     i = 1
+12 -     j = 1
 
-    for k = p to r
-        if L[i] <= R[j]
-            A[k] = L[i]
-            i = i + 1
-        else
-            A[k] = R[j]
-            j = j + 1
+13 -     for k = p to r
+14 -         if L[i] <= R[j]
+15 -             A[k] = L[i]
+16 -             i = i + 1
+17 -         else
+18 -             A[k] = R[j]
+19 -             j = j + 1
 ```
 
 > El primer llamado sobre un arreglo `A` sería `merge_sor(A, 1, length(A))`.
+
+> La indexación comienza en 1.
 
 # Descripción
 

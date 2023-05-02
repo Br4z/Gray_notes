@@ -2,7 +2,7 @@
 id: 4kgaizndlajmi0jbc1tlper
 title: 5-Taller - Subnetting sin VLSM
 desc: ''
-updated: 1682301528540
+updated: 1682721570355
 created: 1682285667013
 ---
 
@@ -36,9 +36,9 @@ created: 1682285667013
 
         $$
         \begin{align*}
-        &192.168.250.00011001 \\
-        &255.255.255.00000000 \\
-        &= 192.168.250.0
+            &192.168.250.00011001 \\
+            &255.255.255.00000000 \\
+            &= 192.168.250.0
         \end{align*}
         $$
 
@@ -50,9 +50,9 @@ created: 1682285667013
 
         $$
         \begin{align*}
-        &192.168.35.11101000 \\
-        &255.255.255.00000000 \\
-        &= 192.168.35.0
+            &192.168.35.11101000 \\
+            &255.255.255.00000000 \\
+            &= 192.168.35.0
         \end{align*}
         $$
 
@@ -66,17 +66,17 @@ created: 1682285667013
 
         $$
         \begin{align*}
-        &172.16.00111011.11111100\\
-        &255.255.00000000.00000000 \\
-        &= 172.16.0.0
+            &172.16.00111011.11111100\\
+            &255.255.00000000.00000000 \\
+            &= 172.16.0.0
         \end{align*}
         $$
+
     - Primera IP host: 172.16.0.1
     - Última ip host: 172.16.0.254
     - IP broadcast: 172.16.0.255
 
 8. ¿Cuántas subredes y cuantos hosts puede tener de una red clase C con máscara /28?
-
 
     $$
     255.255.255.11110000
@@ -86,7 +86,6 @@ created: 1682285667013
 
     - Hosts: $2^4 - 2 = 14$
     - Subredes: $2^4 = 16$
-
 
 9. ¿Cuántas subredes y cuantos hosts puede tener de una red clase C con máscara /30?
 
@@ -131,11 +130,10 @@ created: 1682285667013
 
     Vamos a pasar de una red \24 a cuatro \26:
 
-
-    1. 192.168.40.0/26 -> 192.168.40.63/26
-    2. 192.168.40.64/26 -> 192.168.40.127/26
-    3. 192.168.40.128/26 ->192.168.40.191/26
-    4. 192.168.40.192/26 -> 192.168.40.255/26
+    1. 192.168.40.0/26
+    2. 192.168.40.64/26
+    3. 192.168.40.128/26
+    4. 192.168.40.192/26
 
 13. Divida en 2 subredes la red 172.16.0.0/16
 
@@ -145,9 +143,8 @@ created: 1682285667013
 
     Vamos a pasar de una red \16 a dos \17:
 
-    1. 172.16.0.0/17 -> 172.16.127.255/17
-    2. 172.16.128.0/17 -> 172.16.128.255/17
-
+    1. 172.16.0.0/17
+    2. 172.16.128.0/17
 
 14. Divida la red 192.168.45.0/24 en subredes de 60 host cada una, ¿cuál es la máscara de subred y las ip de red de cada subred?
 
@@ -155,12 +152,12 @@ created: 1682285667013
     2^n - 2 \geq 60 \quad n \geq \lg 58 \quad n = 6
     $$
 
-    Como estamos usando 6 bits para identificar los host, nos quedarían 26 (32 - 6) para identificar subredes. Luego nos quedarían 2 bits (8 - 6) para las subredes.
+    Como estamos usando 6 bits para identificar los hosts, nos quedarían 26 (32 - 6) para identificar subredes. Luego nos quedarían 2 bits (8 - 6) para las subredes.
 
-    1. 192.168.45.0/26 -> 192.168.45.0/26
-    2. 192.168.45.64/26 -> 192.168.45.63/26
-    3. 192.168.45.128/26 -> 192.168.45.127/26
-    4. 192.168.45.192/26 -> 192.168.45.255/26
+    1. 192.168.45.0/26
+    2. 192.168.45.64/26
+    3. 192.168.45.128/26
+    4. 192.168.45.192/26
 
 15. Divida la red 192.168.231.0/24 en subredes de 30 host cada una, ¿cuál es la máscara de subred y las ip de red de cada subred?
 
@@ -168,16 +165,16 @@ created: 1682285667013
     2^n - 2 \geq 30 \quad n \geq \lg 28 \quad n = 5
     $$
 
-    Como estamos usando 5 bits para identificar los host, nos quedarían 27 (32 - 5) para identificar subredes. Luego nos quedarían 3 bits (8 - 5) para las subredes.
+    Como estamos usando 5 bits para identificar los hosts, nos quedarían 27 (32 - 5) para identificar subredes. Luego nos quedarían 3 bits (8 - 5) para las subredes.
 
-    1. 192.168.231.0/27 -> 192.168.231.31/27
-    2. 192.168.231.32/27 -> 192.168.231.63/27
-    3. 192.168.231.64/27 -> 192.168.231.95/27
-    4. 192.168.231.96/27 -> 192.168.231.127/27
-    5. 192.168.231.128/27 -> 192.168.231.159/27
-    6. 192.168.231.160/27 -> 192.168.231.191/27
-    7. 192.168.231.192/27 -> 192.168.231.223/27
-    8. 192.168.231.224/27 -> 192.168.231.255/27
+    1. 192.168.231.0/27
+    2. 192.168.231.32/27
+    3. 192.168.231.64/27
+    4. 192.168.231.96/27
+    5. 192.168.231.128/27
+    6. 192.168.231.160/27
+    7. 192.168.231.192/27
+    8. 192.168.231.224/27
 
 16. Divida la red 172.31.0.0/16 en subredes de 1000 host cada una, ¿cuál es la máscara de subred y las ip de red de cada subred?
 
@@ -185,7 +182,7 @@ created: 1682285667013
     2^n - 2 \geq 100 \quad n \geq \lg 998 \quad n = 10
     $$
 
-    Como estamos usando 10 bits para identificar los host, nos quedarían 22 (32 - 10) para identificar subredes. Luego nos quedarían 6 bits (8 - 2) para las subredes.
+    Como estamos usando 10 bits para identificar los hosts, nos quedarían 22 (32 - 10) para identificar subredes. Luego nos quedarían 6 bits (8 - 2) para las subredes.
 
     1. 172.31.4.0/22
     2. 172.31.8.0/22
@@ -195,57 +192,316 @@ created: 1682285667013
 
     - Máscara: 255.255.252.0
 
+17. ¿Cuál es la IP de red, la IP del primer host, la IP del último host y la IP de broadcast de la:
 
-10. Cuál es la ip de red, la IP del primer host, la IP del ultimo host y la IP de Boadcast de:
-a. La 2da subred de 192.168.232.0/25
- ip red: 192.168.232.128
- ip primer host: 192.168.232.129
- ip ultimo host: 192.168.232.254
- ip broadcast: 192.168.232.255
-b. La 3ra subred de 192.168.132.0/26
- ip red: 192.168.
- ip primer host:
- ip ultimo host:
- ip broadcast:
-c. La Última subred de 192.168.50.0/29
+    - 2da subred de 192.168.232.0/25
 
- ip red: 192.168.232.128
- ip primer host: 192.168.232.129
- ip ultimo host: 192.168.232.254
- ip broadcast: 192.168.232.255
-d. La 6ta subred de 172.18.0.0/19
- ip red: 172
- ip primer host: 192.168.232.129
- ip ultimo host: 192.168.232.254
- ip broadcast: 192.168.232.255
-e. La 4ta subred de 172.23.0.0/20
- ip red: 192.168.232.128
- ip primer host: 192.168.232.129
- ip ultimo host: 192.168.232.254
- ip broadcast: 192.168.232.255
-11. Cuál es la IP de red/subred, la IP del primer host, la IP del ultimo host y la IP de Boadcast a la que pertenece la siguiente IP:
-a. 192.168.24.98/30
-b. 192.168.250.197/26
-  ip red: 192.168.250.192/26
-  ip primer host: 192.168.250.193/26
-  ip ultimo host: 192.168.250.254/26
-  ip broadcast: 192.168.250.1.255/26
-c. 192.168.15.32/29
-  ip red: 192.168.15.32/29
-  ip primer host: 192.168.15.33/19
-  ip ultimo host: 192.168.15.38/19
-  ip broadcast: 192.168.15.39/19
-d. 172.16.19.173/19
-  ip red: 172.16.0.0/19
-  ip primer host: 172.16.0.1/19
-  ip ultimo host: 172.16.31.254/19
-  ip broadcast: 172.16.31.255/19
-e. 172.31.15.245/20
+        Una máscara de 25 corresponde a
 
-  ip red: 172.16.0.0/19
-  ip primer host: 172.16.0.1/19
-  ip ultimo host: 172.16.31.254/19
-  ip broadcast: 172.16.31.255/19
+        $$
+        255.255.255.1 \quad 0000000
+        $$
 
+        Como queremos la segunda subred
 
+        $$
+        1 = 2 - 1
+        $$
 
+        > El 1 es por que empezamos a contar desde el 0.
+
+        El número 1 en binario es 1, entonces nuestra máscara es:
+
+        $$
+        255.255.255.1 \quad 0000000
+        $$
+
+        - IP red:
+
+            $$
+            192.168.232.1 \quad 0000000 = 192.168.232.128
+            $$
+
+        - IP primer host: 192.168.232.129/25
+        - IP último host: 192.168.232.254/25
+        - IP broadcast:
+
+            Llenamos con 1 los espacios de host:
+
+            $$
+            192.168.232.1 \quad 1111111 = 192.168.232.255
+            $$
+
+    - 3ra subred de 192.168.132.0/26?
+
+        Una máscara de 26 corresponde a
+
+        $$
+        255.255.255.11 \quad 000000 = 255.255.255.192
+        $$
+
+        Como queremos la 3ra subred
+
+        $$
+        2 = 3 - 1
+        $$
+
+        El número 2 en binario es 10, entonces nuestra máscara es:
+
+        $$
+        255.255.255.10 \quad 000000
+        $$
+
+        - IP red:
+
+            $$
+            192.168.132.10 \quad 000000 = 192.168.132.128
+            $$
+
+        - IP primer host: 192.168.132.128/26
+        - IP último host: 192.168.132.190/26
+        - IP broadcast:
+
+            $$
+            192.168.232.10 \quad 111111 = 192.168.232.191
+            $$
+
+    - última subred de 192.168.50.0/29?
+
+        Una máscara de 29 corresponde a
+
+        $$
+        255.255.255.11111 \quad 000 = 255.255.255.248
+        $$
+
+        - IP red:
+
+            La última red quiere decir que los bits asociados a las subredes están en 1:
+
+            $$
+            192.168.50.11111 \quad 000 = 192.168.50.248
+            $$
+
+        - IP primer host: 192.168.50.249
+        - IP último host: 192.168.50.254
+        - IP broadcast:
+
+            $$
+            192.168.50.11111 \quad 111 = 192.168.50.255
+            $$
+
+    - 6ta subred de 172.18.0.0/19?
+
+        Una máscara de 19 corresponde a
+
+        $$
+        255.255.111 \quad 00000.0 = 255.255.224.0
+        $$
+
+        Como queremos la 6ta subred
+
+        $$
+        5 = 6 - 1
+        $$
+
+        El número 5 en binario es 101, entonces nuestra máscara es:
+
+        $$
+        255.255.101 \quad 00000.0 = 255.255.160.0
+        $$
+
+        - IP red:
+
+            $$
+            172.18.101 \quad 00000.0 = 172.18.160.0
+            $$
+
+        - IP primer host: 172.18.160.1/19
+        - IP último host: 172.18.191.254/19
+        - IP broadcast:
+
+            $$
+            172.18.101 \quad 11111.11111111 = 172.18.191.255
+            $$
+
+    - 4ta subred de 172.23.0.0/20?
+
+        Una máscara de 20 corresponde a
+
+        $$
+        255.255.1111 \quad 0000.0 = 255.255.240.0
+        $$
+
+        Como queremos la 4ta subred
+
+        $$
+        3 = 4 - 1
+        $$
+
+        El número 3 en binario es 11, entonces nuestra máscara es:
+
+        $$
+        255.255.0010 \quad 0000.0 = 255.255.32.0
+        $$
+
+        - IP red:
+
+            $$
+            172.23.0010 \quad 0000.0 = 172.18.32.0
+            $$
+
+        - IP primer host: 172.18.32.1/20
+        - IP último host: 172.18.128.254/20
+        - IP broadcast:
+
+            $$
+            172.18.0010 \quad 1111.11111111 = 172.18.128.255
+            $$
+
+18. Cuál es la IP de red/subred, la IP del primer host, la IP del último host y la IP de broadcast a la que pertenece la siguiente IP:
+
+    - 192.168.24.98/30
+
+        - IP red:
+
+            $$
+            \begin{align*}
+                &192.168.24.01100010 \\
+                &255.255.255.11111100 \\
+                &= 192.168.24.01100000 = 192.168.24.96
+            \end{align*}
+            $$
+
+        - IP primer host: 192.168.24.97/30
+        - IP último host: 192.168.24.99/30
+        - IP broadcast:
+
+            $$
+            \begin{align*}
+                \neg &255.255.255.11111100 \\
+                     &= 0.0.0.00000011
+            \end{align*} \\[10 pt]
+
+            \begin{align*}
+                &192.168.24&.01100000 \\
+                &0.0.0     &.00000011 \\
+                &= 192.168.24.01100011 = 192.168.24.99
+            \end{align*}
+            $$
+
+    - 192.168.250.197/26
+
+        - IP red:
+
+            $$
+            \begin{align*}
+                &192.168.250.11000101 \\
+                &255.255.255.11000000 \\
+                &= 192.168.24.11000000 = 192.168.24.192
+            \end{align*}
+            $$
+
+        - IP primer host: 192.168.250.193/26
+        - IP último host: 192.168.250.254/26
+
+        - IP broadcast:
+
+            $$
+            \begin{align*}
+                \neg &255.255.255.11000000 \\
+                     &= 0.0.0.00111111
+            \end{align*} \\[10 pt]
+
+            \begin{align*}
+                &192.168.24&.11000000 \\
+                &0.0.0     &.00111111 \\
+                &= 192.168.24.11111111 = 192.168.24.255
+            \end{align*}
+            $$
+
+    - 192.168.15.32/29
+
+        - IP red:
+
+            $$
+            \begin{align*}
+                &192.168.15.00100000 \\
+                &255.255.255.11111000 \\
+                &= 192.168.15.00100000 = 192.168.15.32
+            \end{align*}
+            $$
+
+        - IP primer host: 192.168.15.33/29
+        - IP último host: 192.168.15.38/29
+        - IP broadcast:
+
+            $$
+            \begin{align*}
+                \neg &255.255.255.11111000 \\
+                     &= 0.0.0.00000111
+            \end{align*} \\[10 pt]
+
+            \begin{align*}
+                &192.168.15&.00100000 \\
+                &0.0.0     &.00000111 \\
+                &= 192.168.24.00100111 = 192.168.24.39
+            \end{align*}
+            $$
+
+    - 172.16.19.173/19
+
+        - IP red:
+
+            $$
+            \begin{align*}
+                &172.16.00010011.173 \\
+                &255.255.11100000.0 \\
+                &= 172.16.00000000.0 = 172.16.0.0
+            \end{align*}
+            $$
+
+        - IP primer host: 172.16.0.1/19
+        - IP último host: 172.16.31.254/19
+        - IP broadcast:
+
+            $$
+            \begin{align*}
+                \neg &255.255.11100000.0 \\
+                     &= 0.0.00011111.11111111
+            \end{align*} \\[10 pt]
+
+            \begin{align*}
+                &172.16&.00000000&.00000000 \\
+                &0.0&.00011111 &.11111111 \\
+                &= 172.16.00011111.11111111 = 172.16.31.255
+            \end{align*}
+            $$
+
+    - 172.31.15.245/20
+
+        - IP red:
+
+            $$
+            \begin{align*}
+                &172.31.00001111.245 \\
+                &255.255.11110000.0 \\
+                &= 172.16.0000000.0 = 172.31.0.0
+            \end{align*}
+            $$
+
+        - IP primer host: 172.31.0.1/20
+        - IP último host: 172.16.15.254/19
+        - IP broadcast: 172.16.15.255/19
+
+            $$
+            \begin{align*}
+                \neg &255.255.11110000.0 \\
+                     &= 0.0.00001111.11111111
+            \end{align*} \\[10 pt]
+
+            \begin{align*}
+                &172.31&.00000000&.00000000 \\
+                &0.0&.00001111 &.11111111 \\
+                &= 172.31.00001111.11111111 = 172.16.15.255
+            \end{align*}
+            $$

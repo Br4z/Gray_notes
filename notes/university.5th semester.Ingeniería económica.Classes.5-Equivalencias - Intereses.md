@@ -2,7 +2,7 @@
 id: tqh0um80a9ojnx88ygag2cd
 title: 5-Equivalencias - Intereses
 desc: ''
-updated: 1682280523865
+updated: 1682307057743
 created: 1682217143766
 ---
 
@@ -48,7 +48,7 @@ la tasa efectiva implícita.
     $$
     r = 5\% * 6 \\[10 pt]
 
-    r = 30\% \text{semestral compuesto mensualmente}
+    r = 30\% \text{ semestral compuesto mensualmente}
     $$
 
 ## Conversion a tasa efectiva
@@ -61,7 +61,7 @@ $$
 
 ### Ejemplos
 
-- 9% anual compuesto trimestralmente
+- 9% anual compuesto trimestralmente.
 
     $$
     r = 9\% \quad m = \frac{12}{3} = 4 \\[10 pt]

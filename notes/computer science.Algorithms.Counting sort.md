@@ -2,32 +2,33 @@
 id: gzvot14se88xtxpbm60casb
 title: Counting sort
 desc: ''
-updated: 1682183476141
+updated: 1682984367482
 created: 1682126031065
 ---
 
 # Pseudocódigo
 
 ```
-function counting_sort(A, B, k)
-    // Initialization
-    for i <- 1 to k
-        C[i] <- 0
+    counting_sort(A, B, k)
+        // Initialization
+1 -     for i <- 1 to k
+2 -         C[i] <- 0
 
-    // Index counting
-    for i <- 1 to length(A)
-        C[A[i]] <- C[A[i]] + 1
+        // Index counting
+3 -     for i <- 1 to length(A)
+4 -         C[A[i]] <- C[A[i]] + 1
 
-    // Relative frequency
-    for i <- 2 to k
-        C[i] <- C[i]  + C[i - 1]
+         // Relative frequency
+5 -     for i <- 2 to k
+6 -         C[i] <- C[i]  + C[i - 1]
 
-    // Assignation
-    for i <- length(A) down to 1
-        B[C[A[i]]] <- A[j]
-
-        C[A[i]] <- C[A[i]] - 1
+        // Assignation
+7 -     for i <- length(A) down to 1
+8 -         B[C[A[i]]] <- A[j]
+9 -         C[A[i]] <- C[A[i]] - 1
 ```
+
+> La indexación comienza en 1.
 
 # Descripción
 
@@ -37,3 +38,5 @@ function counting_sort(A, B, k)
 2. Recorrer todos los elementos a ordenar y se cuenta el número de apariciones de cada elemento (usando el vector que hemos creado).
 
 3. Hallar la frecuencia relativa.
+
+4. Asignar los valores de `A` al arreglo `B` según su frecuencia relativa y restándole 1 a esa frecuencia en cada iteración.

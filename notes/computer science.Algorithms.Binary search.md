@@ -2,35 +2,34 @@
 id: 60xevl6oc2v4izqarnbrg3t
 title: Binary search
 desc: ''
-updated: 1682126070710
+updated: 1682984403127
 created: 1680828023752
 ---
 
 La búsqueda binaria funciona en arreglos ordenados. La búsqueda binaria comienza por comparar el elemento del medio del arreglo con el valor buscado. Si el valor buscado es igual al elemento del medio, su posición en el arreglo es retornada. Si el valor buscado es menor o mayor que el elemento del medio, la búsqueda continua en la primera o segunda mitad, respectivamente, dejando la otra mitad fuera de consideración.
-
 
 # Pseudocódigo
 
 > Se asume que `A` es un arreglo ordena ascendentemente.
 
 ```
-binary_search(A, x)
-    n <- length(A)
-    if (x < A[1] or x > A[n])
-        return None
-    else
-        // 1
-        left = 1
-        right = n
-        while (left ≤ right)
-            mid <- (left + right) / 2 // 3
-            if A[mid] = x // 5
-                return mid
-            else if x > A[mid] // 4
-                left <- mid + 1
-            else // 5
-                right <-- mid - 1
-    return None // 2
+     binary_search(A, x)
+1  -     n <- length(A)
+2  -     if (x < A[1] or x > A[n])
+3  -          return None
+4  -     else
+             // 1 step
+5  -         left = 1
+6  -         right = n
+7  -         while (left ≤ right)
+8  -             mid <- (left + right) / 2 // 3 step
+9  -             if A[mid] = x // 5 step
+10 -                 return mid
+11 -             else if x > A[mid] // 4 step
+12 -                 left <- mid + 1
+13 -             else // 5 step
+14 -                 right <-- mid - 1
+15 -     return None // 2 step
 ```
 
 # Descripción
