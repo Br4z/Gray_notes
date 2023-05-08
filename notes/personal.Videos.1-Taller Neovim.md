@@ -2,11 +2,11 @@
 id: w4z2tq83aceql0ztd94f0nn
 title: 1-Taller Neovim
 desc: ''
-updated: 1682901815196
+updated: 1683505756089
 created: 1682892684931
 video_title: Taller de Neovim 2021
 date: 2023-02-28T00:00:00.000Z
-source: 'https://www.youtube.com/watch?v=LFIp7-TGmNU'
+source: https://www.youtube.com/watch?v=LFIp7-TGmNU
 ---
 
 # Shortcuts

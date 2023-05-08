@@ -2,7 +2,7 @@
 id: fb5nnbje23h92e2sy8cf69w
 title: 4-Equivalencias - Intereses
 desc: ''
-updated: 1682377925221
+updated: 1683498052029
 created: 1682302467041
 ---
 

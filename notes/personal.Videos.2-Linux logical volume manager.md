@@ -2,11 +2,11 @@
 id: 3wy7im5ivrfigjxpv3xmhsq
 title: 2-Linux logical volume manager
 desc: ''
-updated: 1682901916946
+updated: 1683505752747
 created: 1682892837507
 video_title: Linux Logical Volume Manager (LVM) Deep Dive Tutorial
 date: 2023-03-01T00:00:00.000Z
-source: 'https://www.youtube.com/watch?v=MeltFN-bXrQ'
+source: https://www.youtube.com/watch?v=MeltFN-bXrQ
 ---
 
 ![LMV basic structure](./assets/Personal/Videos/1-%20lmv_basic_structure.png)

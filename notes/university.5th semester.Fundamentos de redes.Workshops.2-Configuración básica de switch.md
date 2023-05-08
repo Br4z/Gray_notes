@@ -2,7 +2,7 @@
 id: 19t085yjlvwn0zgri5qyrq9
 title: 2-Configuración básica de switch
 desc: ''
-updated: 1680125633223
+updated: 1683492847654
 created: 1680121276936
 ---
 
@@ -24,7 +24,7 @@ created: 1680121276936
 
 5. Asigne un nombre a un switch use su nombre como nombre del switch
 
-    - ¿Qué comando uso? `hostname  Brandon`
+    - ¿Qué comando uso? `hostname Brandon`
 
     > Configuración global.
 

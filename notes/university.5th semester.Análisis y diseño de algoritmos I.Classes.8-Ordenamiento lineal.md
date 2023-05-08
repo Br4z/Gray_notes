@@ -2,7 +2,7 @@
 id: uv8rxw7v5gswqeos0h0k9lt
 title: 8-Ordenamiento lineal
 desc: ''
-updated: 1682994279994
+updated: 1683481790610
 created: 1682124306055
 ---
 
@@ -138,7 +138,7 @@ for i <- 1 to d
 
 > El ordenamiento lo hace con el counting sort.
 
-![imagen ordenamiento pag 43]
+![Radix sort example](./assets/University/An%C3%A1lisis%20y%20dise%C3%B1o%20de%20algoritmos%20I/1_8-2%20Radix_sort_example.png)
 
 Se asume que los $n$ elementos del arreglo tienen `d` dígitos donde el dígito 1 es el menos significativo.
 
@@ -166,7 +166,7 @@ Se asume que la entrada es un conjunto de $n$ números reales en el intervalo $[
 
 - Entrada: `A[1,...,n]` $0 \leq A[i] < 1$
 
-    > Se necesitan ademas un arreglo `B[0,..., n - 1]` de listas enlazadas.
+    > Se necesitan además un arreglo `B[0,..., n - 1]` de listas enlazadas.
 
 ## Idea
 
@@ -178,4 +178,4 @@ Se asume que la entrada es un conjunto de $n$ números reales en el intervalo $[
 
 Como la distribución es uniforme, se espera que los buckets tengan aproximadamente la misma cantidad de elementos.
 
-![demostracion bucket sort pag 47]
+![Bucket sort example](./assets/University/An%C3%A1lisis%20y%20dise%C3%B1o%20de%20algoritmos%20I/1_8-3%20Bucket_sort_example.jpg)

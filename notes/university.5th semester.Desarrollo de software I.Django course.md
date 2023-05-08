@@ -2,7 +2,7 @@
 id: 6l3kcjj0n3chaf4npuxbpvi
 title: Django course
 desc: ''
-updated: 1682895183045
+updated: 1683484054515
 created: 1682208376319
 ---
 
@@ -10,23 +10,23 @@ created: 1682208376319
 
 # Pasos previos
 
-- Instalar [python](https://www.python.org/downloads/)
-- Verificar que tenemos python y pip
+- Instalar [Python](https://www.python.org/downloads/)
+- Verificar que tenemos Python y pip
 
     ```
-    python --version -> Ver la version de python instalada
-    pip --version    -> Ver la version de pip instalada
+    python --version -> Ver la versión de Python instalada
+    pip --version    -> Ver la versión de pip instalada
     ```
 
 # Entornos virtuales
 
 Nos permiten tener por proyecto
 
-- Una version de python
-- Una version de pip
+- Una versión de python
+- Una versión de pip
 - Paquetes
 
-> Con el fin de aislar nuestros proyectos para que no hayan interferencias.
+> Con el fin de aislar nuestros proyectos para que no haya interferencias.
 
 ---
 
@@ -36,22 +36,22 @@ Nos permiten tener por proyecto
 
 2. Inicializamos el entorno virtual en la carpeta donde vayamos a tener un proyecto: `virtualenv env`
 
-3. Abrimos el proyecto con VSC y seleccionamos el interprete del entorno virtual (con la paleta de comandos)
+3. Abrimos el proyecto con VSC y seleccionamos el intérprete del entorno virtual (con la paleta de comandos)
 
     > Si queremos entrar manualmente podemos escribir `. \venv\Scripts\activate`.
 
 4. Instalamos Django:  `pip install django`
 
-    Para comprobar que se ha instalado correctamente escribimos `django-admin --version` o `python -m django --version` debería mostrarnos la version.
+    Para comprobar que se ha instalado correctamente escribimos `django-admin --version` o `python -m django --version` debería mostrarnos la versión.
 
-    Otra forma de comprobar si esta instalado es escribiendo
+    Otra forma de comprobar si está instalado es escribiendo:
 
     ```python
     import django
     django.get_version()
     ```
 
-    en el interprete de python.
+    en el intérprete de Python.
 
 # Crear proyecto
 
@@ -81,7 +81,7 @@ Nos permiten tener por proyecto
 
 # Estructura de una app
 
-- Django ya viene con un modulo para interactuar con la base de datos.
+Django ya viene con un módulo para interactuar con la base de datos.
 
 # Modelos y bases de datos con Sqlite3
 
@@ -89,7 +89,7 @@ Nos permiten tener por proyecto
 
     > Para ver el contenido del archivo `db.sqlite3` podemos usar el programa [DB Browser for SQLite](https://sqlitebrowser.org/dl/)
 
-# Django shell
+# Django Shell
 
 - `python manage.py shell`
 
@@ -104,13 +104,23 @@ Project.objects.all() # Get all register in the table
 
 Project.objects.get(id = 1) # Get a specific register in the table
 
-project.task_set.all() # Get Task related to a project
+project.task_set.all() # Get task related to a project
 
-project.task_set.create() # Add a task to a project (through its foreign key)
+project.task_set.create(title = "My first task") # Add a task to a project (through its foreign key)
 
 project.task_set.get(id = 1) # Get a specific task from a project
 
 Projects.objects.filter(name__startwith = "application") # An get without an error
 ```
 
-# Params
+# Django admin
+
+- Podemos acceder al panel administrativo a través de la ruta `admin/`.
+
+    > Podemos escribir `python manager.py createsuperuser` para crear un usuario.
+
+- Para que en el panel los nombres de los objetos que hayamos sean más descriptivos, podemos crear el método `__str__` para las clases.
+
+# Static files
+
+Son archivos que el servidor no procesa (por ejemplo un los archivos `.css`).

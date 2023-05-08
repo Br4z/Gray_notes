@@ -2,10 +2,9 @@
 id: luxnqjck5sdkwne1xsxhb4q
 title: 4-Laboratorio - Conexión de LAN por cable e inalámbrica
 desc: ''
-updated: 1681263586697
+updated: 1683492349273
 created: 1681173867137
 ---
-
 
 - Parte 5
 
