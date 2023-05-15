@@ -16,3 +16,16 @@ Actualmente, tiene la posibilidad de adquirir un repuesto que se requiere mensua
 Para realizar el cambio se necesita parar la planta, evento que le costara, 5000000 COP para el primer mese -también pagados al final de periodo- y de allí en adelante aumenta en 480000 COP cada periodo. La rentabilidad esperada de la compañía es del 14.06% AMV en pesos. La TRM de hoy es de 3000 $\frac{COP}{\$}$ y se espera una devaluación del dólar del 0.2% mensual y constante durante los próximos 8 años.
 
 Determine si se debe invertir o no en el proyecto
+
+
+# Configuracion neovim para detectar espacios finales
+
+`set list listchars=tab:\ \ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨`
+
+```
+function! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfunction
+```

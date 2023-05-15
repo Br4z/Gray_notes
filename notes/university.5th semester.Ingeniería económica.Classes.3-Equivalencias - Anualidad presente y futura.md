@@ -2,7 +2,7 @@
 id: bthqfbmkjdl3u44lhgu7u20
 title: 3-Equivalencias - Anualidad presente y futura
 desc: ''
-updated: 1681009586042
+updated: 1683912173305
 created: 1681004747109
 ---
 
@@ -52,13 +52,11 @@ $$
 
     - ¿Cuál sería el valor de la deuda al final del décimo semestre, si recibiera los $6000000 al **inicio** de cada semestre?
 
-
         > Podemos usar la fórmula de valor futuro de una anualidad anticipada.
 
         $$
         F = A \left (\frac{(1 + i)^n - 1}{i} \right ) (1 + i)
         $$
-
 
         $$
         F = 6000000 \left (\frac{(1 + 0.04)^{10} - 1}{0.04} \right ) (1 + 0.04)\approx 74918

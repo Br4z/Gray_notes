@@ -18,7 +18,6 @@ Es una metodología ágil de desarrollo de software que se basa en la simplicida
 
 ![XP process](./assets/University/Desarrollo%20de%20software%20I/1_4-1%20XP_process.jpg)
 
-
 ## Prácticas
 
 - El proceso de planificación

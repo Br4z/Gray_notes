@@ -2,7 +2,7 @@
 id: nvz60210ewd6nfwxwnfst0w
 title: 5-Manipulating files and directories
 desc: ''
-updated: 1680926068231
+updated: 1683851570340
 created: 1680558212222
 ---
 
@@ -93,7 +93,7 @@ mv item... directory -> To move one or more items from one directory to another.
 # `ln` (create links)
 
 ```bash
-ln file link -> Creates a hard link
+ln file link    -> Creates a hard link
 ln -s item link -> Creates a symbolic link (where item is either a file or a directory.)
 ```
 

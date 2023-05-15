@@ -2,11 +2,11 @@
 id: x02s8i6lsifil3h3qkrdara
 title: 4-The pacman command
 desc: ''
-updated: 1683507351971
+updated: 1684082389112
 created: 1683505681650
 video_title: Linux Crash Course - The Pacman Command
 date: 2023-05-07T00:00:00.000Z
-source: 'https://www.youtube.com/watch?v=HD7jJEh4ZaM'
+source: https://www.youtube.com/watch?v=HD7jJEh4ZaM
 ---
 
 - `pacman -Syy`
