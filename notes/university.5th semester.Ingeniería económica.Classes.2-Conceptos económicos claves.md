@@ -2,7 +2,7 @@
 id: 8jg44zgvqpslyz1bf4vu74e
 title: 2-Conceptos económicos claves
 desc: ''
-updated: 1681681351256
+updated: 1684253456837
 created: 1679963055320
 ---
 
@@ -83,7 +83,7 @@ $$
 
 Se puede definir como el conjunto de **mercados e instituciones** usados para contraer **acuerdos financieros** e intercambiar activos y riesgos.
 
-![Finance system](./assets/University/Ingenieria%20economica/1_2-1%20Finance-system.jpg)
+![Finance system](./assets/University/Ingenieria%20econ%C3%B3mica/1_2-1%20Finance-system.jpg)
 
 # Nomenclatura
 

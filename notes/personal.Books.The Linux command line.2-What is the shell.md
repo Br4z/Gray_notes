@@ -2,7 +2,7 @@
 id: t4lux2n7ddmt6vunm0mw4s2
 title: 2-What is the shell?
 desc: ''
-updated: 1680489486815
+updated: 1684789350853
 created: 1680488911028
 ---
 
@@ -37,10 +37,10 @@ Most Linux distributions remember the last 1,000 commands by default.
 
 ```bash
 date
-cal  -> Display the Calendar
-df   -> Display the current amount of free space on our disk drives
-free -> Display the amount of free memory
-exit -> Close the terminal emulator window or you can also use ctlr-D
+cal  # Display the Calendar
+df   # Display the current amount of free space on our disk drives
+free # Display the amount of free memory
+exit # Close the terminal emulator window or you can also use ctlr-D
 ```
 
 > **The console behind the curtain**

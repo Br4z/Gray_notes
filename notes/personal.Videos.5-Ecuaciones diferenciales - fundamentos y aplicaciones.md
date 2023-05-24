@@ -2,7 +2,7 @@
 id: uatu1g57sxlustxl5t0uawn
 title: '5-Ecuaciones diferenciales: fundamentos y aplicaciones'
 desc: ''
-updated: 1684092309200
+updated: 1684253358690
 created: 1684082306107
 video_title: ECUACIONES DIFERENCIALES - Fundamentos y Aplicaciones | El Traductor
 date: 2023-05-13
@@ -158,6 +158,8 @@ $$
 ## Ejemplo
 
 Suponga la siguiente situación
+
+![Brine problem](./assets/Personal/Videos/5-%20Brine_problem.jpg)
 
 $$
 \text{siendo $y(t)$ la cantidad de sal en un instante $t$} \\[10 pt]

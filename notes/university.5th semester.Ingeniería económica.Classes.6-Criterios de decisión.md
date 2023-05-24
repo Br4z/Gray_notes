@@ -2,7 +2,7 @@
 id: z0oziq4zobi1dqiekvh4m4y
 title: 6-Criterios de decisión
 desc: ''
-updated: 1684108676993
+updated: 1684885594181
 created: 1684093157228
 ---
 
@@ -24,7 +24,7 @@ Son utilizados para determinar si un proyecto o alternativa de inversión es o n
 
 Es un valor presente equivalente a todos los flujos de efectivo del proyecto, el cual se calcula usando la **tasa mínima de retorno** (TMR) o **tasa del inversionista**.
 
-![Imagen diapositiva 4]
+![VPN definition](./assets/University/Ingenieria%20econ%C3%B3mica/1_6-1%20VPN_definition.jpg)
 
 $$
 \text{VPN} = \text{valor presente de los ingresos} - \text{valor presente de los egresos}
@@ -38,7 +38,7 @@ El VPN es la **utilidad económica** en el presente.
 
 Es una serie de flujos uniformes equivalente a todos los flujos de efectivo del proyecto, la cual se calcula usando la **tasa mínima de retorno** (TMR) o **tasa del inversionista**.
 
-![Imagen diapositiva 5]
+![VAN definition](./assets/University/Ingenieria%20econ%C3%B3mica/1_6-2%20VAN_definition.jpg)
 
 $$
 \text{VAN} = \text{valor anual de los ingresos} - \text{valor anual de los egresos}
@@ -52,7 +52,7 @@ El VAN es la **utilidad económica** representada en una serie de flujos uniform
 
 Es un valor futuro equivalente a todos los flujos de efectivo del proyecto, el cual se calcula usando la **tasa mínima de retorno** (TMR) o **tasa del inversionista**.
 
-![Imagen diapositiva 6]
+![VFN definition](./assets/University/Ingenieria%20econ%C3%B3mica/1_6-3%20VFN_definition.jpg)
 
 $$
 \text{VAN} = \text{valor futuro de los ingresos} - \text{valor futuro de los egresos}
@@ -68,7 +68,7 @@ El VFN es la **utilidad económica** en el futuro o periodo final del proyecto.
 
     Si la tasa mínima de retorno es del 20% anual, determine si este negocio sería económicamente factible o no.
 
-    ![Imagen diapositiva 7]
+    ![Example of decision criteria](./assets/University/Ingenieria%20econ%C3%B3mica/1_6-4%20Example_decision_criteria.jpg)
 
 
     | $n$ | Flujo |
@@ -102,7 +102,7 @@ El VFN es la **utilidad económica** en el futuro o periodo final del proyecto.
 
 Algunos proyectos pueden tener flujos de dinero que no tienen un comportamiento periódico, sino que su ocurrencia está asociada a fechas específicas.
 
-![imagen diapositiva 10]
+![VPN of non-periodic flows definition](./assets/University/Ingenieria%20econ%C3%B3mica/1_6-5%20VPN_non-periodic_flows_definition.jpg)
 
 > En estos casos se debe dejar todo en **términos anuales**.
 
@@ -200,6 +200,6 @@ Tasa de interés que hace que el **VPN (VAN o VFN)** de una serie de flujos de e
 
 La principal desventaja de la TIR es que su comportamiento está relacionado con la forma del flujo de efectivo neto del proyecto. Lo aconsejable es emplear este criterio **solo cuando el flujo de efectivo sea convencional**.
 
-![imagen diapositiva 18]
+![Types of net flows](./assets/University/Ingenieria%20econ%C3%B3mica/1_6-6%20Types_net_flows.jpg)
 
 > Para tratar este problema existe la Tasa Interna de Retorno Modificada (TIRM).

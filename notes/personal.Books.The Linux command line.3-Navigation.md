@@ -2,14 +2,14 @@
 id: ekucjwzvveiczxiyvz1gi8j
 title: 3-Navigation
 desc: ''
-updated: 1680491582237
+updated: 1684789339457
 created: 1680489495900
 ---
 
 ```bash
-pwd // Print name of current working directory
-cd  // Change directory
-ls  // List directory contents
+pwd # Print name of current working directory
+cd  # Change directory
+ls  # List directory contents
 ```
 
 # Understanding the file system tree
@@ -29,8 +29,9 @@ When we first log in to our system (or start a terminal emulator session), our c
 An absolute pathname begins with the root directory and follows the tree branch by branch until the path to the desired directory or file is completed.
 
 ```bash
-cd /usr/bin -> Start with from the root directory (represented by the leading slash in the pathname)
-[me@linuxbox bin]$ -> The prompt has changed (now showing us the path that we are in)
+cd /usr/bin # Start with from the root directory (represented by the leading slash in the pathname)
+
+[me@linuxbox bin]$ # The prompt has changed (now showing us the path that we are in)
 ```
 
 ## Relative pathnames
@@ -60,7 +61,7 @@ In general, if we do not specify a pathname to something, the working directory 
 # Some helpful shortcuts
 
 ```bash
-cd             -> Changes the working directory to your home directory
-cd -           -> Changes the working directory to the previous working directory.
-cd ~<user_name> -> Changes the working directory to the home directory of user_name
+cd              # Changes the working directory to your home directory
+cd -            # Changes the working directory to the previous working directory.
+cd ~<user_name> # Changes the working directory to the home directory of user_name
 ```

@@ -17,10 +17,42 @@ Para realizar el cambio se necesita parar la planta, evento que le costara, 5000
 
 Determine si se debe invertir o no en el proyecto
 
+Primero hayamos algunos datos
+
+- $4 \text{ años} = 48 \text{ meses}$
+
+- $i_m = \frac{14.06\%}{12} \approx 1.17\%$
+
+- $i_{\$}\approx \frac{1.17\% + 1}{1 - 0.2\%} - 1 \approx 1.4\%$
+
+En el proyecto identificamos las siguientes estructuras:
+
+- $(4800,8\%)_{(0 - 48)}$
+    $$
+    P_{\$} \approx 4800 \left (\frac{ 1 - \left (\frac{(1 + 0.8\%)}{(1 + 1.4\%)} \right )^{48}}{(1.4\% - 0.8\%)} \right ) \approx 198309 \\[10 pt]
+
+    P_{\text{COP}} = P_{\$} * 3000 = 594927000
+    $$
+
+- $A/P$
+
+    $$
+    A = 594927 \left (\frac{1.17\%(1 + 1.17\%)^{48}}{(1 + 1.17\%)^{48} - 1} \right ) = 16269 * 10^3
+    $$
+
+- $(5000,480)_{0 - 48}$
+
+    $$
+    A = 5000 + 480 \left (\frac{1}{1.17\%} - \frac{48}{(1 + 1.17\%)^{48} - 1} \right ) \approx 15214 * 10^3
+    $$
+
+$$
+30000 - (16269 + 15214) = -1483.0
+$$
+
+NO se debe invertir en el proyecto.
 
 # Configuracion neovim para detectar espacios finales
-
-`set list listchars=tab:\ \ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨`
 
 ```
 function! TrimWhitespace()

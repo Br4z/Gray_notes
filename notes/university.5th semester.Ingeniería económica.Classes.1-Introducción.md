@@ -2,7 +2,7 @@
 id: 33lb70bhirrwadyqkkpfzu4
 title: 1-Introducción
 desc: ''
-updated: 1682124642982
+updated: 1684253456785
 created: 1679959921307
 ---
 
@@ -14,7 +14,7 @@ created: 1679959921307
 
     Es una unidad económica compuesta por **recursos** totalmente **integrados** que buscan cumplir un propósito y alcanzar así los **beneficios** que se proponen los dueños.
 
-    ![Company relations](./assets/University/Ingenieria%20economica/1_1-1%20Company-relations.jpg)
+    ![Company relations](./assets/University/Ingenieria%20econ%C3%B3mica/1_1-1%20Company-relations.jpg)
 
     - Objetivo financiero básico de una empresa
 
@@ -22,7 +22,7 @@ created: 1679959921307
 
         Entendemos por **valor de la compañía**, el valor del conjunto de elementos, materiales, inmateriales y humanos que integran o constituyen la empresa. Incluye **no sólo el valor en el presente**, sino también las **expectativas acerca de los beneficios que se espera que la empresa genere en el futuro**.
 
-![Decisions](./assets/University/Ingenieria%20economica/1_1-2%20Decisions.jpg)
+![Decisions](./assets/University/Ingenieria%20econ%C3%B3mica/1_1-2%20Decisions.jpg)
 
 - un proyecto?
 
@@ -55,9 +55,9 @@ Dejando los aspectos más importantes no quedamos con que
 - Flujo de caja descontado
 - Interés
 
-![Money flow](./assets/University/Ingenieria%20economica/1_1-3%20Money-flow.jpg)
+![Money flow](./assets/University/Ingenieria%20econ%C3%B3mica/1_1-3%20Money-flow.jpg)
 
-![Money value](./assets/University/Ingenieria%20economica/1_1-4%20Money-value.jpg)
+![Money value](./assets/University/Ingenieria%20econ%C3%B3mica/1_1-4%20Money-value.jpg)
 
 Otros conceptos importantes son
 
@@ -113,7 +113,7 @@ Es una medida resumen de la evaluación de progreso a largo plazo en tres dimens
 
 ## Tasas de interés e inflación
 
-![Bank strategies against inflation or deflation](./assets/University/Ingenieria%20economica/1_1-5%20Bank-strategies-against-inflation-or-deflation.jpg)
+![Bank strategies against inflation or deflation](./assets/University/Ingenieria%20econ%C3%B3mica/1_1-5%20Bank-strategies-against-inflation-or-deflation.jpg)
 
 > Cuando la inflación proyectada se ubica por debajo del rango - Cuando la inflación proyectada se ubica por encima del rango.
 

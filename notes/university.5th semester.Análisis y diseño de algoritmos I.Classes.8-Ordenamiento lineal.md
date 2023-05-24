@@ -2,7 +2,7 @@
 id: uv8rxw7v5gswqeos0h0k9lt
 title: 8-Ordenamiento lineal
 desc: ''
-updated: 1683481790610
+updated: 1684890755947
 created: 1682124306055
 ---
 
@@ -138,7 +138,7 @@ for i <- 1 to d
 
 > El ordenamiento lo hace con el counting sort.
 
-![Radix sort example](./assets/University/An%C3%A1lisis%20y%20dise%C3%B1o%20de%20algoritmos%20I/1_8-2%20Radix_sort_example.png)
+![Radix sort example](./assets/University/An%C3%A1lisis%20y%20dise%C3%B1o%20de%20algoritmos%20I/1_8-2%20Radix_sort_example.jpg)
 
 Se asume que los $n$ elementos del arreglo tienen `d` dígitos donde el dígito 1 es el menos significativo.
 

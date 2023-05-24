@@ -2,20 +2,20 @@
 id: tvmme18939tpggywggtaceu
 title: 6-Working with commands
 desc: ''
-updated: 1683928487593
+updated: 1684789872098
 created: 1680926055609
 ---
 
 ```bash
-type    -> Indicate how a command name is interpreted
-which   -> Display which executable program will be executed
-help    -> Get help for shell builtins
-man     -> Display a command's manual page
-apropos -> Display a list of appropriate commands
+type    # Indicate how a command name is interpreted
+which   # Display which executable program will be executed
+help    # Get help for shell builtins
+man     # Display a command's manual page
+apropos # Display a list of appropriate commands
 
-info    -> Display a command's info entry
-whatis  -> Display one-line manual page descriptions
-alias   -> Create an alias for a command
+info    # Display a command's info entry
+whatis  # Display one-line manual page descriptions
+alias   # Create an alias for a command
 ```
 
 # What exactly are commands?
@@ -39,9 +39,23 @@ A command can be one of four different things.
     ```bash
     type <command>
 
-    type type -> type is a shell builtin
-    type ls   -> ls is aliased to `ls --color=tty'
-    type cp   -> cp is /bin/cp
+    # ---------------------------------- # ---------------------------------- #
+
+    type type
+
+    type is a shell builtin
+
+    # ---------------------------------- # ---------------------------------- #
+
+    type ls
+
+    ls is aliased to `ls --color=tty'
+
+    # ---------------------------------- # ---------------------------------- #
+
+    type cp
+
+    cp is /bin/cp
     ```
 
 - `which`
@@ -49,13 +63,17 @@ A command can be one of four different things.
     Is used to determine the exact location of a given executable.
 
     ```bash
-    which ls -> /bin/ls
+    which ls
+
+    /bin/ls
     ```
 
     `which` works only for executable programs, not builtins or aliases that are substitutes for actual executable programs.
 
     ```bash
-    which cd -> /usr/bin/which: no cd in (/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games)
+    which cd
+
+    /usr/bin/which: no cd in (/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games)
     ```
 
     > This result is a fancy way of saying "command not found".
@@ -67,7 +85,11 @@ A command can be one of four different things.
 ```bash
 help <command>
 
-help cd -> cd: cd [-L|[-P [-e]] [-@]] [dir]...
+# ---------------------------------- # ---------------------------------- #
+
+help cd
+
+cd: cd [-L|[-P [-e]] [-@]] [dir]...
 ```
 
 > When square brackets appear in the description of a command's syntax, they indicate optional items. A vertical bar character indicates mutually exclusive items.
@@ -79,8 +101,12 @@ Many executable programs support a `--help` option that displays a description o
 ```bash
 <command> --help
 
-mkdir --help -> Usage: mkdir [OPTION] DIRECTORY...
-                Create the DIRECTORY(ies), if they do not already exist. ...
+# ---------------------------------- # ---------------------------------- #
+
+mkdir --help
+
+Usage: mkdir [OPTION] DIRECTORY...
+Create the DIRECTORY(ies), if they do not already exist. ...
 ```
 
 ## `man`: display a program's manual page.
@@ -125,8 +151,11 @@ It is also possible to search the list of man pages for possible matches based o
 ```bash
 apropos <term>
 
-apropos partition -> addpart (8) - tell the kernel about the existence of a partition...
+# ---------------------------------- # ---------------------------------- #
 
+apropos partition
+
+addpart (8) - tell the kernel about the existence of a partition...
 ```
 
 The first field in each line of output is the name of the man page, and the second field shows the section.
@@ -183,34 +212,57 @@ cd /usr; ls; cd -
 ```
 
 1. Name availability verification.
-    ```bash
-    type test -> test is a shell builtin
 
-    type foo  -> bash: type: foo: not found
+    ```bash
+    type test
+
+    test is a shell builtin
+
+    # ---------------------------------- # ---------------------------------- #
+
+    type foo
+
+    bash: type: foo: not found
     ```
+
 2. Alias creation.
 
     ```bash
     alias <alias name>='<string>'
 
+    # ---------------------------------- # ---------------------------------- #
+
     alias foo='cd /usr; ls; cd -'
 
-    type foo -> foo is aliased to `cd /usr; ls; cd -'
+    # ---------------------------------- # ---------------------------------- #
+
+    type foo
+
+    foo is aliased to `cd /usr; ls; cd -'
     ```
+
 3. Alias removal.
 
     ```bash
     unalias foo
 
-    type foo -> bash: type: foo: not found
+    # ---------------------------------- # ---------------------------------- #
+
+    type foo
+
+    bash: type: foo: not found
     ```
 
 While we purposefully avoided naming our alias with an existing command name, it is not uncommon to do so. This is often done to apply a commonly desired option to each invocation of a common command.
 
 ```bash
-type ls -> ls is aliased to `ls --color=tty'
+type ls
 
-alias -> Display all aliases defined in the environment
+ls is aliased to `ls --color=tty'
+
+# ---------------------------------- # ---------------------------------- #
+
+alias # Display all aliases defined in the environment
 ```
 
 There is one tiny problem with defining aliases on the command line. They vanish when your shell session ends.

@@ -2,7 +2,7 @@
 id: tqh0um80a9ojnx88ygag2cd
 title: 5-Equivalencias - Intereses
 desc: ''
-updated: 1682307057743
+updated: 1684253456829
 created: 1682217143766
 ---
 
@@ -111,7 +111,7 @@ $$
 
 - Es necesario transformar anticipado en vencido
 
-![Equivalence between due and anticipated rates](./assets/University/Ingenieria%20economica/1_5-1%20Equivalence_between_due_and_anticipated_rates.jpg)
+![Equivalence between due and anticipated rates](./assets/University/Ingenieria%20econ%C3%B3mica/1_5-1%20Equivalence_between_due_and_anticipated_rates.jpg)
 
 $$
 F = P(1 + i_v)^n \quad F = (P^* - P^* * i_a)(1 + i_v)^1 = P^*(1 - i_a)(1 + i_v)^1 \\[10 pt]
@@ -158,7 +158,7 @@ $$
 
 ---
 
-![Multiple interests](./assets/University/Ingenieria%20economica/1_5-2%20Multiple_interests.jpg)
+![Multiple interests](./assets/University/Ingenieria%20econ%C3%B3mica/1_5-2%20Multiple_interests.jpg)
 
 $$
 F_\$ = P_\$(1 + i_\$)^1 \quad F_{TC} = P_{TC}(1 + Rev_\$)^1 \quad F_P = P_P(1 + i_{COP})^1 \\[10 pt]

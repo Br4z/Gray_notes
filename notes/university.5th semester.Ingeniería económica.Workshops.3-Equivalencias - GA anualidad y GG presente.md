@@ -2,13 +2,13 @@
 id: sehfz3ivw998icktnr6tghd
 title: 3-Equivalencias - GA anualidad y GG presente
 desc: ''
-updated: 1682284543306
+updated: 1684253456797
 created: 1681681862218
 ---
 
 1. De acuerdo con la siguiente serie anual y considerando una tasa de interés del 12% anual
 
-    ![Money flow diagram](./assets/University/Ingenieria%20economica/2_3-1%20Money_flow_diagram.jpg)
+    ![Money flow diagram](./assets/University/Ingenieria%20econ%C3%B3mica/2_3-1%20Money_flow_diagram.jpg)
 
 
     > Podemos obtener el presente de todos los flujos o identificar estructuras.

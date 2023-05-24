@@ -2,7 +2,7 @@
 id: yjwjx1t24b45jazy30qtt7z
 title: 4-Equivalencias - GA anualidad y GG presente
 desc: ''
-updated: 1681672669849
+updated: 1684275358432
 created: 1681612824743
 ---
 
@@ -10,9 +10,9 @@ created: 1681612824743
 
 - Objetivo: Determinar el valor presente equivalente a flujos que **varían** en una cantidad **uniforme**, dada una tasa de interés ($i$) y un horizonte de tiempo ($n$).
 
-![Arithmetic gradient](./assets/University/Ingenieria%20economica/1_4-1%20arithmetic_gradient.jpg)
+![Arithmetic gradient](./assets/University/Ingenieria%20econ%C3%B3mica/1_4-1%20arithmetic_gradient.jpg)
 
-![Arithmetic gradient decomposition](./assets/University/Ingenieria%20economica/1_4-2%20arithmetic_gradient_decomposition.jpg)
+![Arithmetic gradient decomposition](./assets/University/Ingenieria%20econ%C3%B3mica/1_4-2%20arithmetic_gradient_decomposition.jpg)
 
 - Anualidad
 
@@ -117,7 +117,7 @@ empresa estima un **crecimiento anual** de $25000000 en utilidades. Si se consid
 
 - Objetivo: determinar el valor presente equivalente ($P$) de un gradiente geométrico, dada una tasa de interés ($i$) y un horizonte de tiempo ($n$).
 
-![Geometric gradient](./assets/University/Ingenieria%20economica/1_4-3%20Geometric_gradient.jpg)
+![Geometric gradient](./assets/University/Ingenieria%20econ%C3%B3mica/1_4-3%20Geometric_gradient.jpg)
 
 $$
 P = P_1 + P_2 + \dots + P_n \quad \text{si } P = \frac{F}{(1 + i)^n} \\[10 pt]
@@ -130,15 +130,15 @@ P \left (\frac{1 + s}{1 + i} \right ) = \frac{T(1 + s)}{(1 + i)^2} + \frac{T(1 +
 
 \text{haciendo $(7) - (6)$} \\[5 pt]
 
-P \left (\frac{1 + s}{1 + i} - 1 \right ) = T \left (-\frac{1}{(1 + i)^1} + \frac{T(1 + s)^n}{(1 + i)^{n + 1}} \right ) \\[10 pt]
+P \left (\frac{1 + s}{1 + i} - 1 \right ) = T \left (-\frac{1}{(1 + i)^1} + \frac{(1 + s)^n}{(1 + i)^{n + 1}} \right ) \\[10 pt]
 
-P \left (\frac{1 + s}{1 + i} - \frac{1 + i}{1 + i} \right ) = T \left (-\frac{1}{(1 + i)^1} + \frac{T(1 + s)^n}{(1 + i)^{n + 1}} \right ) \\[10 pt]
+P \left (\frac{1 + s}{1 + i} - \frac{1 + i}{1 + i} \right ) = T \left (-\frac{1}{(1 + i)^1} + \frac{(1 + s)^n}{(1 + i)^{n + 1}} \right ) \\[10 pt]
 
-P \left (\frac{s - i}{1 + i} \right ) = T \left (-\frac{1}{(1 + i)^1} + \frac{T(1 + s)^n}{(1 + i)^{n + 1}} \right ) \\[10 pt]
+P \left (\frac{s - i}{1 + i} \right ) = T \left (-\frac{1}{(1 + i)^1} + \frac{(1 + s)^n}{(1 + i)^{n + 1}} \right ) \\[10 pt]
 
-P(s - i) = T \left (-1 + \frac{T(1 + s)^n}{(1 + i)^n} \right ) \quad P = T \left (\frac{ \left (\frac{T(1 + s)}{(1 + i)} \right )^n - 1}{(s - i)} \right ) \\[10 pt]
+P(s - i) = T \left (-1 + \frac{(1 + s)^n}{(1 + i)^n} \right ) \quad P = T \left (\frac{ \left (\frac{(1 + s)}{(1 + i)} \right )^n - 1}{(s - i)} \right ) \\[10 pt]
 
-P = T \left (\frac{ 1 - \left (\frac{T(1 + s)}{(1 + i)} \right )^n}{(i - s)} \right ) \quad s \neq i \quad P = \frac{Tn}{1 + i} \quad s = 1
+P = T \left (\frac{ 1 - \left (\frac{(1 + s)}{(1 + i)} \right )^n}{(i - s)} \right ) \quad s \neq i \quad P = \frac{Tn}{1 + i} \quad s = 1
 $$
 
 ## Ejemplo
@@ -146,7 +146,7 @@ $$
 - El ingeniero de mantenimiento de una planta de generación eléctrica a base de carbón desea actualizar la válvula de control de emisiones. Dicha modificación requiere una inversión inicial de US$8000. Se estima que la vida útil de la válvula es de **5 años**. Los costos de mantenimiento serán de US$1700 para el **primer año** los cuales incrementarán en un 11% **cada año**. Determine el valor presente de todos los costos del proyecto, considerando una tasa de interés del 8% anual.
 
     $$
-    P_G = 1700 \left (\frac{ 1 - \left (\frac{1700(1 + 11\%)}{(1 + 8\%)} \right )^5}{(8\% - 11\%)} \right ) \approx 8319 \\[10 pt]
+    P_G = -1700 \left (\frac{ 1 - \left (\frac{1700(1 + 11\%)}{(1 + 8\%)} \right )^5}{(8\% - 11\%)} \right ) \approx -8319 \\[10 pt]
 
-    P \approx 8000 + 8319 = 16319
+    P \approx -8000 - 8319 = -16319
     $$

@@ -2,14 +2,14 @@
 id: utea9yv49m2umusqurvte3i
 title: 4-Exploring the system
 desc: ''
-updated: 1680550106635
+updated: 1684789284903
 created: 1680491611722
 ---
 
 ```bash
-ls   -> List directory contents
-file -> Determinate file type
-less -> View file contents
+ls   # List directory contents
+file # Determinate file type
+less # View file contents
 ```
 
 # More fun with ls
@@ -18,8 +18,8 @@ The `ls` command is probably the most used command, and for good reason. With it
 
 ```bash
 ls <path>
-ls <path> <path> -> We can even specify multiple directories
-ls -l            -> We changed the output to the long format.
+ls <path> <path> # We can even specify multiple directories
+ls -l            # We changed the output to the long format.
 ```
 
 ## Options and arguments
@@ -28,8 +28,8 @@ This brings us to a very important point about how most commands work. Commands 
 
 ```bash
 command -options arguments
-ls -lt           -> Show the long format and sort it by modification time
-ls -lt -reverse  -> Reverse the order of the sort
+ls -lt           # Show the long format and sort it by modification time
+ls -lt -reverse  # Reverse the order of the sort
 ```
 
 > Command options, like filenames on Linux, are case-sensitive.
@@ -69,9 +69,13 @@ As we saw earlier, the `-l` option causes ls to display its results in long form
 ## Determining a File's Type with file
 
 ```bash
-file <file path> -> Will print a brief description of the file's contents
+file <file path> # Will print a brief description of the file's contents
 
-file picture.jpg -> picture.jpg: JPEG image data, JFIF standard 1.01
+# ---------------------------------- # ---------------------------------- #
+
+file picture.jpg
+
+picture.jpg: JPEG image data, JFIF standard 1.01
 ```
 
 There are many kinds of files. In fact, one of the common ideas in Unixlike operating systems such as Linux is that "everything is a file".

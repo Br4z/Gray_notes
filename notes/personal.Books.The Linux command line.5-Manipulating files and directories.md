@@ -2,14 +2,14 @@
 id: nvz60210ewd6nfwxwnfst0w
 title: 5-Manipulating files and directories
 desc: ''
-updated: 1683851570340
+updated: 1684790017793
 created: 1680558212222
 ---
 
 - `mkdir`  create directories
 
     ```bash
-    mkdir dir1 dir2 dir3 -> would create three directories named dir1, dir2, and dir3
+    mkdir dir1 dir2 dir3 # would create three directories named dir1, dir2, and dir3
     ```
 
 # Wildcards
@@ -43,8 +43,8 @@ created: 1680558212222
 # `cp` (copy Files and Directories)
 
 ```bash
-cp item1 item2       -> Copies the single file or directory item1 to the file or directory item2
-cp item... directory -> Copies multiple items (either files or directories) into a directory
+cp item1 item2       # Copies the single file or directory item1 to the file or directory item2
+cp item... directory # Copies multiple items (either files or directories) into a directory
 ```
 
 ## Useful Options
@@ -60,8 +60,8 @@ cp item... directory -> Copies multiple items (either files or directories) into
 # `mv`  (move/rename files and directories)
 
 ```bash
-mv item1 item2       -> To move or rename the file or directory item1 to item2
-mv item... directory -> To move one or more items from one directory to another.
+mv item1 item2       # To move or rename the file or directory item1 to item2
+mv item... directory # To move one or more items from one directory to another.
 ```
 
 ## Useful Options
@@ -93,8 +93,8 @@ mv item... directory -> To move one or more items from one directory to another.
 # `ln` (create links)
 
 ```bash
-ln file link    -> Creates a hard link
-ln -s item link -> Creates a symbolic link (where item is either a file or a directory.)
+ln file link    # Creates a hard link
+ln -s item link # Creates a symbolic link (where item is either a file or a directory.)
 ```
 
 ## Hard links
@@ -112,7 +112,6 @@ A hard link is indistinguishable from the file itself. Unlike a symbolic link, w
 Symbolic links were created to overcome the limitations of hard links. They work by creating a special type of file that contains a text pointer to the referenced file or directory. In this regard, they operate in much the same way as a Windows shortcut, though of course they predate the Windows feature by many years.
 
 A file pointed to by a symbolic link and the symbolic link itself are largely indistinguishable from one another.
-
 
 # Building a playground
 
