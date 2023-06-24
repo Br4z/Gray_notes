@@ -2,7 +2,7 @@
 id: djs3v17raaad4yb29fzyfg6
 title: 1-Microestructura - relaciones referenciales
 desc: ''
-updated: 1679865706293
+updated: 1685065026264
 created: 1679808042942
 ---
 
@@ -24,8 +24,7 @@ Existen tres relaciones
 
 ---
 
-Al hecho de que dos o más palabras en un discurso remitan a un mismo referente se le denomina correferencia. En sentido estricto, los elementos correferenciales no dependen uno del otro para su
-interpretación, a diferencia de lo que ocurre con los elementos de una cadena referencial, en que algunas de las unidades dependen de su
+Al hecho de que dos o más palabras en un discurso remitan a un mismo referente se le denomina correferencia. En sentido estricto, los elementos correferenciales no dependen uno del otro para su interpretación, a diferencia de lo que ocurre con los elementos de una cadena referencial, en que algunas de las unidades dependen de su
 antecedente para que adquieran sentido.
 
 ---

@@ -2,7 +2,7 @@
 id: z0oziq4zobi1dqiekvh4m4y
 title: 6-Criterios de decisión
 desc: ''
-updated: 1684885594181
+updated: 1685301972364
 created: 1684093157228
 ---
 
@@ -70,7 +70,6 @@ El VFN es la **utilidad económica** en el futuro o periodo final del proyecto.
 
     ![Example of decision criteria](./assets/University/Ingenieria%20econ%C3%B3mica/1_6-4%20Example_decision_criteria.jpg)
 
-
     | $n$ | Flujo |
     |:---:|:-----:|
     |  0  | -150  |
@@ -126,7 +125,7 @@ Tasa de interés que hace que el **VPN (VAN o VFN)** de una serie de flujos de e
         P = 50 \left (\frac{(1 + i)^5 - 1}{i(1 + i)^5} \right )
         $$
 
-     - $P/F$
+    - $P/F$
 
         $$
         P = \frac{15}{(1 + i)^5}
@@ -145,7 +144,6 @@ Tasa de interés que hace que el **VPN (VAN o VFN)** de una serie de flujos de e
 - La organización XYZ, adquiere una máquina cortadora por $200000 y con ella logra reducir sus costos anuales en $50000 durante los 5 años de vida útil de la máquina.
 
     Calcule el rendimiento o tasa interna de retorno (TIR) de esta inversión. Suponga que el valor de mercado de la máquina pasados los 5 años es nulo.
-
 
     - $P/A$
 
@@ -189,7 +187,7 @@ Tasa de interés que hace que el **VPN (VAN o VFN)** de una serie de flujos de e
         $$
 
     $$
-    \frac{-500}{(1 + i)} + \frac{-8100}{(1 + i)^2} - \frac{6800}{(1 + i)^3} = 2000 \\[10 pt]
+    \frac{500}{(1 + i)} + \frac{8100}{(1 + i)^2} - \frac{6800}{(1 + i)^3} = 2000 \\[10 pt]
 
     i = 7.46\% \quad i = 41.35\%
     $$

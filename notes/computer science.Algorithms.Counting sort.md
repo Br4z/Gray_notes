@@ -2,11 +2,11 @@
 id: gzvot14se88xtxpbm60casb
 title: Counting sort
 desc: ''
-updated: 1682984367482
+updated: 1687485193082
 created: 1682126031065
 ---
 
-# Pseudocódigo
+## Pseudocódigo
 
 ```
     counting_sort(A, B, k)
@@ -30,8 +30,7 @@ created: 1682126031065
 
 > La indexación comienza en 1.
 
-# Descripción
-
+## Descripción
 
 1. Crea un vector de números enteros con tantos elementos como valores haya en el intervalo $[0, \text{máximo}]$, y a cada elemento se le da el valor 0 (0 apariciones).
 

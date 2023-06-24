@@ -2,14 +2,14 @@
 id: w4z2tq83aceql0ztd94f0nn
 title: 1-Taller Neovim
 desc: ''
-updated: 1683505756089
+updated: 1686418553541
 created: 1682892684931
 video_title: Taller de Neovim 2021
 date: 2023-02-28T00:00:00.000Z
 source: https://www.youtube.com/watch?v=LFIp7-TGmNU
 ---
 
-# Shortcuts
+## Shortcuts
 
 - `^` ir al primer carácter no vació de una línea.
 
@@ -47,7 +47,7 @@ source: https://www.youtube.com/watch?v=LFIp7-TGmNU
 
 - `da<opening or closing character>` lo mismo que el anterior, pero este es inclusivo.
 
-    > En general es `<motion><a or i><opening or closing character>`.
+	> En general es `<motion><a or i><opening or closing character>`.
 
 - `df<character>` borra desde el cursor hasta donde está el carácter.
 
@@ -55,13 +55,13 @@ source: https://www.youtube.com/watch?v=LFIp7-TGmNU
 
 - `f<character>` movernos a la coincidencia más cercana del carácter a nuestro cursor (hacia la derecha).
 
-    > Si queremos ver la próxima coincidencia podemos usar `;`, lo mismo aplica para `t<character>`.
+	> Si queremos ver la próxima coincidencia podemos usar `;`, lo mismo aplica para `t<character>`.
 
 - `d/<string>` borra hasta que encuentre la coincidencia (empezando desde nuestro cursor), inclusivamente.
 
 - Podemos buscar cadenas con `/cadena` y podemos usar `n` y `N` para navegar entre las coincidencias.
 
-    > `?<string>` invierte el sentido de la búsqueda.
+	> `?<string>` invierte el sentido de la búsqueda.
 
 - `d?<string>` borrar hasta una coincidencia anterior (empezando desde nuestro cursor), inclusivamente.
 
@@ -71,13 +71,13 @@ source: https://www.youtube.com/watch?v=LFIp7-TGmNU
 
 - `g<basic motion>` realiza el movimiento en las líneas que se ven en pantalla.
 
-    > Útil para cuando activas `wrap`.
+	> Útil para cuando activas `wrap`.
 
 - `gui<opening or closing character>` poner todas las letras en minúscula dentro de lo que encierra el carácter de apertura y cierre.
 
-    > Con `U` podemos ponerlo en mayúsculas.
+	> Con `U` podemos ponerlo en mayúsculas.
 
-# Sustituciones
+## Sustituciones
 
 - `s/,/#/g` sustituye todas las `,` por `#` en la línea actual.
 - `%s/,/#/g`sustituye todas las `,` por `#` en todo el fichero.

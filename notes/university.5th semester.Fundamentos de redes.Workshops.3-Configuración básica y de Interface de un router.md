@@ -2,7 +2,7 @@
 id: eglnvulzytrna53s3cp0u1c
 title: 3-Configuración básica y de Interface de un router
 desc: ''
-updated: 1680718427111
+updated: 1686160887853
 created: 1680121580927
 ---
 
@@ -127,7 +127,6 @@ created: 1680121580927
         2. `description "interface g 0/0"`
         3. `interface g 0/1`
         4. `description "interface g 0/1"`
-
 
     - `S1`
 

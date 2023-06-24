@@ -2,13 +2,13 @@
 id: 60xevl6oc2v4izqarnbrg3t
 title: Binary search
 desc: ''
-updated: 1682984403127
+updated: 1685735127998
 created: 1680828023752
 ---
 
 La búsqueda binaria funciona en arreglos ordenados. La búsqueda binaria comienza por comparar el elemento del medio del arreglo con el valor buscado. Si el valor buscado es igual al elemento del medio, su posición en el arreglo es retornada. Si el valor buscado es menor o mayor que el elemento del medio, la búsqueda continua en la primera o segunda mitad, respectivamente, dejando la otra mitad fuera de consideración.
 
-# Pseudocódigo
+## Pseudocódigo
 
 > Se asume que `A` es un arreglo ordena ascendentemente.
 
@@ -32,7 +32,7 @@ La búsqueda binaria funciona en arreglos ordenados. La búsqueda binaria comien
 15 -     return None // 2 step
 ```
 
-# Descripción
+## Descripción
 
 1. Asignar 0 a `left` y `n` a `right`.
 2. Si $\text{left} > \text{right}$, la búsqueda termina sin encontrar el valor.

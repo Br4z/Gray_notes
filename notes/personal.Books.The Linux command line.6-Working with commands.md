@@ -2,11 +2,11 @@
 id: tvmme18939tpggywggtaceu
 title: 6-Working with commands
 desc: ''
-updated: 1684789872098
+updated: 1686277577546
 created: 1680926055609
 ---
 
-```bash
+```BASH
 type    # Indicate how a command name is interpreted
 which   # Display which executable program will be executed
 help    # Get help for shell builtins
@@ -18,7 +18,7 @@ whatis  # Display one-line manual page descriptions
 alias   # Create an alias for a command
 ```
 
-# What exactly are commands?
+## What exactly are commands?
 
 A command can be one of four different things.
 
@@ -30,90 +30,90 @@ A command can be one of four different things.
 - A shell function
 - An alias
 
-# Identifying commands
+## Identifying commands
 
-- `type`
+### `type`
 
-    Shell builtin that displays the kind of command the shell will execute, given a particular command name.
+Shell builtin that displays the kind of command the shell will execute, given a particular command name.
 
-    ```bash
-    type <command>
+```BASH
+# type <command>
 
-    # ---------------------------------- # ---------------------------------- #
+# ---------------------------------- # ---------------------------------- #
 
-    type type
+type type
 
-    type is a shell builtin
+type is a shell builtin
 
-    # ---------------------------------- # ---------------------------------- #
+# ---------------------------------- # ---------------------------------- #
 
-    type ls
+type ls
 
-    ls is aliased to `ls --color=tty'
+ls is aliased to `ls --color=tty'
 
-    # ---------------------------------- # ---------------------------------- #
+# ---------------------------------- # ---------------------------------- #
 
-    type cp
+type cp
 
-    cp is /bin/cp
-    ```
+cp is /bin/cp
+```
 
-- `which`
+### `which`
 
-    Is used to determine the exact location of a given executable.
+Is used to determine the exact location of a given executable.
 
-    ```bash
-    which ls
+```BASH
+which ls
 
-    /bin/ls
-    ```
+/bin/ls
+```
 
-    `which` works only for executable programs, not builtins or aliases that are substitutes for actual executable programs.
+`which` works only for executable programs, not builtins or aliases that are substitutes for actual executable programs.
 
-    ```bash
-    which cd
+```BASH
+which cd
 
-    /usr/bin/which: no cd in (/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games)
-    ```
+/usr/bin/which: no cd in (/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games)
+```
 
-    > This result is a fancy way of saying "command not found".
+> This result is a fancy way of saying "command not found".
 
-# Getting a command's documentation
+## Getting a command's documentation
 
-## `help`: get help for shell builtins.
+### `help` (get help for shell builtins)
 
-```bash
-help <command>
+```BASH
+# help <command>
 
 # ---------------------------------- # ---------------------------------- #
 
 help cd
 
-cd: cd [-L|[-P [-e]] [-@]] [dir]...
+# cd: cd [-L|[-P [-e]] [-@]] [dir]...
 ```
 
 > When square brackets appear in the description of a command's syntax, they indicate optional items. A vertical bar character indicates mutually exclusive items.
 
-## `--help`: display usage information.
+### `--help` (display usage information)
 
 Many executable programs support a `--help` option that displays a description of the command's supported syntax and options.
 
-```bash
-<command> --help
+```BASH
+# <command> --help
 
 # ---------------------------------- # ---------------------------------- #
 
 mkdir --help
 
-Usage: mkdir [OPTION] DIRECTORY...
-Create the DIRECTORY(ies), if they do not already exist. ...
+# Usage: mkdir [OPTION] DIRECTORY...
+# Create the DIRECTORY(ies), if they do not already exist. ...
 ```
 
-## `man`: display a program's manual page.
+### `man`: (display a program's manual page)
 
 Most executable programs intended for command line use provide a formal piece of documentation called a manual or man page. A special paging program called man is used to view them.
 
-```bash
+```BASH
 man <command>
 ```
 
@@ -126,10 +126,7 @@ Man pages vary somewhat in format, but generally contain the following:
 
 > On most Linux systems, man uses less to display the manual page.
 
-
 The "manual" that man displays is broken into sections and covers not only user commands:
-
-
 
 | Section | Contents                                       |
 |:-------:|------------------------------------------------|
@@ -144,12 +141,12 @@ The "manual" that man displays is broken into sections and covers not only user 
 
 > Sometimes we need to refer to a specific section of the manual to find what we are looking for.
 
-## `apropos`: display appropriate commands.
+### `apropos` (display appropriate commands)
 
 It is also possible to search the list of man pages for possible matches based on a search term.
 
-```bash
-apropos <term>
+```BASH
+# apropos <term>
 
 # ---------------------------------- # ---------------------------------- #
 
@@ -162,7 +159,7 @@ The first field in each line of output is the name of the man page, and the seco
 
 > The `man` command with the `-k` option performs the same function as `apropos`.
 
-## `whatis`: Display one-line manual page descriptions.
+### `whatis` (display one-line manual page descriptions)
 
 Displays the name and a one-line description of a `man` page matching a specified keyword.
 
@@ -172,7 +169,7 @@ Displays the name and a one-line description of a `man` page matching a specifie
 >
 > On the other hand, it is very accurate and concise, as well as being extremely complete.
 
-## `info`: display a program's info entry.
+### `info` (display a program's info entry)
 
 The GNU Project provides an alternative to man pages for their programs, called info. Info manuals are displayed with a reader program named **info**.
 
@@ -180,8 +177,8 @@ The GNU Project provides an alternative to man pages for their programs, called 
 
 The info program reads info files, which are tree structured into individual **nodes**, each containing a single topic. Info files contain hyperlinks that can move you from node to node. A hyperlink can be identified by its leading asterisk and is activated by placing the cursor upon it and pressing `ENTER`.
 
-```bash
-info <command>
+```BASH
+# info <command>
 ```
 
 |          Command          | Action                                                                  |
@@ -197,53 +194,53 @@ info <command>
 
 > Most of the command line programs we have discussed so far are part of the GNU Project's coreutils package.
 
-## README and other program documentation files
+### README and other program documentation files
 
 Many software packages installed on your system have documentation files residing in the `/usr/share/doc` directory.
 
-# Creating our own commands with alias
+## Creating our own commands with alias
 
 It's possible to put more than one command on a line by separating each command with a semicolon:
 
-```bash
-command1; command2; command3
+```BASH
+# command1; command2; command3
 
 cd /usr; ls; cd -
 ```
 
 1. Name availability verification.
 
-    ```bash
-    type test
+	```BASH
+	type test
 
-    test is a shell builtin
+	# test is a shell builtin
 
-    # ---------------------------------- # ---------------------------------- #
+	# ---------------------------------- # ---------------------------------- #
 
-    type foo
+	type foo
 
-    bash: type: foo: not found
-    ```
+	# bash: type: foo: not found
+	```
 
 2. Alias creation.
 
-    ```bash
-    alias <alias name>='<string>'
+	```BASH
+	# alias <alias name>='<string>'
 
-    # ---------------------------------- # ---------------------------------- #
+	# ---------------------------------- # ---------------------------------- #
 
-    alias foo='cd /usr; ls; cd -'
+	alias foo='cd /usr; ls; cd -'
 
-    # ---------------------------------- # ---------------------------------- #
+	# ---------------------------------- # ---------------------------------- #
 
-    type foo
+	type foo
 
-    foo is aliased to `cd /usr; ls; cd -'
-    ```
+	# foo is aliased to `cd /usr; ls; cd -'
+	```
 
 3. Alias removal.
 
-    ```bash
+    ```BASH
     unalias foo
 
     # ---------------------------------- # ---------------------------------- #
@@ -255,10 +252,10 @@ cd /usr; ls; cd -
 
 While we purposefully avoided naming our alias with an existing command name, it is not uncommon to do so. This is often done to apply a commonly desired option to each invocation of a common command.
 
-```bash
+```BASH
 type ls
 
-ls is aliased to `ls --color=tty'
+# ls is aliased to `ls --color=tty'
 
 # ---------------------------------- # ---------------------------------- #
 

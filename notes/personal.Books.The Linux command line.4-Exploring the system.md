@@ -2,38 +2,37 @@
 id: utea9yv49m2umusqurvte3i
 title: 4-Exploring the system
 desc: ''
-updated: 1684789284903
+updated: 1686277470115
 created: 1680491611722
 ---
 
-```bash
+```BASH
 ls   # List directory contents
 file # Determinate file type
 less # View file contents
 ```
 
-# More fun with ls
+## More fun with ls
 
 The `ls` command is probably the most used command, and for good reason. With it, we can see directory contents and determine a variety of important file and directory attributes.
 
-```bash
-ls <path>
-ls <path> <path> # We can even specify multiple directories
-ls -l            # We changed the output to the long format.
+```BASH
+# ls <path>
+# ls <path> <path> We can even specify multiple directories
+# ls -l            We changed the output to the long format.
 ```
 
-## Options and arguments
+### Options and arguments
 
 This brings us to a very important point about how most commands work. Commands are often followed by one or more **options** that modify their behavior and, further, by one or more **arguments**.
 
-```bash
+```BASH
 command -options arguments
 ls -lt           # Show the long format and sort it by modification time
 ls -lt -reverse  # Reverse the order of the sort
 ```
 
 > Command options, like filenames on Linux, are case-sensitive.
-
 
 | Option |   Long option    |                                                                                                          Description                                                                                                          |
 |--------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -47,12 +46,11 @@ ls -lt -reverse  # Reverse the order of the sort
 | -S     |                  | Sort results by file size.                                                                                                                                                                                                    |
 | -t     |                  | Sort by modification time.                                                                                                                                                                                                    |
 
-
-## A longer look at long format
+### A longer look at long format
 
 As we saw earlier, the `-l` option causes ls to display its results in long format. This format contains a great deal of useful information. Here is an example from an Ubuntu system:
 
-```bash
+```BASH
 -rw-r--r-- 1 root root 32059 2017-04-03 11:05 oo-cd-cover.odf
 ```
 
@@ -66,9 +64,9 @@ As we saw earlier, the `-l` option causes ls to display its results in long form
 | 2017-04-03 11:05 | Date and time of the file's last modification.                                                                                                                                                                                                                                                                                                     |
 | oo-cd-cover.odf  | Name of the file.                                                                                                                                                                                                                                                                                                                                  |
 
-## Determining a File's Type with file
+## Determining a file's Type with file
 
-```bash
+```BASH
 file <file path> # Will print a brief description of the file's contents
 
 # ---------------------------------- # ---------------------------------- #
@@ -117,7 +115,7 @@ Once started, the less program allows us to scroll forward and backward through 
 > less falls into the class of programs called pagers, programs that allow the easy viewing of long text documents in a page-by-page manner. Whereas the more program could only page forward, the less program allows paging both forward and backward and has many other features as well.
 >
 
-### Taking a Guided Tour
+## Taking a guided tour
 
 The file system layout on a Linux system is much like that found on other Unix-like systems. The design is actually specified in a published standard called the **Linux** **Filesystem** **Hierarchy** Standard. Not all Linux distributions conform to the standard exactly, but most come pretty close.
 
@@ -156,16 +154,16 @@ The file system layout on a Linux system is much like that found on other Unix-l
 
 ## Symbolic Links
 
-```bash
+```BASH
 lrwxrwxrwx 1 root root 11 2018-08-11 07:34 libc.so.6 -> libc-2.6.so
 ```
 
 Notice how the first letter of the listing is l and the entry seems to have two filenames? This is a special kind of a file called a symbolic link (also known as a soft link or symlink). In most Unix-like systems, it is possible to have a file referenced by multiple names.
 
-## Hard Links
+### Hard Links
 
 Hard links also allow files to have multiple names, but they do it in a different way.
 
-## Summing Up
+### Summing Up
 
 One thing you should take away from this is how open the system is. In Linux there are many important files that are plain human-readable text. Unlike many proprietary systems, Linux makes everything available for examination and study.

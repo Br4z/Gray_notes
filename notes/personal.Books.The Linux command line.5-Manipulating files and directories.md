@@ -2,17 +2,17 @@
 id: nvz60210ewd6nfwxwnfst0w
 title: 5-Manipulating files and directories
 desc: ''
-updated: 1684790017793
+updated: 1686277467576
 created: 1680558212222
 ---
 
 - `mkdir`  create directories
 
-    ```bash
-    mkdir dir1 dir2 dir3 # would create three directories named dir1, dir2, and dir3
-    ```
+	```BASH
+	mkdir dir1 dir2 dir3 # would create three directories named dir1, dir2, and dir3
+	```
 
-# Wildcards
+## Wildcards
 
 (also known as **globbing**) allows you to select filenames based on patterns of characters.
 
@@ -35,19 +35,18 @@ created: 1680558212222
 > **Wildcards work in the GUI, too**
 >
 > Wildcards are especially valuable not only because they are used so frequently on the command line but because they are also supported by some graphical file managers.
-
 > **Characters ranges**
 >
 > These are traditional Unix notations and worked in older versions of Linux as well. They can still work, but you have to be careful with them because they will not produce the expected results unless properly configured.
 
-# `cp` (copy Files and Directories)
+## `cp` (copy files and directories)
 
-```bash
-cp item1 item2       # Copies the single file or directory item1 to the file or directory item2
-cp item... directory # Copies multiple items (either files or directories) into a directory
+```BASH
+cp item1 item2           # Copies the single file or directory item1 to the file or directory item2
+# cp item... <directory> # Copies multiple items (either files or directories) into a directory
 ```
 
-## Useful Options
+### Useful options (`cp`)
 
 |        Option         |                                                                                                                                    Meaning                                                                                                                                    |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -57,15 +56,14 @@ cp item... directory # Copies multiple items (either files or directories) into 
 | `-u`, `--update`      | When copying files from one directory to another, only copy files that either don't exist or are newer than the existing corresponding files in the destination directory. This is useful when copying large numbers of files as it skips files that don't need to be copied. |
 | `-v`, `--verbose`     | Display informative messages as the copy is performed.                                                                                                                                                                                                                        |
 
-# `mv`  (move/rename files and directories)
+## `mv`  (move/rename files and directories)
 
-```bash
-mv item1 item2       # To move or rename the file or directory item1 to item2
-mv item... directory # To move one or more items from one directory to another.
+```BASH
+mv item1 item2           # To move or rename the file or directory item1 to item2
+# mv item... <directory> # To move one or more items from one directory to another.
 ```
 
-## Useful Options
-
+### Useful options (`mv`)
 
 |        Option        |                                                                                     Meaning                                                                                     |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -73,8 +71,9 @@ mv item... directory # To move one or more items from one directory to another.
 | `-u`, `--update`      | When moving files from one directory to another, only move files that either don't exist or are newer than the existing corresponding files in the destination directory.        |
 | `-v`, `--verbose`     | Display informative messages as the copy is performed.                                                                                                                           |
 
+## `rm` (remove files and directories)
 
-# `rm` (remove files and directories)
+### Useful options (`rm`)
 
 | Option                | Meaning                                                                                                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -83,21 +82,20 @@ mv item... directory # To move one or more items from one directory to another.
 | `-f`, `--force`       | Ignore nonexistent files and do not prompt. This overrides the `--interactive` option.                                                                                  |
 | `-v`, `--verbose`     | Display informative messages as the deletion is performed.                                                                                                              |
 
-
 > **Be carefully with `rm`!**
 >
 > Unix-like operating systems such as Linux do not have an undelete command. Once you delete something with rm, it's gone. Linux assumes you're smart and you know what you're doing.
 >
 > Be particularly careful with wildcards. Here is a useful tip: whenever you use wildcards with `rm` (besides carefully checking your typing!), test the wildcard first with `ls`.
 
-# `ln` (create links)
+## `ln` (create links)
 
-```bash
-ln file link    # Creates a hard link
-ln -s item link # Creates a symbolic link (where item is either a file or a directory.)
+```BASH
+# ln <file> <link>    Creates a hard link
+# ln -s <item> <link> Creates a symbolic link (where item is either a file or a directory)
 ```
 
-## Hard links
+### Hard links
 
 Hard links are the original Unix way of creating links, compared to symbolic links, which are more modern. By default, every file has a single hard link that gives the file its name. When we create a hard link, we create an additional directory entry for a file. Hard links have two important limitations.
 
@@ -107,15 +105,15 @@ Hard links are the original Unix way of creating links, compared to symbolic lin
 
 A hard link is indistinguishable from the file itself. Unlike a symbolic link, when you list a directory containing a hard link, you will see no special indication of the link. When a hard link is deleted, the link is removed, but the contents of the file itself continue to exist (that is, its space is not deallocated) until all links to the file are deleted. It is important to be aware of hard links because you might encounter them from time to time, but modern practice prefers symbolic links.
 
-## Symbolic links
+### Symbolic links
 
 Symbolic links were created to overcome the limitations of hard links. They work by creating a special type of file that contains a text pointer to the referenced file or directory. In this regard, they operate in much the same way as a Windows shortcut, though of course they predate the Windows feature by many years.
 
 A file pointed to by a symbolic link and the symbolic link itself are largely indistinguishable from one another.
 
-# Building a playground
+## Building a playground
 
-## Creating hard links
+### Creating hard links
 
 When thinking about hard links, it is helpful to imagine that files are made up of two parts.
 
@@ -127,12 +125,12 @@ When we create hard links, we are actually creating additional name parts that a
 
 > The `ls` command has a way to reveal this information. It is invoked with the `-i` option (in this version of the listing, the first field is the inode number).
 
-## Creating symbolic links
+### Creating symbolic links
 
 Notice, that the length of the symbolic link file is the number of characters in the string to the file which it is pointing (**path**).
 
-```bash
-ln -s <file path> <symbolic link path>
+```BASH
+# ln -s <file path> <symbolic link path>
 ```
 
 > The `<file path>`, can be a relative (of the symbolic link path) or absolute path.
@@ -141,8 +139,7 @@ In most cases, using relative pathnames is more desirable because it allows a di
 
 When we create a symbolic link, we are creating a text description of where the target file is relative to the symbolic link.
 
-
-## Removing files and directories
+### Removing files and directories
 
 Most Linux distributions configure ls to display broken links. The presence of a broken link is not in and of itself dangerous, but it is rather messy. If we try to use a broken link, we will see `No such file or directory` error.
 

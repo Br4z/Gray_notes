@@ -2,7 +2,7 @@
 id: 3wteziy120nbzkpr80vrxyk
 title: 7-Redirection
 desc: ''
-updated: 1684790089753
+updated: 1685225366270
 created: 1683928108898
 ---
 
@@ -17,11 +17,11 @@ tail # Output the last part of a file
 tee  # Read from standard input and write to standard output files
 ```
 
-# Standard input, output, and error
+## Standard input, output, and error
 
 Keeping with the Unix theme of "everything is a file", programs such as **ls** actually send their results to a special file called **standard output** (often expressed as **stdout**) and their status messages to another file called **standard error** (**stderr**). By default, both standard output and standard error are linked to the screen and not saved into a disk file.
 
-# Redirecting standard output
+## Redirecting standard output
 
 I/O redirection allows us to redefine where standard output goes. To redirect standard output to another file instead of the screen, we use the `>` redirection operator followed by the name of the file.
 
@@ -70,7 +70,7 @@ ls -l /usr/bin >> ls-output.txt
 
 > We repeated the command three times, resulting in an output file three times as large.
 
-# Redirecting standard error
+## Redirecting standard error
 
 ```bash
 0 # Standard input
@@ -82,7 +82,7 @@ ls -l /usr/bin >> ls-output.txt
 ls -l /bin/usr 2> ls-error.txt
 ```
 
-## Redirecting standard output and standard error to one file
+### Redirecting standard output and standard error to one file
 
 ```bash
 <command> > <existing file> 2>&1
@@ -94,8 +94,7 @@ Using this method, we perform two redirections. First we redirect standard outpu
 
 > Notice that the order of the redirections is significant
 >
-> The redirection of standard error must always occur after redirecting standard
-output or it doesn’t work.
+> The redirection of standard error must always occur after redirecting standard output or it doesn't work.
 
 Recent versions of bash provide a second, more streamlined method for performing this combined redirection, shown here:
 
@@ -107,7 +106,7 @@ ls -l /bin/usr &> ls-output.txt
 ls -l /bin/usr &>> ls-output.txt # You can also append
 ```
 
-## Disposing of unwanted output
+### Disposing of unwanted output
 
 The system provides a way to do this by redirecting output to a special file called `/dev/null`. This file is a system device often referred to as a **bit bucket**, which accepts input and does nothing with it. To suppress error messages from a command, we do this:
 
@@ -115,9 +114,9 @@ The system provides a way to do this by redirecting output to a special file cal
 ls -l /bin/usr 2> /dev/null
 ```
 
-# Redirecting standard input
+## Redirecting standard input
 
-## `cat`
+### `cat`
 
 ```bash
 cat <file path>
@@ -141,13 +140,13 @@ cat movie.mpeg.0* > movie.mpeg
 
 ---
 
-If we enter cat with no arguments, it reads from standard input, and since standard input is, by default, attached to the keyboard, it’s waiting for us to type something. If we typed something and press `CTRL + d` to tell cat that it has reached end of file (EOF) on standard input.
+If we enter cat with no arguments, it reads from standard input, and since standard input is, by default, attached to the keyboard, it's waiting for us to type something. If we typed something and press `CTRL + d` to tell cat that it has reached end of file (EOF) on standard input.
 
 > We can use this behavior to create short text files.
 
 ---
 
-Let’s try redirecting standard input.
+Let's try redirecting standard input.
 
 ```bash
 cat < lazy_dog.txt
@@ -306,7 +305,7 @@ Feb 8 14:25:36 twin4 su(pam_unix)[29279]: session opened for user root by me(uid
 
 > The promp won't be available until you press `CTRL + c`.
 
-#### `tea`
+### `tea`
 
 The `tea` program reads standard input and copies it to both standard output (allowing the data to continue down the pipeline) and to one or more files. This is useful for capturing a pipeline's contents at an intermediate stage of processing.
 

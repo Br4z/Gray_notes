@@ -2,11 +2,11 @@
 id: 49yuppzbulwsg846tjqxn40
 title: 6-Funciones de orden superior
 desc: ''
-updated: 1680403083139
+updated: 1685210543506
 created: 1680400899813
 ---
 
-> "*Tzu-li y Tzu-ssu estaban jactándose del tamaño de sus ultimos programas. ‘Doscientas mil líneas’, dijo Tzu-li, ‘sin contar los comentarios!’ Tzu-ssu respondió, ‘Pssh, el mío tiene casi un **millón** de líneas ya.’ El Maestro Yuan-Ma dijo, ‘Mi mejor programa tiene quinientas líneas.’ Al escuchar esto, Tzu-li y Tzu-ssu fueron iluminados.*" - Master Yuan-Ma, *The Book of Programming*.
+> "*Tzu-li y Tzu-ssu estaban jactándose del tamaño de sus ultimos programas. 'Doscientas mil líneas', dijo Tzu-li, 'sin contar los comentarios!' Tzu-ssu respondió, 'Pssh, el mío tiene casi un **millón** de líneas ya.' El Maestro Yuan-Ma dijo, ‘Mi mejor programa tiene quinientas líneas.' Al escuchar esto, Tzu-li y Tzu-ssu fueron iluminados.*" - Master Yuan-Ma, *The Book of Programming*.
 
 
 > "*Hay dos formas de construir un diseño de software: Una forma es hacerlo tan simple de manera que no haya deficiencias obvias, y la otra es hacerlo tan complicado de manera que obviamente no haya deficiencias.*" - C.A.R. Hoare, *1980 ACM Turing Award Lecture*.

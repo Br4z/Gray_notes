@@ -2,7 +2,7 @@
 id: np8y3ula9232o3k9xav5vtk
 title: 6-VLSM y IPV6
 desc: ''
-updated: 1682878161733
+updated: 1686161038408
 created: 1682721907826
 ---
 
@@ -30,11 +30,11 @@ created: 1682721907826
         - IP red:
 
             $$
-            \begin{align*}
-                &172.16  &.0        &.0 \\
-                &255.255 &.11100000 &.0 \\
-                &= 172.16.0.0 = 172.16.0.0
-            \end{align*}
+            \begin{array}{lllll}
+                  &172. &16.  &0.        &0 \\
+                  &255. &255. &11100000. &0 \\
+                = &172. &16.  &0.        &0 = 172.16.0.0
+            \end{array}
             $$
 
         - Broadcast:
@@ -280,7 +280,6 @@ created: 1682721907826
 
         Por lo que la siguiente red empezara en 172.31.120.0
 
-
 3. Divida la red 192.168.200.0/24 en subredes para cada área así:
 
     - Estudiantes: 100 hosts
@@ -416,7 +415,7 @@ created: 1682721907826
 
         Por lo que la siguiente red empezara en 192.168.200.240
 
-5. Comprima las siguientes direcciones IPV6 con la regla de omitir ceros:
+4. Comprima las siguientes direcciones IPV6 con la regla de omitir ceros:
 
     - 2001:0000:0000:ABCD:0000:0000:0010:0100
 

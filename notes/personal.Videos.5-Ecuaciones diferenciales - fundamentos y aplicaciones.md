@@ -2,14 +2,14 @@
 id: uatu1g57sxlustxl5t0uawn
 title: '5-Ecuaciones diferenciales: fundamentos y aplicaciones'
 desc: ''
-updated: 1684253358690
+updated: 1685734053072
 created: 1684082306107
 video_title: ECUACIONES DIFERENCIALES - Fundamentos y Aplicaciones | El Traductor
 date: 2023-05-13
 source: https://www.youtube.com/watch?v=MdKOjS8-oNw&t
 ---
 
-# EDO 1er orden de variables separables
+## EDO 1er orden de variables separables
 
 $$
 {y}' - y = 0 \quad \frac{dy}{dx} = y \quad \frac{1}{y} dy = dx \\[10 pt]
@@ -25,7 +25,7 @@ $$
 y(0) = 1 = ke^0 = k \quad y = e^x \text{ para la condición dada}
 $$
 
-## Ejemplo
+### Ejemplo (EDO 1er orden de variables separables)
 
 Si tenemos que la tasa de crecimiento de una población es proporcional al tamaño de la población:
 
@@ -41,7 +41,7 @@ $$
 P = ke^{\mu t} \quad P(0) = ke^0 = k \text{ corresponde a la población inicial}
 $$
 
-# EDO homogénea
+## EDO homogénea
 
 Decimos que una EDO ($g(x,y)$) es homogénea si cumple lo siguiente:
 
@@ -51,7 +51,7 @@ $$
 
 > Donde $n$ corresponde al orden de homogeneidad.
 
-## Ejemplo
+### Ejemplo (EDO homogénea)
 
 - $g(x,y) = x^2 + xy$
 
@@ -95,7 +95,7 @@ $$
 
 Una vez encontremos el valor de $z$ reemplazamos en el cambio de variable que hicimos para hallar $y$.
 
-## Ejemplo
+### Ejemplo
 
 - $(x^2 - 2y^2) dx + xy dy = 0$
 
@@ -131,7 +131,7 @@ Una vez encontremos el valor de $z$ reemplazamos en el cambio de variable que hi
 
     Si reemplazamos en ${y}' = -\frac{x^2 - 2y^2}{xy}$, la ecuación debería cumplirse.
 
-# EDO lineal de 1er orden
+## EDO lineal de 1er orden
 
 $$
 {y}' + P(x)y = Q(x) \quad (1) \\[10 pt]
@@ -155,7 +155,7 @@ d \left [e^{\int P(x) dx}y \right ] = e^{\int P(x) dx}Q(x) dx \quad \int d \left
 e^{\int P(x) dx} * y = \int e^{\int P(x) dx}Q(x) dx \quad y = \frac{\int e^{\int P(x) dx}Q(x) dx}{e^{\int P(x) dx}}
 $$
 
-## Ejemplo
+### Ejemplo
 
 Suponga la siguiente situación
 

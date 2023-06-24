@@ -2,11 +2,11 @@
 id: jrg14boj8uye0i8617w2f6c
 title: Quick sort
 desc: ''
-updated: 1682984432476
+updated: 1685735153864
 created: 1680902169493
 ---
 
-# Pseudocódigo
+## Pseudocódigo
 
 ```
      partition(A, p, r)
@@ -38,7 +38,7 @@ created: 1680902169493
 
 > La indexación comienza en 1.
 
-# Descripción
+## Descripción
 
 1. Elegir un elemento del conjunto de elementos a ordenar, al que llamaremos **pivote**.
 
@@ -60,7 +60,7 @@ created: 1680902169493
 
 > En la implementación mostrada con el pseudocódigo, nuestro pivote siempre es el primer elemento de la lista.
 
-## Técnicas de elección del pivote
+### Técnicas de elección del pivote
 
 - Tomar un elemento cualquiera como pivote tiene la ventaja de no requerir ningún cálculo adicional, lo cual lo hace bastante rápido. Sin embargo, esta elección "a ciegas" siempre provoca que el algoritmo tenga un orden de $O(n^2)$ para ciertas permutaciones de los elementos en la lista.
 

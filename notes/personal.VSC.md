@@ -2,7 +2,7 @@
 id: 71hhokeue0mejx9ixat6sor
 title: VSC
 desc: ''
-updated: 1681583040681
+updated: 1686604171624
 created: 1679867204411
 ---
 
@@ -72,8 +72,8 @@ Estos nos se le muestran al usuario, como por ejemplo un salto de linea:
 - `Ctrl + Alt + ↑ ↓` añadir cursor encima o abajo.
 - `Shift + Alt + h` mostrar llamado de herencia.
 - `Shift + Alt + ↑ ↓`
-    - Copiar la linea superior o inferior.
-    - Expandir selección.
+		- Copiar la linea superior o inferior.
+		- Expandir selección.
 - `Ctrl + k` Formatear lo seleccionado.
 - `Ctrl + Shift + f` Buscar en archivos.
 - `Ctrl + Enter` Insertar linea abajo.

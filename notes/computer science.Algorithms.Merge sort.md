@@ -2,11 +2,11 @@
 id: 8wmvime0b1ivgv6zrscdt2q
 title: Merge sort
 desc: ''
-updated: 1682984457275
+updated: 1685735144323
 created: 1680827802827
 ---
 
-# Pseudocódigo
+## Pseudocódigo
 
 ```
 // A: array to sort    p: position of the first element (to sort)    r: position of the last element (to sort)
@@ -53,7 +53,7 @@ created: 1680827802827
 
 > La indexación comienza en 1.
 
-# Descripción
+## Descripción
 
 Conceptualmente, el ordenamiento por mezcla funciona de la siguiente manera:
 

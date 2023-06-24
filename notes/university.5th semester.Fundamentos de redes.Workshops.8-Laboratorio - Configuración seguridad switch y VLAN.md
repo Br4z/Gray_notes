@@ -2,7 +2,7 @@
 id: hfslkx9vn7il6mgd29h4ejk
 title: 8-Laboratorio - Configuración seguridad switch y VLAN
 desc: ''
-updated: 1684696409307
+updated: 1686155220882
 created: 1684516521186
 ---
 
@@ -22,7 +22,7 @@ created: 1684516521186
 
     3. Asigne su nombre en minúscula como la contraseña de enable y asigne su apellido en minúscula como la contraseña de consola.
 
-       - enable
+        - enable
 
             > Configuración de consola.
 
@@ -71,7 +71,6 @@ created: 1684516521186
             - `int range fastEthernet 0/<start>-<end>`
             - `switchport mode access`
             - `switchport access vlan <vlan number>`
-
 
     4. Configurar un enlace troncal 802.1Q entre los switches.
 

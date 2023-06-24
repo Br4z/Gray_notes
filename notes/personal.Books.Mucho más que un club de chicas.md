@@ -2,7 +2,7 @@
 id: bduolqlh88obhrwtqg29b16
 title: Mucho más que un club de chicas
 desc: ''
-updated: 1682907107603
+updated: 1685046182714
 created: 1682901978864
 ---
 
@@ -54,7 +54,7 @@ created: 1682901978864
 
 1. ¿Por qué he decidido leer-ver esto?
 
-    Porque me leí el primero y dije: ¿por que no terminar la historia?
+    Porque me leí el primero y dije: ¿por qué no terminar la historia?
 
 2. ¿Qué significo para mí?
 

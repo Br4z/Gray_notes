@@ -2,25 +2,25 @@
 id: t4lux2n7ddmt6vunm0mw4s2
 title: 2-What is the shell?
 desc: ''
-updated: 1684789350853
+updated: 1686277475130
 created: 1680488911028
 ---
 
 When we speak of the command line, we are really referring to the **shell**. The shell is a program that takes keyboard commands and passes them to the operating system to carry out. Almost all Linux distributions supply a shell program from the GNU Project called **bash**. The name is an acronym for **b**ourne-**a**gain **sh**ell, a reference to the fact that bash is an enhanced replacement for sh, the original Unix shell program written by Steve Bourne.
 
-# Terminal emulators
+## Terminal emulators
 
 When using a graphical user interface (GUI), we need another program called a **terminal** **emulator** to interact with the shell. If we look through our desktop menus, we will probably find one. KDE uses konsole, and GNOME uses gnome-terminal, though it's likely called simply Terminal on your menu. A number of other terminal emulators are available for Linux, but they all basically do the same thing: give us access to the shell. You will probably develop a preference for one or another terminal emulator based on the number of bells and whistles it has.
 
-# Making your first keystrokes
+## Making your first keystrokes
 
-```bash
+```BASH
 [me@linuxbox ~]$
 ```
 
 This is called a shell prompt, and it will appear whenever the shell is ready to accept input. While it might vary in appearance somewhat depending on the distribution, it will typically include your `username@machinename`, followed by the current working directory (more about that in a little bit) and a dollar sign. If the last character of the prompt is a hash mark (`#`) rather than a dollar sign, the terminal session has superuser privileges. This means either we are logged in as the root user or we selected a terminal emulator that provides superuser (administrative) privileges.
 
-# Command history
+### Command history
 
 Most Linux distributions remember the last 1,000 commands by default.
 
@@ -32,10 +32,9 @@ Most Linux distributions remember the last 1,000 commands by default.
 >
 > Your graphical desktop environment (most likely KDE or GNOME), in an effort to behave like Windows, probably has its focus policy set to "click to focus." This means for a window to get focus (become active), you need to click on it. This is contrary to the traditional X behavior of "focus follows mouse," which means that a window gets focus just by passing the mouse over it. The window will not come to the foreground until you click on it, but it will be able to receive input. Setting the focus policy to "focus follows mouse" will make the copy-and-paste technique even more useful. Give it a try if you can (some desktop environments, such as Ubuntu's Unity no longer support it). I think if you give it a chance, you will prefer it.
 
+## Try Some Simple Commands
 
-# Try Some Simple Commands
-
-```bash
+```BASH
 date
 cal  # Display the Calendar
 df   # Display the current amount of free space on our disk drives

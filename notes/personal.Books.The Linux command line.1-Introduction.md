@@ -2,11 +2,9 @@
 id: zw9qzcry6hr935ml95d2jmx
 title: 1-Introduction
 desc: ''
-updated: 1680489189433
+updated: 1685212186423
 created: 1680488212598
 ---
-
-# Introduction
 
 Many people speak of "freedom" with regard to Linux, but I don't think most people know what this freedom really means. Freedom is the power to decide what your computer does, and the only way to have this freedom is to know what your computer is doing. Freedom is a computer that is without secrets, one where everything can be known if you care enough to find out.
 

@@ -2,7 +2,7 @@
 id: sd6aa2573ij3x7hob3oify5
 title: 9-Laboratorio - Enrutamiento entre VLAN
 desc: ''
-updated: 1684700969597
+updated: 1686154053236
 created: 1684524158131
 ---
 

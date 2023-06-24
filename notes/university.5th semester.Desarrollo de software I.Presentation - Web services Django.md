@@ -2,13 +2,13 @@
 id: 8mo9hrwcln3t8b1j7u9adf1
 title: Presentation - Web services Django
 desc: ''
-updated: 1684545420759
+updated: 1685490632120
 created: 1684525289544
 ---
 
 > Aunque vayamos a tratar los web services con Django (para la parte práctica), primero tenemos que verlos en general.
 
-# Definición
+## Definición
 
 Cuando hablamos de web services, hacemos referencia a la tecnología que utiliza un conjunto de protocolos y estándares (abiertos) que permiten la comunicación entre aplicaciones o sistemas diferentes a través de la web.
 
@@ -23,7 +23,7 @@ El W3C define un servicio web como:
 
 Un servicio web es un sistema software diseñado para soportar la interacción máquina-a-máquina, a través de una red, de forma interoperable. Cuenta con una interfaz descrita en un formato procesable por un equipo informático (específicamente en **WSDL**), a través de la que es posible interactuar con el mismo mediante el intercambio de mensajes **SOAP**, típicamente transmitidos usando serialización **XML** sobre **HTTP** conjuntamente con otros estándares web.
 
-## Glosario
+### Glosario
 
 - XML (eXtensible Markup Language): es un metalenguaje que permite definir lenguajes de marcas desarrollado por el **W3C**.
 
@@ -39,15 +39,15 @@ Un servicio web es un sistema software diseñado para soportar la interacción m
 
     > Podemos utilizarlo para comprobar qué servicios web están disponibles.
 
-# Características
+## Características
 
-## Ventajas
+### Ventajas
 
 - Aportan interoperabilidad entre aplicaciones de software independientemente de sus propiedades o de las plataformas sobre las que se instalen.
 - Los servicios Web fomentan los estándares y protocolos basados en texto, que hacen más fácil acceder a su contenido y entender su funcionamiento.
 - Permiten que servicios y software de diferentes compañías ubicadas en diferentes lugares geográficos puedan ser combinados fácilmente para proveer servicios integrados (es **distribuido**).
 
-## Desventajas
+### Desventajas
 
 - Seguridad
 
@@ -64,7 +64,7 @@ Un servicio web es un sistema software diseñado para soportar la interacción m
 
     > Para el manejo de ellas es recomendable usar herramientas especializadas.
 
-# ¿Cómo funciona?
+## ¿Cómo funciona?
 
 1. El proveedor de servicios envía al publicador del servicio un fichero **WSDL** con la definición del servicio web.
 
@@ -74,7 +74,7 @@ Un servicio web es un sistema software diseñado para soportar la interacción m
 
 4. El fichero **XML** es validado de nuevo por el que pide el servicio, utilizando un fichero **XSD** (XML Schema Definition) para interpretarlo. La información resultante se envía al software y estará lista para ser procesada.
 
-# Esquema (WSDL)
+## Esquema (WSDL)
 
 - Tipos de datos (`<types>`): esta sección define los tipos de datos usados en los mensajes.
 
@@ -82,8 +82,8 @@ Un servicio web es un sistema software diseñado para soportar la interacción m
 
 - Mensajes (`<message>`): aquí definimos los elementos de mensaje.
 
-    -  Cada mensaje puede consistir en una serie de partes lógicas.
-    -  Las partes pueden ser de cualquiera de los tipos definidos en la sección anterior.
+    - Cada mensaje puede consistir en una serie de partes lógicas.
+    - Las partes pueden ser de cualquiera de los tipos definidos en la sección anterior.
 
 - Tipos de puerto (`<portType>`): con este apartado definimos las operaciones permitidas y los mensajes intercambiados en el Servicio.
 
@@ -91,19 +91,19 @@ Un servicio web es un sistema software diseñado para soportar la interacción m
 
 - Servicios (`service`): conjunto de puertos y dirección de los mismos.
 
-    - Esta parte final hace referencia a lo aportado por las secciones anteriores.
+    > Esta parte final hace referencia a lo aportado por las secciones anteriores.
 
 > Con estos elementos no sabemos qué hace un servicio, pero sí disponemos de la información necesaria para interactuar con él (funciones, mensajes de entrada/salida, protocolos...).
 
-# Ejemplos
+## Ejemplos
 
-## Amazon
+### Amazon
 
 Ademá de contar con servicios para su propia empresa, como la posibilidad de hacer consultas simples de los catálogos de Amazon y sitios web de ecommerce que operan en asociación con Amazon a través de su programa de afiliados. También tienen Amazon Web Services (AWS), servicio que brinda acceso a la infraestructura técnica de Amazon.
 
 > AWS se puede implementar utilizando los tipos de servicios web **SOAP** o **REST**, pero la mayoría de las implementaciones de AWS siguen el segundo enfoque.
 
-## Google
+### Google
 
 proporciona una interfaz de servicio web basada en **SOAP** a su motor de búsqueda público para acceder a sus recursos en un modelo de servicios web. De hecho, este web service se denomina API web de Google. Dicha API puede ser usada para:
 
@@ -112,9 +112,9 @@ proporciona una interfaz de servicio web basada en **SOAP** a su motor de búsqu
 - Sugerencias ortográficas.
 - Obtención de una página almacenada en caché.
 
-# Ejemplo practico
+## Ejemplo practico
 
-En general se caracterizan por poder ser  desarrolladas utilizando prácticamente cualquier lenguaje de programación y admiten una variedad de formatos de datos. El único requisito es que se alineen con los siguientes seis principios de diseño de REST:
+En general se caracterizan por poder ser desarrolladas utilizando prácticamente cualquier lenguaje de programación y admiten una variedad de formatos de datos. El único requisito es que se alineen con los siguientes seis principios de diseño de REST:
 
 1. Interfaz uniforme: todas las solicitudes de API para el mismo recurso deben tener el mismo aspecto, sin importar de dónde provenga la solicitud. La API REST debe garantizar que el mismo dato, como el nombre o la dirección de correo electrónico de un usuario, pertenezca a un solo identificador uniforme de recursos (URI). Los recursos no deben ser demasiado grandes, pero deben contener toda la información que el cliente necesite.
 

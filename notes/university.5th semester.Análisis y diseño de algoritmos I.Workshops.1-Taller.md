@@ -2,7 +2,7 @@
 id: 6hcxyqh7qqvama9ratymseq
 title: 1-Taller
 desc: ''
-updated: 1682885651685
+updated: 1687223593735
 created: 1682868818070
 ---
 
@@ -28,7 +28,7 @@ created: 1682868818070
         T(n) = \lg \lg n + 1
         $$
 
-        El costo del segundo `for `está dado por la expresión:
+        El costo del segundo `for`está dado por la expresión:
 
         $$
         1 * 4^i = n \quad 4^i = n \quad i = \log_4 n
@@ -332,11 +332,6 @@ created: 1682868818070
 
     - Determine si este algoritmo es estable asumiendo que puede haber elementos repetidos en el arreglo de entrada
 
-        Si funciona para elementos repetidos, porque en cada iteración del primer `for` `min` se inicializa en el elemento cuya posición determina  que elementos están ordenados:
-
-        - `[1,..., i - 1]`: elementos ordenado
-        - `[i,..., n]`: elementos desordenados
-
-        No importa que haya elementos repetidos, pues al momento de escoger al mínimo intercambiara al primero que encuentre (el elemento más a la izquierda) y luego hará lo mismo con el otro.
+        El algoritmo no es estable, pues no se cumple para las entradas
 
 5. Modifique el algoritmo visto en clase para determinar un orden estadístico de tal forma que se organicen en grupos de tamaño 9 (en lugar de tamaño 5). Realice el respectivo análisis de algoritmo y determine cuál sería su respectivo orden de complejidad.

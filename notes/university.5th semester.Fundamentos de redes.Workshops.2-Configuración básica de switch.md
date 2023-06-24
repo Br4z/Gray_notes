@@ -2,7 +2,7 @@
 id: 19t085yjlvwn0zgri5qyrq9
 title: 2-Configuración básica de switch
 desc: ''
-updated: 1683492847654
+updated: 1685820067261
 created: 1680121276936
 ---
 
@@ -33,7 +33,7 @@ created: 1680121276936
     - ¿Qué comando uso? `password cisco`
 
     > Configuración de consola (`line console 0`).
-
+    >
     > Para que pida la contraseña usamos `login` (también en el modo de configuración global).
 
 7. Proporcione un acceso seguro al modo privilegiado, usando una contraseña encriptada, use su código de estudiante como contraseña
