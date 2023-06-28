@@ -2,7 +2,7 @@
 id: w4z2tq83aceql0ztd94f0nn
 title: 1-Taller Neovim
 desc: ''
-updated: 1686418553541
+updated: 1687829334052
 created: 1682892684931
 video_title: Taller de Neovim 2021
 date: 2023-02-28T00:00:00.000Z
@@ -80,6 +80,9 @@ source: https://www.youtube.com/watch?v=LFIp7-TGmNU
 ## Sustituciones
 
 - `s/,/#/g` sustituye todas las `,` por `#` en la línea actual.
+
 - `%s/,/#/g`sustituye todas las `,` por `#` en todo el fichero.
+
 - `%s\v(def) ([^\(]+)(\([^\)]+\))\3 \2 \1` para invertir las definiciones de las funciones.
+
 - `g/^[^e]\+|[aiou]/d` borrar las palabras que no tengan a la "e" como su única vocal.

@@ -2,7 +2,7 @@
 id: 4gsnv69mdq9zsfb73nztixr
 title: 12-Laboratorio - Acces Control List
 desc: ''
-updated: 1686336011593
+updated: 1687652251890
 created: 1686155275292
 ---
 
@@ -10,49 +10,29 @@ created: 1686155275292
 
 	- `S1`, `S2`, `R1`, `R2` y `R3`.
 
-		> Configuración global.
+		- Contraseña modo privilegiado: brandon.
 
-		1. `hostname <devicename>`.
-		2. `no ip doamin-lookup`.
-		3. `enable secret brandon`.
-		4. Consola.
+		- Contraseña de consola: calderon.
 
-			> Configuración de consola (`line console 0`).
-
-			- `pass calderon`.
-			- `login`.
-
-		5. `banner motd +Warning: you're entering in the device <device name>+`.
-		6. `service password-encription`.
+		![[Guía | university.5th semester.Fundamentos de redes.Workshops.Guía de configuraciones#Configuración-de-parámetros-básicos]]
 
 2. Configuración de acceso por SSH.
 
 	- `S1`, `S2`, `R1`, `R2` y `R3`.
 
-		> Configuración global.
+		- Dominio: `cisco.com`.
 
-		- `ip domain-name cisco.com`.
-		- `username Admin secret 2125974`.
-		- `crypto key generate rsa` (1024 bits).
-		- `line vty 0 4`.
+		- Nombre de usuario: Admin.
 
-		> Configuración de consola (a la que nos debió cambiar el comando `line vty`).
+		- Contraseña del usuario: 2125974.
 
-		- `transport input ssh`.
-		- `login local`.
+		![[Guía | university.5th semester.Fundamentos de redes.Workshops.Guía de configuraciones#Configuración-de-acceso-por-ssh]]
 
 3. Configure el direccionamiento para todos los dispositivos de acuerdo con la tabla de direccionamiento.
 
 	- `R1`, `R2` y `R3`.
 
-		> Configuración global.
-
-		- `int gigabitEthernet  <interface identifier>`.
-		- `ip add <ip> <mask>`.
-		- `description <description>`.
-		- `no sh`.
-
-			> Puede dar error si no hemos configurado las IP de los otros routers.
+		![[Guía | university.5th semester.Fundamentos de redes.Workshops.Guía de configuraciones#Configuración-de-direccionamiento]]
 
 4. Configurar enrutamiento dinámico con OSPF.
 

@@ -2,50 +2,17 @@
 id: hfslkx9vn7il6mgd29h4ejk
 title: 8-Laboratorio - Configuración seguridad switch y VLAN
 desc: ''
-updated: 1686155220882
+updated: 1687738276820
 created: 1684516521186
 ---
 
 1. Configuración de parámetros básicos en switch:
 
-    1. Nombre según la tabla de direccionamiento
+	- Contraseña modo privilegiado: brandon.
 
-        > Configuración global.
+	- Contraseña de consola: calderon.
 
-        - `hostname <name>`
-
-    2. Desactive la búsqueda de DNS.
-
-        > Configuración global.
-
-        - `no ip domain-lookup`
-
-    3. Asigne su nombre en minúscula como la contraseña de enable y asigne su apellido en minúscula como la contraseña de consola.
-
-        - enable
-
-            > Configuración de consola.
-
-            - `enable secret brandon`
-
-        - consola
-
-            > Configuración de consola (`line console 0`).
-
-            - `pass calderon`
-            - `login`
-
-    4. Mensaje de bienvenida con la palabra "Advertencia".
-
-        > Configuración global.
-
-        - `banner motd +Warning: you're entering in the device <device name>+`
-
-    5. Cifre todas las contraseñas de texto no cifrado.
-
-        > Configuración global.
-
-        `service password-encription`
+	![[Guía | university.5th semester.Fundamentos de redes.Workshops.Guía de configuraciones#Configuración-de-parámetros-básicos]]
 
 2. Crear redes VLAN y asignar puertos de switch.
 
@@ -102,16 +69,14 @@ created: 1684516521186
 
     - S1 y S2
 
-        - `int range fastEthernet 0/1-24`
-        - `switchport port-security`
-        - `switchport port-security maximum 2`
+		- Tipo de interfaz: fastEthernet.
 
-            > Configure máximo 2 MAC permitidas por puerto.
+		- Identificador de interfaz: `0/1-24` (rango).
 
-        - `switchport port-security mac-address sticky`
+		- MAC por puerto: 2.
 
-            > Agregar todas las direcciones MAC seguras que se detectan dinámicamente en un puerto.
+		- `mac-address` mode: sticky.
 
-        - `switchport port-security violation restrict`
+		- `violation` mode: restrict.
 
-            > Configure la opción de violación de seguridad para que se envíe un mensaje al log, pero que no deshabilite el puerto.
+		![[Guía | university.5th semester.Fundamentos de redes.Workshops.Guía de configuraciones#Configuración-de-opciones-de-seguridad]]

@@ -2,7 +2,7 @@
 id: qotq7hv49offs07okrs7mkc
 title: 16-Storage media
 desc: ''
-updated: 1687208235168
+updated: 1687659697008
 created: 1686878800561
 ---
 
@@ -86,4 +86,30 @@ Using the `tail` command to monitor the `/var/log/messages` or `/var/log/syslog`
 
 ## Creating new file systems
 
-### Manipulating partitions with fdisk
+### Manipulating partitions with `fdisk`
+
+`fdisk` allow us to interact directly with disk-like devices at a very low level. With it we can edit, delete, and create partitions on the device.
+
+### Creating a new file system with `mkfs`
+
+With `mkfs` (short for "make file system"), we can create file systems in a variety of formats.
+
+## Testing and repairing file systems
+
+Each time the system boots, it routinely checks the
+integrity of the file systems before mounting them. This is done by the `fsck` program (short for "file system check"). The last number in each fstab entry specifies the order in which the devices are to be checked.
+
+In addition to checking the integrity of file systems, fsck can also repair corrupt file systems with varying degrees of success, depending on the amount of damage. On Unix-like file systems, recovered portions of files are placed in the `lost+found` directory, located in the root of each file system.
+
+## Moving data directly to and from devices
+
+While we usually think of data on our computers as being organized into files, it is also possible to think of the data in "raw" form. If we look at a disk
+drive, for example, we see that it consists of a large number of "blocks" of data that the operating system sees as directories and files.
+
+The `dd` copies blocks of data from one place to another.
+
+```BASH
+dd if=input_file of=output_file [bs=block_size [count=blocks]]
+```
+
+> The dd command is very powerful. Though its name derives from "data definition", it is sometimes called "destroy disk" because users often mistype either the if or of specification.

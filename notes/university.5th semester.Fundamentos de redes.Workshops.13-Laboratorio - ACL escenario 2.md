@@ -1,8 +1,8 @@
 ---
 id: y7m3vfbqd2m8fhfleaqj5fi
-title: 13- Laboratorio - ACL escenario 2
+title: 13-Laboratorio - ACL escenario 2
 desc: ''
-updated: 1686512932558
+updated: 1687723056515
 created: 1686508036530
 ---
 
