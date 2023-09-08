@@ -2,7 +2,7 @@
 id: gzvot14se88xtxpbm60casb
 title: Counting sort
 desc: ''
-updated: 1687485193082
+updated: 1688944564511
 created: 1682126031065
 ---
 
@@ -15,16 +15,16 @@ created: 1682126031065
 2 -         C[i] <- 0
 
         // Index counting
-3 -     for i <- 1 to length(A)
+3 -     for i <- 1 to A.length
 4 -         C[A[i]] <- C[A[i]] + 1
 
-         // Relative frequency
+        // Relative frequency
 5 -     for i <- 2 to k
 6 -         C[i] <- C[i]  + C[i - 1]
 
         // Assignation
-7 -     for i <- length(A) down to 1
-8 -         B[C[A[i]]] <- A[j]
+7 -     for i <- A.length down to 1
+8 -         B[C[A[i]]] <- A[i]
 9 -         C[A[i]] <- C[A[i]] - 1
 ```
 

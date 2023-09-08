@@ -1,12 +1,11 @@
 ---
 id: uatu1g57sxlustxl5t0uawn
-title: '5-Ecuaciones diferenciales: fundamentos y aplicaciones'
-desc: ''
-updated: 1685734053072
+title: 'Ecuaciones diferenciales: fundamentos y aplicaciones'
+desc: >-
+  Title: ECUACIONES DIFERENCIALES - Fundamentos y Aplicaciones | El Traductor
+  URL: https://www.youtube.com/watch?v=MdKOjS8-oNw&t
+updated: 1691004810397
 created: 1684082306107
-video_title: ECUACIONES DIFERENCIALES - Fundamentos y Aplicaciones | El Traductor
-date: 2023-05-13
-source: https://www.youtube.com/watch?v=MdKOjS8-oNw&t
 ---
 
 ## EDO 1er orden de variables separables
@@ -159,7 +158,7 @@ $$
 
 Suponga la siguiente situación
 
-![Brine problem](./assets/Personal/Videos/5-%20Brine_problem.jpg)
+![Brine problem](./assets/Personal/Videos/Ecuaciones%20diferenciales%20fundamentos%20y%20aplicaciones-%20Brine_problem.jpg)
 
 $$
 \text{siendo $y(t)$ la cantidad de sal en un instante $t$} \\[10 pt]

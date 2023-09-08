@@ -2,7 +2,7 @@
 id: a7g0m20nphyy8j7dsccct60
 title: 3-Ejercicios - Árboles binarios de búsqueda
 desc: ''
-updated: 1687660575450
+updated: 1688437763718
 created: 1687223901970
 ---
 
@@ -14,4 +14,30 @@ created: 1687223901970
 
 2. Así como es posible generar el listado con los elementos ordenados a partir de un árbol binario de búsqueda con costo lineal, ¿Es posible a partir de un heap generar el listado con los elementos ordenados con costo lineal? ¿Sí esto fuera posible, cómo afectaría esto al costo de ordenar usando montículos?
 
-	La primera afirmacion se justifica en el recorrido **in-order** de una ABB.
+	La primera afirmacion se justifica en el recorrido **in-order** de una ABB. Enunciar una mejor [[complejidad | university.5th semester.Análisis y diseño de algoritmos I.Classes.9-Heap sort#Complejidad-heap_sortA]] a la que ya enuncia el procedimiento `heap_sort` podría considerarse justificación suficiente.
+
+3. Es posible ordenar un conjunto de $n$ números construyendo un árbol binario de búsqueda aplicando la función insert repetidamente y entonces generando el listado in-order (lo anterior como fue visto en clase).
+
+	- ¿Cuál sería el pseudocódigo de este algoritmo?
+
+		Aplicaríamos el procedimiento [[`tree_insert` | university.5th semester.Análisis y diseño de algoritmos I.Classes.12-Árboles binarios de búsqueda#tree_insertT-z]] a todos los elementos partiendo de un árbol vacío, para posteriormente retornar el recorrido **in-roder** (lista ordenada).
+
+		```
+		sort(n)
+			tree = NIL
+
+			for i = 1 to n
+				insert(tree, n[i])
+
+			return inorder_walk(tree)
+		```
+
+	- ¿Cuál sería el orden de complejidad?
+
+		Tanto en el mejor como en el peor caso la complejidad es $O(n) * n + O(n) = O(n^2)$ (la suma de la complejidad del ciclo y la del `inorder_walk` respectivamente).
+
+4. Muestre que cualquier árbol binario de búsqueda con $n$ nodos puede ser transformado en cualquier otro árbol binario de búsqueda con los mismos $n$ nodos usando $O(n)$ rotaciones.
+
+	> Ayuda: Primero se puede demostrar que con máximo $n - 1$ rotaciones hacia la derecha se pueden transformar cualquier árbol binario de búsqueda con $n$ nodos en un árbol binario de búsqueda que corresponde a una cadena extendida hacia la derecha.
+
+	Partiendo de la ayuda como verdadera, podemos decir que un ABB arbitrario $B$ tras máximo $n - 1$ rotaciones hacia la derecha puede terminar como una cadena extendida hacia la derecha, lo que implica a su vez que con $n - 1$ rotaciones hacia la izquierda se puede volver al ABB original (un ABB arbitrario).

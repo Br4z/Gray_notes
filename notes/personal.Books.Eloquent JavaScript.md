@@ -2,11 +2,11 @@
 id: ds9iirj22bsyh0ts8xjlapl
 title: Eloquent JavaScript
 desc: ''
-updated: 1680467665325
+updated: 1689995457172
 created: 1680395952230
 ---
 
-# Chapters
+## Capítulos
 
 1. [[Introducción | personal.Books.Eloquent JavaScript.1-Introducción]]
 

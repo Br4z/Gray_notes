@@ -1,18 +1,19 @@
 ---
 id: x02s8i6lsifil3h3qkrdara
-title: 4-The pacman command
-desc: ''
-updated: 1686794196669
+title: The pacman command
+desc: >-
+  Title: Linux Crash Course - The Pacman Command
+  URL: https://www.youtube.com/watch?v=HD7jJEh4ZaM
+updated: 1689626325766
 created: 1683505681650
-video_title: Linux Crash Course - The Pacman Command
-date: 2023-05-07T00:00:00.000Z
-source: https://www.youtube.com/watch?v=HD7jJEh4ZaM
 ---
 
 - `pacman -Syy`
 
 		- `S`: sync.
+
 		- `y`: refresh the packets database.
+
 		- `y`: force to refresh the local databases (even if it's up to date).
 
 - When you're using pacman and you attempt to do any operation that requires synchronization (such as installing a package from a repository), it will used the servers described in the file `/etc/pacman.d/mirrorlist` (trying from the top to the bottom).
@@ -28,13 +29,15 @@ source: https://www.youtube.com/watch?v=HD7jJEh4ZaM
 - `pacman -Qdt`: find orphan packages.
 
 		- `Q`: query.
+
 		- `d`: skips dependency checks.
+
 		- `t`: limit the results to orphan packages.
 
 - `pacman -Syu`
 
 		- `u`: update.
 
-    > Two weeks between upgrades is a good amount of time.
+	> Two weeks between upgrades is a good amount of time.
 
 - It's a good idea regenerate your mirrorlist often (every month).

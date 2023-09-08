@@ -1,17 +1,16 @@
 ---
 id: 3wy7im5ivrfigjxpv3xmhsq
-title: 2-Linux logical volume manager
-desc: ''
-updated: 1683593294368
+title: Linux logical volume manager
+desc: >-
+  Title: Linux Logical Volume Manager (LVM) Deep Dive Tutorial
+  URL: https://www.youtube.com/watch?v=MeltFN-bXrQ
+updated: 1691004754261
 created: 1682892837507
-video_title: Linux Logical Volume Manager (LVM) Deep Dive Tutorial
-date: 2023-03-01T00:00:00.000Z
-source: https://www.youtube.com/watch?v=MeltFN-bXrQ
 ---
 
-![LMV basic structure](./assets/Personal/Videos/1-%20lmv_basic_structure.png)
+![LMV basic structure](./assets/Personal/Videos/Linux%20logical%20volume%20manager-%20lmv_basic_structure.png)
 
-# Commands
+## Commands
 
 - `pvcreate /dev/<disk>`: convert the new disk to an LVM physical volume.
 
@@ -25,7 +24,7 @@ source: https://www.youtube.com/watch?v=MeltFN-bXrQ
 
 - `resize2fs /dev/mapper/<volume group name>-<logical volume name>`: grow the file system to match the newly available space.
 
-    > You can add the flag `--resize` to the lvextend command to do the 2 things at once.
+	> You can add the flag `--resize` to the lvextend command to do the 2 things at once.
 
 - `pvdisplay`: displays information about the physical volumes.
 

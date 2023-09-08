@@ -1,11 +1,11 @@
 ---
 id: 2ypp7tybiju0e2isis2yb0s
-title: 6-Curso POSTGRESQL
-desc: ''
-updated: 1685734390950
-playlist_title: ►[ Curso de PostgreSQL ]◄ APRENDE a USAR esta BASE de DATOS desde CERO
-date: 2023-06-02
-source: https://www.youtube.com/playlist?list=PL8gxzfBmzgex2nuVanqvxoTXTPovVSwi2
+title: Curso POSTGRESQL
+desc: >-
+  Title: ►[ Curso de PostgreSQL ]◄ APRENDE a USAR esta BASE de DATOS desde CERO
+  URL: https://www.youtube.com/playlist?list=PL8gxzfBmzgex2nuVanqvxoTXTPovVSwi2
+updated: 1689626508442
+created: 1689626475907
 ---
 
 ## 2

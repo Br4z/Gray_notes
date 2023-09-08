@@ -1,8 +1,10 @@
 ---
 id: cetjth3wbona2geofjabnw5
-title: 7-Curso React
-desc: ''
-updated: 1686018691714
+title: Curso React
+desc: >-
+  Title: Aprende React Desde Cero - Curso de React Con Proyectos
+  URL: https://www.youtube.com/watch?v=6Jfk8ic3KVk&t
+updated: 1689626536183
 created: 1685840089151
 ---
 
@@ -134,8 +136,8 @@ Es una expresión de JavaScript que permite desempacar valores de arreglos o pro
 
 ```JSX
 const user = {
-    id: 42,
-    is_verified: true
+	id: 42,
+	is_verified: true
 };
 
 const {id, is_verified} = user;
@@ -147,7 +149,6 @@ console.log(is_verified); // true
 ## `useState`
 
 Es un hook de React que nos permite añadir una variable de estado a nuestro componente.
-
 
 ```JSX
 import {useState} from 'react';

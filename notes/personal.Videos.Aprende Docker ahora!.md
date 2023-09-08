@@ -1,33 +1,32 @@
 ---
 id: m27nuvkj2rfiek3k3wbjiyj
-title: 3-Aprende Docker ahora!
-desc: ''
-updated: 1683505748828
+title: Aprende Docker ahora!
+desc: >-
+  Title: Aprende Docker ahora! curso completo gratis desde cero!
+  URL: https://www.youtube.com/watch?v=4Dko5W96WHg&t
+updated: 1689626380195
 created: 1682892977504
-video_title: Aprende Docker ahora! curso completo gratis desde cero!
-date: 2023-04-30T00:00:00.000Z
-source: https://www.youtube.com/watch?v=4Dko5W96WHg&t
 ---
 
-# Permite
+## Permite
 
 - Desarrolla en equipo con un ambiente controlado (lo que genera menos bugs).
 - Instalar dependencias rápidamente.
 - Hacer despliegues de una forma simple.
 
-# ¿Qué es un contenedor?
+## ¿Qué es un contenedor?
 
 Es una manera de empaquetar nuestras aplicaciones, dicha operación nos permite incluir todas las dependencias y archivos de configuración que tengan, lo que los hace **portables**, y en consecuencia fáciles de compartir.
 
-# ¿Dónde se almacenan?
+## ¿Dónde se almacenan?
 
 En un repositorio de contenedores, pueden ser **privados** o **públicos** (Docker Hub).
 
-# Antes de los contenedores
+## Antes de los contenedores
 
 Las personas que trabajaban en un proyecto usaban sus propios computadores, lo que ocasionaba diferencias en la instalación de dependencias (podría considerarse factor humano) y finalmente propiciaba la aparición de errores. Docker entra a solucionar este problema (automatizar dependencias).
 
-# ¿Qué es una imagen?
+## ¿Qué es una imagen?
 
 Es un empaquetado que contiene:
 
@@ -36,17 +35,17 @@ Es un empaquetado que contiene:
 
 Finalmente, esto es lo que se comparte
 
-# ¿Qué es un contenedor?
+## ¿Qué es un contenedor?
 
 Son capas de imágenes.
 
 > Son livianas en comparación con las máquinas virtuales (mientras que las primeras van en orden de lo MB, las segundas van en orden de GB).
 
-# Virtualización
+## Virtualización
 
 Docker usa el kernel del sistema operativo en el que se está ejecutando, lo que hace que las imágenes de Docker pesen menos.
 
-## Bonus
+### Bonus
 
 Existen tres tipos de virtualización:
 
@@ -56,7 +55,7 @@ Existen tres tipos de virtualización:
 
 Haciendo referencia a como el hardware del **anfitrión** se conecta con el del **cliente**.
 
-# ¿Qué es Docker Desktop?
+## ¿Qué es Docker Desktop?
 
 - Una máquina virtual (corre Linux y ejecuta **contenedores**).
 
@@ -66,13 +65,13 @@ Haciendo referencia a como el hardware del **anfitrión** se conecta con el del 
 
 - Corre de forma nativa en Windows WSL 2.
 
-# Instalación
+## Instalación
 
 Entramos a la [página](https://www.docker.com/) y seleccionamos la version correspondiente a nuestro SO.
 
-# Comandos
+## Comandos
 
-## Imágenes
+### Imágenes
 
 Debemos asegurarnos de que Docker esté ejecutándose.
 
@@ -80,7 +79,7 @@ Debemos asegurarnos de que Docker esté ejecutándose.
 - `docker pull <image>:<version>`: descargar una imagen.
 - `docker image rm <image>:<version>`: eliminar una imagen.
 
-## Contadores
+### Contadores
 
 - `docker create <image>`: crear un contenedor.
 
@@ -110,15 +109,15 @@ Debemos asegurarnos de que Docker esté ejecutándose.
 
 > Para referirnos a un contenedor, basta con poner algunos dígitos del ID.
 
-# Port mapping
+## Port mapping
 
 Consiste en asignar puertos de nuestra máquina (**anfitrión**) a los puertos de los contenedores (**huéspedes**). Esto se hace con el siguiente modificador en la creación del contenedor `-p <host port>:<guest port>` o `-p <guest port>` (para dejar que Docker decida), los "enlaces" que hagamos se verán cuando listemos los contenedores.
 
-# Configuración de contenedores
+## Configuración de contenedores
 
 La documentación de los contenedores se encuentra en su respectiva página dentro del [Docker Hub](https://hub.docker.com/).
 
-## Ejemplo (conexión a una base de datos de Mongo)
+### Ejemplo (conexión a una base de datos de Mongo)
 
 1. `docker create -p 27017:27017 --name monguito -e MONGO_INITDB_ROOT_USERNAME=nico -e MONGO_INITDB_ROOT_PASSWORD=password mongo`.
 
@@ -127,21 +126,21 @@ La documentación de los contenedores se encuentra en su respectiva página dent
 2. `docker ps -a`.
 3. `docker start monguito`.
 
-## Dockerfile
+### Dockerfile
 
 Con el propósito de personalizar el despliegue de nuestros contenedores está el archivo `Dockerfile`, su estructura es la siguiente:
 
 ```Dockerfile
 FROM <image>:<image version or label>
 
-RUN mkdir -p /home/app  # Esta ruta se creara dentro del contenedor
+RUN mkdir -p /home/app  ## Esta ruta se creara dentro del contenedor
 
-COPY <host directory> # Estamos copiando el código fuente (del host) al contenedor
+COPY <host directory> ## Estamos copiando el código fuente (del host) al contenedor
 
 CMD [<command>, <argument>]
 ```
 
-### Ejemplo
+#### Ejemplo
 
 ```Dockerfile
 FROM node:18
@@ -155,11 +154,11 @@ EXPOSE 3000
 CMD ["node", "/home/app/index.js"]
 ```
 
-# Redes
+## Redes
 
 Llamamos red a un conjunto de contenedores que están comunicados entre sí.
 
-## Comandos
+### Comandos
 
 - `docker network ls`: listar las redes.
 
@@ -171,7 +170,7 @@ Llamamos red a un conjunto de contenedores que están comunicados entre sí.
 
 - Para crear un contenedor vinculado a una red en específico, hacemos uso del comando normal con el modificador `--network <network name>`
 
-## Ejemplo
+### Ejemplo
 
 Con el fin de tener una [aplicación](https://github.com/nschurmann/mongoapp-curso-docker/blob/main/index.js) en un contenedor y la base de datos en otra, vamos a seguir los siguientes pasos:
 
@@ -193,7 +192,7 @@ Con el fin de tener una [aplicación](https://github.com/nschurmann/mongoapp-cur
 
 > Después de hacer estos pasos deberíamos tener conexión a la aplicación a traves de nuestro puerto 3000.
 
-# Docker compose
+## Docker compose
 
 Es una herramienta que nos facilita la tarea de crear un contenedor, es un archivo llamado `docker-compose.yml` y tiene la siguiente estructura:
 
@@ -213,7 +212,7 @@ services:
             ...
 ```
 
-## Ejemplo
+### Ejemplo
 
 ```docker-compose
 version: "3.9"
@@ -235,11 +234,11 @@ services:
 
 Para ejecutar la configuración descrita usamos el comando `docker compose up` estando en el directorio del archivo. El comando creará los contenedores y redes necesarios, para eliminar todo lo que haga el comando, podemos usar el comando `docker compose down`.
 
-# Volúmenes
+## Volúmenes
 
 Responde a la necesidad de conservar información y manifestar cambios de nuestra aplicación.
 
-## Tipos
+### Tipos
 
 - Anónimos: solo indicamos la ruta del contenedor.
 
@@ -251,7 +250,7 @@ Responde a la necesidad de conservar información y manifestar cambios de nuestr
 
     > Si lo podemos referenciar.
 
-## Ejemplo
+### Ejemplo
 
 ```docker-compose
 version: "3.9"
@@ -275,11 +274,11 @@ volumes:
     mongo-data:
 ```
 
-# Ambientes y hot reload
+## Ambientes y hot reload
 
 Consiste en tener varios **Dockerfile** según nuestro propósito.
 
-## Ejemplo (desarrollo)
+### Ejemplo (desarrollo)
 
 ```Dockerfile
 FROM node:18
@@ -322,4 +321,4 @@ volumes:
 
 Ahora ejecutamos `docker compose -f docker-compose-dev.yml`.
 
- > `-f` es para especificar el archivo.
+> `-f` es para especificar el archivo.
