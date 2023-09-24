@@ -4,7 +4,7 @@ title: >-
   3-Relación entre inducción y programación - Especificación recursiva de datos
   y programas
 desc: ''
-updated: 1694136378469
+updated: 1694904137444
 created: 1693849906052
 ---
 
@@ -34,13 +34,13 @@ Dentro de este tipo podemos clasificar las definiciones en:
 	Podemos utilizar esta definición para escribir un procedimiento (predicado) que decida si un número natural $n$ está en $S$:
 
 	```RKT
-	(define In-S? (
+	(define in-s? (
 		lambda (n) (
 			if (zero? n)
 				#t
 				(if (< n 0)
 					#f
-					(In-S? (- n 3))
+					(in-s? (- n 3))
 				)
 		)
 	))
@@ -56,7 +56,7 @@ Dentro de este tipo podemos clasificar las definiciones en:
 
 ---
 
-Existe las "rules of inference definition", que no son más que otra forma de expresar especificaciones, y se tienen las siguientes características:
+Existen las "rules of inference definition", que no son más que otra forma de expresar especificaciones, y se tienen las siguientes características:
 
 - Cada entrada es una regla.
 
@@ -93,7 +93,7 @@ Otros ejemplos de especificación inductiva son:
 - Lista de números pares.
 
 	$$
-	empty \in S \\[10 pt]
+	\frac{ }{ empty \in S } \\[10 pt]
 
 	\frac{ l \in s , \; n \in \mathbb{ N } }{ cons(2n , l) \in S}
 	$$
@@ -101,7 +101,7 @@ Otros ejemplos de especificación inductiva son:
 - Múltiplos de 5.
 
 	$$
-	5 \in S \\[10 pt]
+	\frac{ }{ 5 \in S } \\[10 pt]
 
 	\frac{ n \in S }{ n + 5 \in S}
 	$$
@@ -123,35 +123,34 @@ Ejemplos de especificación mediante gramáticas son:
 - Lista de números enteros.
 
 	```
-	<int-list> ::= ()
-	           :: = (<int> <int-list>)
+	<int_list> ::= ()
+	           :: = (<int> <int_list>)
 
-	<int-list> ::= () | (<int> <int-list>)
+	<int_list> ::= () | (<int> <int_list>)
 
-
-	<int-list> ::= ({<int>}*)
+	<int_list> ::= ({<int>}*)
 	```
 
 - Listas de símbolos y listas.
 
 	```
-	<S-list> ::= ({S-exp}*)
-	<S-exp> ::= <symbol> | <S-list>
+	<s_list> ::= ({s_exp}*)
+	<s_exp>  ::= <symbol> | <s_list>
 	```
 
 - Árbol binario.
 
 	```
-	<binary-tree> ::= <int>
-	              ::= (<symbol> <binary-tree> <binary-tree>)
+	<binary_tree> ::= <int>
+	              ::= (<symbol> <binary_tree> <binary_tree>)
 	```
 
-- Expresión cálculo $\lamda$.
+- Expresión cálculo $\lambda$.
 
 	```
-	<lambda-exp> ::= <identifier>
-	             ::= (lambda (<identifier>) <lambda-exp>)
-	             ::= (<lambda-exp> <lambda-exp>)
+	<lambda_exp> ::= <identifier>
+	             ::= (lambda (<identifier>) <lambda_exp>)
+	             ::= (<lambda_exp> <lambda_exp>)
 	```
 
 - Listas en Scheme.
@@ -193,7 +192,7 @@ La definición inductiva o mediante gramáticas de los conjuntos de datos sirve 
 
 	(define report-error (
 		lambda (n) (
-			(format "List too short by ~s elements" (+ n 1))
+			format "List too short by ~s elements" (+ n 1)
 		)
 	))
 	```
@@ -231,14 +230,14 @@ La definición inductiva o mediante gramáticas de los conjuntos de datos sirve 
 5. Función que recibe un árbol binario "tree" y retorna la cantidad de símbolos (nodos) en "tree".
 
 	```RKT
-	(define nodes (
+	(define interior-nodes (
 		lambda (tree) (
 			if (number? tree)
 				0
 				(+
 					1
-					(nodes (cadr tree))
-					(nodes (caddr tree))
+					(interior-nodes (cadr tree))
+					(interior-nodes (caddr tree))
 				)
 		)
 	))
@@ -247,12 +246,12 @@ La definición inductiva o mediante gramáticas de los conjuntos de datos sirve 
 6. Función que recibe un árbol binario "tree" y retorna la lista con los símbolos (nodos) de "tree".
 
 	```RKT
-	(define list-nodes (
+	(define list-interior-nodes (
 		lambda (tree) (
 			if (number? tree)
 				empty
 				(cons (car tree)
-					(cons (list-nodes (cadr tree)) (list-nodes (caddr tree)))
+					(cons (list-interior-nodes (cadr tree)) (list-interior-nodes (caddr tree)))
 				)
 		)
 	))
@@ -267,16 +266,14 @@ La definición inductiva o mediante gramáticas de los conjuntos de datos sirve 
 				list2
 				(cons (car list1) (concat (cdr list1) list2))
 		)
-
 	))
 
-
-	(define list-nodes (
+	(define list-interior-nodes (
 		lambda (tree) (
 			if (number? tree)
 				empty
 				(concat (cons (car tree) empty)
-					(concat (list-nodes (cadr tree)) (list-nodes (caddr tree)))
+					(concat (list-interior-nodes (cadr tree)) (list-interior-nodes (caddr tree)))
 				)
 		)
 	))

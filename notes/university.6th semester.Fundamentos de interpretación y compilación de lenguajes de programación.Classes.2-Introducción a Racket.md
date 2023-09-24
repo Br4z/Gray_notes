@@ -2,7 +2,7 @@
 id: oikr2i51opts4v58p3ds96k
 title: 2-Introducción a Racket
 desc: ''
-updated: 1694135986316
+updated: 1694285267997
 created: 1693684417335
 ---
 
@@ -136,15 +136,15 @@ Diseñe una función que almacene los factoriales (en una lista) desde $0$ hasta
 (define factorial-list (
 	lambda (n) (
 		letrec (
-				(makeList (
+				(make-list (
 					lambda (counter factorial) (
 						if (= (+ counter 1) n)
 							(list (* factorial counter))
-							(cons (* factorial counter) (makeList (+ counter 1) (* factorial counter)))
+							(cons (* factorial counter) (make-list (+ counter 1) (* factorial counter)))
 					)
 				))
 		)
-		(cons 1 (makeList 1 1))
+		(cons 1 (make-list 1 1))
 	)
 ))
 ```

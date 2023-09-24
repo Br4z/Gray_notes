@@ -2,7 +2,7 @@
 id: lk1rfl7qztm5uc6k4uvdezn
 title: '1'
 desc: ''
-updated: 1693664233050
+updated: 1695260928611
 created: 1692838741500
 ---
 
@@ -150,7 +150,7 @@ Siendo $\hat{ \imath }$ y $\hat{ \jmath }$ vectores unitarios.
 $$
 \vec{ A } = (A \cos{ \theta } , A \sin{ \theta }) \\[10 pt]
 
-\cos { \theta } = \frac{ A_x }{ A } \quad \sin{ \theta } = \frac{ A_y }{ A } \quad \tan { \theta } = \frac{ A_y }{ A_x } \\[10 pt]
+\cos{ \theta } = \frac{ A_x }{ A } \quad \sin{ \theta } = \frac{ A_y }{ A } \quad \tan{ \theta } = \frac{ A_y }{ A_x } \\[10 pt]
 
 A = \sqrt{ { A_x }^2 + { A_y }^2 }
 $$
@@ -238,11 +238,19 @@ $$
 ![Dot product](./assets/University/Física%20I%20+%20laboratorio/1_1-9%20Dot_product.jpg)
 
 $$
-\vec { A } \cdot \vec{ B } = | A | | B | \cos{ \theta } \\[5 pt]
+\vec{ A } \cdot \vec{ B } = | A | | B | \cos{ \theta } \\[5 pt]
 
 | A |\cos{ \theta } = \text{ proyección escalar de $\vec{ A }$ en $\vec{ B }$ } \\[10 pt]
 
 \hat{ \imath } \cdot \hat{ \imath } = \hat{ \jmath } \cdot \hat{ \jmath } = \hat{ k } \cdot \hat{ k } = 1
+$$
+
+La forma más común de definir el producto punto no es esa, sino por medio de la suma de los productos de sus respectivas componentes:
+
+$$
+\vec{ A } = (A_1 , A_2 , \dots , A_n) \quad \vec{ B } = (B_1 , B_2 , \dots , B_n) \\[10 pt]
+
+\vec{ A } \cdot \vec{ B } = \sum_{ i = 1 }^{ n } { A_i B_i }
 $$
 
 #### Propiedades (producto punto)
@@ -286,7 +294,7 @@ $$
 	\end{array}
 \end{array} \\[5 pt]
 
-\vec{ C } = 0 \hat{ \imath } - 0 \hat{ \jmath } + ((A_x B_y) - (B_y A_y)) \hat{ k } \\[10 pt]
+\vec{ C } = 0 \hat{ \imath } - 0 \hat{ \jmath } + ((A_x B_y) - (B_x A_y)) \hat{ k } \\[10 pt]
 
 | \vec{ A } \times \vec{ B } | = | A | | B | \sin{ \theta }
 $$
@@ -326,3 +334,241 @@ $\vec{ C }$ es perpendicular al plano formado por $\vec{ A }$ y $\vec{ B }$.
 - $\vec{ A } \times \vec{ A } = 0$.
 
 - $\vec{ A } \cdot (\vec{ A } \times \vec{ B })$.
+
+### Ejercicio (operaciones con vectores)
+
+![Vector exercise](./assets/University/Física%20I%20+%20laboratorio/1_1-11%20Vector_exercise.jpg)
+
+$$
+| \vec{ A } | = 5,83 \quad | \vec{ B } | = 5 \quad | \vec{ C } | = 4
+$$
+
+Primero descomponemos todos los vectores en sus componentes:
+
+$$
+A_x = 5,83 \cos{ 30,96 \degree } \approx 5,00 \quad A_y = 5,83 \sin{ 30,96 \degree } \approx 3,00 \\[10 pt]
+
+B_x = 5 \cos{ 143,2 \degree } \approx -4,00 \quad B_y = 5 \sin{ 143,2 \degree } \approx 3,00 \\[10 pt]
+
+C_x = 0 \quad C_y = -4
+$$
+
+1. $\vec{ A } + \vec{ B } + \vec{ C }$.
+
+	$$
+	((5,00 - 4,00 + 0,00) , (3,00 + 3,00 - 4,00)) = 1,00 \hat{ \imath } + 2,00 \hat{ \jmath }
+	$$
+
+2. $\vec{ A } - \vec{ C }$.
+
+	$$
+	((5,00 - 0,00) , (3,00 + (-4,00))) = 5,00 \hat{ \imath } + 7,00 \hat{ \jmath }
+	$$
+
+3. $\vec{ A } \cdot \vec{ B }$.
+
+	$$
+	5,83 * 5,00 * \cos{ 112,24 \degree } \approx -11,03
+	$$
+
+	> La otra forma seria $5,00 * -4,00 + 3,00 * 3,00 = -11,00$, no da lo mismo porque las componentes están aproximadas.
+
+4. $\vec{ A } \times \vec{ B }$.
+
+	$$
+	((5,00 * 3,00) - (-4,00 * 3,00)) \hat{ k } = 27 \hat{ k }
+	$$
+
+## Week 3
+
+### Cinemática
+
+Rama de la mecánica que estudia y describe el movimiento de los cuerpos sin considerar la causa que los produce.
+
+- Sistema de referencia: es un conjunto de convenciones usado por un observador para poder medir la posición y otras magnitudes físicas de un sistema físico y de mecánica.
+
+#### Cantidades
+
+- Posición: vector que une el origen del sistema de referencia con el punto donde se encuentra la partícula (o cuerpo).
+
+- Desplazamiento: el vector desplazamiento $\Delta{ \vec{ x } }$ (1D) o $\Delta{ \vec{ r } }$ es la diferencia entre el vector de la posición final y el vector de la posición inicial.
+
+	![Displacement](./assets/University/Física%20I%20+%20laboratorio/1_1-12%20Displacement.jpg)
+
+	$$
+	\Delta{ \vec{ x } } = \vec{ x_2 }(t_2) - \vec{ x_1 }(t_1) = \vec{ x_2 }(t + \Delta{ t }) - \vec{ x_1 }(t)
+	$$
+
+- Velocidad media: velocidad promedio que tiene una partícula entre dos instantes de tiempo (pendiente de la recta secante).
+
+	![Average velocity](./assets/University/Física%20I%20+%20laboratorio/1_1-13%20Average_velocity.jpg)
+
+	$$
+	m = \frac{ x_2 - x_1 }{  t_2 - t_1 } = \frac{  \Delta{ \vec{ x } } }{  \Delta{ t } }
+	$$
+
+- Velocidad instantánea: velocidad que tiene una partícula en un instante de tiempo determinado (pendiente de la recta tangente).
+
+	$$
+	\vec{ v } = \lim_{ t \to 0}{ \frac{ \vec{ x }(t + \Delta{ t }) - \vec{ x }}{ (t + \Delta{ t }) - t } } = \frac{ d \vec{ x } }{ dt}
+	$$
+
+- Rapidez: es la relación entre la distancia recorrida y el tiempo empleado en completarla.
+
+### Movimiento Rectilíneo Uniforme (MRU)
+
+En este tipo de movimiento:
+
+- El cuerpo se mueve en línea recta.
+
+- La velocidad no cambia durante el movimiento, es decir, permanece constante.
+
+$$
+\vec{ v }_{ \text{ m } }  = \text{ cte } \quad \vec{ a } =  0 \\[10 pt]
+
+\vec{ v }_{ \text{ m } } = \frac{ \vec{ x } - \vec{ x }_{ 0 } }{ t - t_{ 0 } } \quad t_{ 0 } = 0 \\[10 pt]
+
+\vec{ x } = \vec{ x }_{ 0 } + \vec{ v }_{ \text{ m } } t \quad \text{ ecuación del movimiento }
+$$
+
+## Week 4
+
+Continuación de MRU.
+
+- Aceleración media: cambio en su (de un cuerpo) vector velocidad dividido entre el intervalo de tiempo $\Delta{ t }$ (durante el que ocurre dicho cambio).
+
+	$$
+	\vec{ a }_m = \frac{ \vec{ v }_f - \vec{ v }_i }{ t_f - t_i } = \frac{ \Delta{ \vec{ v } } }{ \Delta{ t } }
+	$$
+
+	![Average acceleration](./assets/University/Física%20I%20+%20laboratorio/1_1-14%20Average_acceleration.jpg)
+
+	> La pendiente de la recta secante.
+
+- Aceleración instantánea: se define como el límite de la aceleración media cuando $\Delta{ t } \to 0$.
+
+	$$
+	\vec{ a } = \frac{ d \vec{ v } }{ dt } = \frac{ d^2 \vec{ x } }{ dt^2 }
+	$$
+
+	> La pendiente de la recta tangente.
+
+---
+
+- Cóncava: una función es cóncava cuando dados dos puntos cualesquiera en el dominio de la función, el segmento que los une queda por debajo de la curva (${ f }'' < 0$).
+
+	> Podríamos decir que es una curvatura hacia el centro.
+
+- Convexa: una función es convexa cuando dados dos puntos cualesquiera en el dominio de la función, el segmento que los une queda por encima de la curva (${ f }'' > 0$).
+
+	> Podríamos decir que es una curvatura hacia afuera.
+
+### Movimiento Rectilíneo Uniforme Acelrado (MRUA)
+
+En este tipo de movimiento:
+
+- El cuerpo se mueve describiendo una línea recta.
+
+- La velocidad cambia respecto al tiempo.
+
+- La aceleración es constante.
+
+$$
+\vec{ a }_m = \frac{ \vec{ v }_f - \vec{ v }_i }{ t_f - t_i } \quad
+	\begin{array}{ll}
+		t_i = 0                   & t_f = t \\
+		\vec{ v }_i = \vec{ v }_0 & \vec{ v }_f = \vec{ v }
+	\end{array} \\[10 pt]
+
+\vec{ a }_m = \frac{ \vec{ v } - \vec{ v }_0 }{ t } \quad \vec{ v } = \vec{ v }_0 + \vec{ a }_m t \quad (1)
+$$
+
+Como la aceleración es constante podemos decir que $\vec{ a }_m = \vec{ a }$ y además enunciar lo siguiente:
+
+$$
+\vec{ v }_m = \frac{ \vec{ x } - \vec{ x }_0 }{ t } \quad t_i = 0 \quad (2) \\[10 pt]
+
+\vec{ v }_m = \frac{ \vec{ v }_x + \vec{ v }_{ 0x } }{ 2 } \\[10 pt]
+
+\text{ Reemplazando $\vec{ v }_x$ con $(1)$ } \quad \vec{ v }_m = \frac{ (\vec{ v }_0 + \vec{ a } t) + \vec{ v }_{ 0x } }{ 2 } = \frac{ 2 \vec{ v }_0 + \vec{ a } t }{ 2 } \quad (3) \\[10 pt]
+
+(2) = (3) \quad \frac{ \vec{ x } - \vec{ x }_0 }{ t } = \frac{ 2 \vec{ v }_0 + \vec{ a } t }{ 2 } \\[10 pt]
+
+\vec{ x } = \vec{ x }_0 + \vec{ v }_0 t + \frac{ 1 }{ 2 } \vec{ a } t^2 \quad (4) \\[10 pt]
+
+\text{ Despejando $t$ de $(1)$ } \quad t = \frac{ \vec{ v } - \vec{ v }_0 }{ \vec{ a } } \\[10 pt]
+
+\text{ Reemplazando $t$ en $(3)$ } \quad \vec{ x } = \vec{ x }_0 + \vec{ v }_0 \left (\frac{ \vec{ v } - \vec{ v }_0 }{ \vec{ a } } \right ) + \frac{ 1 }{ 2 } \vec{ a } \left (\frac{ \vec{ v } - \vec{ v }_0 }{ \vec{ a } } \right )^2 \\[10 pt]
+
+\vec{ x } = \vec{ x }_0 + \frac{ \vec{ v }_0 \vec{ v } - { \vec{ v }_0 }^2 }{ \vec{ a } } + \frac{ \vec{ v }^2 - 2 \vec{ v } \vec{ v }_0 + { \vec{ v }_0 }^2 }{ 2 \vec{ a } } \\[10 pt]
+
+\vec{ x } = \vec{ x }_0 + \frac{ \vec{ v }^2 - { \vec{ v }_0 }^2 }{ 2 \vec{ a } } \quad 2 \vec{ a } (\vec{ x } - \vec{ x }_0) = \vec{ v }^2 - { \vec{ v }_0 }^2
+$$
+
+### Diagramas del movimiento
+
+- Posición.
+
+	![Position motion diagram](./assets/University/Física%20I%20+%20laboratorio/1_1-15%20Position_motion_diagram.jpg)
+
+- Velocidad.
+
+	![Velocity motion diagram](./assets/University/Física%20I%20+%20laboratorio/1_1-16%20Velocity_motion_diagram.jpg)
+
+- Aceleración.
+
+	![Acceleration motion diagram](./assets/University/Física%20I%20+%20laboratorio/1_1-17%20Acceleration_motion_diagram.jpg)
+
+### Caida libre
+
+Un tipo de movimiento MRUA donde se cumple que:
+
+$$
+(1) \quad \vec{ y } = \vec{ y }_0 + \vec{ v }_0 t - \frac{ 1 }{ 2 } \vec{ g } t^2 \quad (2) \quad \vec{ v } = \vec{ v }_0 - \vec{ g } t \quad (3) \quad \vec{ v }^2 - { \vec{ v }_0 } ^2 = -2 \vec{ g } (\vec{ y } - \vec{ y }_0) \\[10 pt]
+
+\text{ Reemplazando $(2)$ en $(3)$ } \quad (\vec{ v }_0 - \vec{ g } t)^2 - { \vec{ v }_0 } ^2 = -2 \vec{ g } (\vec{ y } - \vec{ y }_0) \\[10 pt]
+
+{ \vec{ v }_0 }^2 - 2 \vec{ v }_0 \vec{ g } t + \vec{ g }^2 t^2 - { \vec{ v }_0 } ^2 = -2 \vec{ g } (\vec{ y } - \vec{ y }_0) \\[10 pt]
+
+\vec{ g }(-2 \vec{ v }_0 t + \vec{ g } t^2) = -2 \vec{ g } (\vec{ y } - \vec{ y }_0) \quad -2 \vec{ v }_0 t + \vec{ g } t^2 = -2 (\vec{ y } - \vec{ y }_0) \quad \text{ con $\vec{ v }_0 = 0$ } \\[10 pt]
+
+\vec{ g } t^2 = -2 (\vec{ y } - \vec{ y }_0) \quad (4)
+$$
+
+### Ecuaciones cinematicas derivadas del calculo
+
+![Velocity representation](./assets/University/Física%20I%20+%20laboratorio/1_1-18%20Velocity%20representation.jpg)
+
+$$
+\vec{ v }_m = \frac{ \Delta{ \vec{ x } } }{ \Delta{ t } } \quad \Delta{ \vec{ x } } = \vec{ v } \Delta{ t }
+$$
+
+Dicha igualdad corresponde al área del rectángulo en un $\vec{ v }$ específico.
+
+$$
+\int{ \Delta{ \vec{ x } } } = \lim_{ \Delta{ t } \to 0 } \sum_{ i = 1 }^n { v_n \Delta{ t_n } }
+$$
+
+> Al hacer la base de los triángulos tan pequeña, el número de triángulos $n$ tiende a infinito $n \to \infty$.
+
+- MRU.
+
+	$$
+	\int{ \Delta{ \vec{ x } } } = \int{ \vec{ v } dt } \quad \vec{ x } = \vec{ v } t + C \\[10 pt]
+
+	\vec{ x }(0) = \vec{ v } * 0 + C = C \quad \vec{ x } = \vec{ v } t + \vec{ x }_0
+	$$
+
+- MRUA.
+
+	$$
+	\int{ \Delta{ \vec{ v } } } = \int{ \vec{ a } dt } \quad \vec{ x } = \vec{ a } t + C \\[10 pt]
+
+	\vec{ v }(0) = \vec{ a } * 0 + C = C \quad \vec{ v } = \vec{ a } t + \vec{ v }_0
+	$$
+
+	$$
+	\int{ \Delta{ \vec{ x } } } = \int{ \vec{ a } t + \vec{ v }_0 dt } \quad \vec{ x } = \frac{ 1 }{ 2 } a t^2 + \vec{ v }_0 t + C \\[10 pt]
+
+	\vec{ x }(0) = \frac{ 1 }{ 2 } a * 0^2 + \vec{ v }_0 * 0 + C = C \quad \vec{ x } = \frac{ 1 }{ 2 } a t^2 + \vec{ v }_0 t + \vec{ x }_0
+	$$

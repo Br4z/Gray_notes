@@ -2,7 +2,7 @@
 id: ky87on867oft8d7hiz3vw7g
 title: Glossary
 desc: ''
-updated: 1693840536327
+updated: 1695163636451
 created: 1692497079281
 ---
 
@@ -16,7 +16,7 @@ created: 1692497079281
 
 - Sopesar (verbo): examinar con atención o considerar con prudencia las ventajas y los inconvenientes de algo, o su importancia y trascendencia.
 
-- Dubitativa (adjetivo): [persona] que tiene o muestra duda.----
+- Dubitativa (adjetivo): [persona] que tiene o muestra duda.
 
 - Espetar (verbo): decir a alguien una cosa que causa sorpresa o fastidio, en especial si se dice con brusquedad.
 
@@ -24,13 +24,13 @@ created: 1692497079281
 
 - Enfurruñarse (verbo): enfadarse, especialmente de manera leve pero con expresión de disgusto.
 
-- Catarro (sustantivo): Malestar físico provocado por esta inflamación.
+- Catarro (sustantivo): malestar físico provocado por esta inflamación.
 
 	> Inflamación aguda o crónica de las membranas mucosas del aparato respiratorio, especialmente de la garganta y de la nariz, de naturaleza vírica, bacteriana o alérgica, que produce un aumento de la secreción nasal y suele ir acompañada de tos, fiebre y dolores musculares.
 
 - Exultar (verbo): mostrar alegría, gozo o satisfacción.
 
-- Hortera (sustantivo): que aunque pretende ser elegante o moderno, resulta vulgar, ordinario y de mal gusto.
+- Hortera (adjetivo): que aunque pretende ser elegante o moderno, resulta vulgar, ordinario y de mal gusto.
 
 - Chasco (sustantivo): decepción o impresión desagradable que causa algo que se hace o se espera con ilusión o alegría y no resulta ser o suceder como se esperaba.
 
@@ -62,11 +62,11 @@ created: 1692497079281
 
 - Soslayo (adverbio): palabra que se usa en las locuciones adverbiales de soslayo o al soslayo para indicar que algo (espiar, mirar, observar, etc.) se hace siguiendo con la mirada, una línea oblicua y no de forma directa, normalmente con la intención de no ser sorprendido en la acción.
 
-- Ruiseñor (sustantivo): una especie de ave.
+- Ruiseñor (sustantivo): pájaro cantor de unos 16 cm de longitud, plumaje castaño rojizo uniforme, más oscuro en el dorso y la cabeza que en el vientre; es apreciado por su bello canto, sostenido y muy melodioso; habita en bosques frondosos..
 
 - Animadversión (sustantivo): sentimiento de oposición, enemistad o antipatía que se tiene hacia una persona.
 
-- Pletóric@ (adjetivo): que está lleno o tiene gran abundancia de una característica positiva; especialmente, de alegría.
+- Pletóric@ (adjetivo): que está lleno o tiene gran abundancia de una característica positiva; especialmente, de alegría.---
 
 - Proscrit@ (adjetivo): [persona] que ha sido expulsado de su patria o su ambiente, especialmente por causas políticas.
 
