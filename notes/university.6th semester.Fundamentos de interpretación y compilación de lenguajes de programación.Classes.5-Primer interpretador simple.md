@@ -2,7 +2,7 @@
 id: j8rc6g2iu2hjtnqzmlhl4nd
 title: 5-Primer interpretador simple
 desc: ''
-updated: 1695426675272
+updated: 1696100420791
 created: 1695345812525
 ---
 
@@ -16,7 +16,7 @@ created: 1695345812525
 
 - Un interpretador está escrito en algún lenguaje. Este lenguaje es llamado el lenguaje de **implementación** o el lenguaje de **definición**.
 
-!!!!![interpreter image]
+![Interpreter](./assets/University/Fundamentos%20de%20interpretación%20y%20compilación%20de%20lenguajes%20de%20programación/1_5-1%20Interpreter.jpg)
 
 ## Compilación
 
@@ -26,7 +26,9 @@ created: 1695345812525
 
 	> Los lenguajes generados (mas simples que el original) que posteriormente son interpretados son llamados lenguajes a **bytecode** y sus interpretadores **maquinas virtuales**.
 
-!!!!![compiler image]
+![Compiler](./assets/University/Fundamentos%20de%20interpretación%20y%20compilación%20de%20lenguajes%20de%20programación/1_5-2%20Compiler.jpg)
+
+> El compilador iría entre el **front end** y el **interpretador**, generando un ejecutable que contiene instrucciones de bajo nivel (al menos más bajo que el código fuente original).
 
 - Un compilador está dividido en dos partes: un **analizador** y un **traductor**.
 
@@ -121,7 +123,7 @@ Usando `define-dataype` los tipos de datos para esta gramática pueden ser descr
 
 En SLLGEN la gramática puede ser descrita así:
 
-```
+```RKT
 (define lexica '(
 	(white-sp (whitespace) skip)
 	(comment ("//" (arbno (not #\newline))) skip)
@@ -251,7 +253,7 @@ El interpretador simple constará de tres procedimientos correspondientes a los 
 	)
 ))
 
-(define eval-rands (
+(define eval-expressions (
 	lambda (rands env) (
 		map (lambda (x) (eval-expression x env)) rands
 	)
@@ -264,7 +266,7 @@ El interpretador simple constará de tres procedimientos correspondientes a los 
 			(var-exp (identifier) (apply-env env identifier))
 			(primapp-exp (prim rands) (
 					let (
-						(args (eval-rands rands env))
+						(args (eval-expressions rands env))
 					)
 					(apply-primitive prim args)
 				)

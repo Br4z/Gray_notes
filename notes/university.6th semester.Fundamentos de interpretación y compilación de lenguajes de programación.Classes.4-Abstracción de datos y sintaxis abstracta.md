@@ -2,7 +2,7 @@
 id: 8u558ml4ielcwb2loe3ijl2
 title: 4-Abstracción de datos y sintaxis abstracta
 desc: ''
-updated: 1695492695541
+updated: 1696602584704
 created: 1694720220951
 ---
 
@@ -181,7 +181,7 @@ $$
 
 	```RKT
 	(define zero (
-		lambda () empty
+		lambda () (cons 0 empty)
 	))
 	```
 
@@ -190,14 +190,36 @@ $$
 	```RKT
 	(define is-zero? (
 		lambda (number) (
-			empty? number
+			and (zero? (car number)) (empty? (cdr number))
 		)
 	))
 	```
 
 - `successor`.
 
+	```RKT
+	(define sucessor (
+		lambda (base number) (
+			cond
+				[(= (car number) (- base 1)) (cons 0 (sucessor base (cdr number)))]
+				[(empty? (car number)) (cons 1 empty)]
+				[else (cons (+ (car number) 1) (cdr number))]
+		)
+	))
+	```
+
 - `predecessor`.
+
+	```RKT
+	(define predecessor (
+		lambda (base number) (
+			cond
+				[(empty? number) (eopl:error "you can not find the predecessor of zero")]
+				[(= (car number) 0) (cons base (predecessor base (cdr number)))]
+				[else (cons (- (car number) 1) (cdr number))]
+		)
+	))
+	```
 
 ### Ambientes
 
@@ -522,7 +544,7 @@ Con esta nueva forma de definir tipos de datos podemos representar el `occurs-fr
 
 ---
 
-La implementación para [[s_list | university.6th semester.Fundamentos de interpretación y compilación de lenguajes de programación.Classes.3-Relación entre inducción y programación - Especificación recursiva de datos y programas#especificacion-mediante-gramaticas]] podría con `define-datatype` ser:
+La implementación para [[s_list | university.6th semester.Fundamentos de interpretación y compilación de lenguajes de programación.Classes.3-Relación entre inducción y programación - Especificación recursiva de datos y programas#especificacion-mediante-gramaticas]] con `define-datatype` podría ser:
 
 ```RKT
 (define-datatype s_list s_list?
@@ -610,13 +632,13 @@ Una forma de implementar `apply-env` podría ser:
 	lambda (env var) (
 		cases environment env
 			(empty-environment () (format "No binding for ~s" var))
-			(extended-environment (symbols values saved-env) (
+			(extended-environment (symbols values old-env) (
 					let (
-						(position (index-of var symbols))
+						(index (index-of var symbols))
 					)
-					(if position
-						(nth-element values position)
-						(apply-env saved-env var)
+					(if index
+						(nth-element values index)
+						(apply-env old-env var)
 					)
 				)
 			)
@@ -635,6 +657,8 @@ Para crear una sintaxis abstracta a partir de una sintaxis concreta, se debe nom
 ```
 
 La sintaxis abstracta de una expresión es más fácil de comprender visualizándola como un **árbol de sintaxis abstracta**. Por ejemplo, el de la expresión `(lambda (x) (f (f x)))` es:
+
+![Lambda calculus abstract syntax tree example](./assets/University/Fundamentos%20de%20interpretación%20y%20compilación%20de%20lenguajes%20de%20programación/1_4-1%20Lambda%20calculus%20abstract%20syntax%20tree%20example.jpg)
 
 ---
 
