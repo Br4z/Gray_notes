@@ -2,13 +2,13 @@
 id: mocab2mhov7ywrbj8zxphe8
 title: 2-Movimiento parabólico
 desc: ''
-updated: 1696177131374
+updated: 1697490809641
 created: 1696119687913
 ---
 
-El sistema experimental es el siguiente:
+El montaje experimental es el siguiente:
 
-!!!
+![Experimental setup](./assets/University/Física%20I%20+%20laboratorio/3_2-1%20Experimental_setup.jpg)
 
 ## Consideraciones teóricas
 

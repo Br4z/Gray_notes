@@ -2,7 +2,7 @@
 id: dlm8f1j8wu8ymhfsib7zrd2
 title: '2'
 desc: ''
-updated: 1697157321083
+updated: 1697762864521
 created: 1696385447863
 ---
 
@@ -19,13 +19,13 @@ created: 1696385447863
 	- Encuentre la altura desde la que se lanzó la bola.
 
 		$$
-		y(t) = y_0 + v_{ 0y } t + \frac{ 1 }{ 2 } g t^2 \quad y = v_{ 0y } (3) + \frac{ 1 }{ 2 } (9,81) (3)^2 = 52,32 \text{ m }
+		y(t) = y_0 + v_{ 0y } t + \frac{ 1 }{ 2 } g t^2 \quad y = (-8 \sin{ 20 \degree }) (3) - \frac{ 1 }{ 2 } (9,81) (3)^2 = -52,32 \text{ m }
 		$$
 
 	- ¿Cuánto tarda la bola en llegar a un punto 10,0 m abajo del nivel de lanzamiento?
 
 		$$
-		10 = v_{ 0y } t + \frac{ 1 }{ 2 } g t^2 \quad 4,9t^2 + 2,74t - 10 = 0 \\[5 pt]
+		-10 = v_{ 0y } t - \frac{ 1 }{ 2 } g t^2 \quad 4,9t^2 + 2,74t - 10 = 0 \\[5 pt]
 
 		t = \frac{ 2,74 \pm \sqrt{ (2,74)^2 - 4 (4,9) (-10) } }{ 2 (4,9) } \quad t_1 = 1,18 \text{ s } \quad t_2 = -1,73 \text{ s }
 		$$
@@ -146,7 +146,7 @@ created: 1696385447863
 		\tan{ \theta } = \frac{ \vec{ a }_c }{ \vec{ a }_t } \quad \theta = \arctan{ \frac{ -0,072 }{ 0,300 } } = -13,5 \degree
 		$$
 
-7. .
+7. ![Seventh problem](./assets/University/Física%20I%20+%20laboratorio/2_2-2%20Problem.jpg).
 
 	$$
 	w_i = 30 \frac{ \text{ rev } }{ \text{ min } } \frac{ 2 \pi \text{ rad } }{ 60 \text{ s } } = \pi \frac{ \text{ rad } }{ \text{ s } }

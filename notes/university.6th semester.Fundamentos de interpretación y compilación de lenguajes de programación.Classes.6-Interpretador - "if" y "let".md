@@ -2,7 +2,7 @@
 id: 6k0w3x9kdlrvc4vr96tetur
 title: 6-Interpretador - "if" y "let"
 desc: ''
-updated: 1696616785299
+updated: 1698431910668
 created: 1696098408076
 ---
 
@@ -36,17 +36,17 @@ La especificación de la gramática es la siguiente:
 
 	```RKT
 	(define grammar '(
-			(program (expression) a-program)
-			(expression (number) lit-exp)
-			(expression (identifier) var-exp)
-			(expression (primitive "(" (separated-list expression ",") ")" ) primapp-exp)
-			(expression ("if" expression "then" expression "else" expression) if-exp)
-			(expression ("let" (arbno identifier "=" expression) "in" expression) let-exp)
-			(primitive ("+") add-prim)
-			(primitive ("-") substract-prim)
-			(primitive ("*") mult-prim)
-			(primitive ("add1") incr-prim)
-			(primitive ("sub1") decr-prim)
+		(program (expression) a-program)
+		(expression (number) lit-exp)
+		(expression (identifier) var-exp)
+		(expression (primitive "(" (separated-list expression ",") ")" ) primapp-exp)
+		(expression ("if" expression "then" expression "else" expression) if-exp)
+		(expression ("let" (arbno identifier "=" expression) "in" expression) let-exp)
+		(primitive ("+") add-prim)
+		(primitive ("-") substract-prim)
+		(primitive ("*") mult-prim)
+		(primitive ("add1") incr-prim)
+		(primitive ("sub1") decr-prim)
 	))
 	```
 

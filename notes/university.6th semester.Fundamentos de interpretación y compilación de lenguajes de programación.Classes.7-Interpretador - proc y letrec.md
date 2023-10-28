@@ -2,7 +2,7 @@
 id: rzsp41ci9mvldwguws0651l
 title: 7-Interpretador - proc y letrec
 desc: ''
-updated: 1696616777055
+updated: 1698431900398
 created: 1696459593901
 ---
 
@@ -38,19 +38,19 @@ La especificación de la gramática es la siguiente:
 
 	```RKT
 	(define grammar '(
-			(program (expression) a-program)
-			(expression (number) lit-exp)
-			(expression (identifier) var-exp)
-			(expression (primitive "(" (separated-list expression ",") ")" ) primapp-exp)
-			(expression ("if" expression "then" expression "else" expression) if-exp)
-			(expression ("let" (arbno identifier "=" expression) "in" expression) let-exp)
-			(expression ("proc" "(" (separated-list identifier ",") ")" expression) proc-exp)
-			(expression ("(" expression (arbno expression) ")") app-exp)
-			(primitive ("+") add-prim)
-			(primitive ("-") substract-prim)
-			(primitive ("*") mult-prim)
-			(primitive ("add1") incr-prim)
-			(primitive ("sub1") decr-prim)
+		(program (expression) a-program)
+		(expression (number) lit-exp)
+		(expression (identifier) var-exp)
+		(expression (primitive "(" (separated-list expression ",") ")" ) primapp-exp)
+		(expression ("if" expression "then" expression "else" expression) if-exp)
+		(expression ("let" (arbno identifier "=" expression) "in" expression) let-exp)
+		(expression ("proc" "(" (separated-list identifier ",") ")" expression) proc-exp)
+		(expression ("(" expression (arbno expression) ")") app-exp)
+		(primitive ("+") add-prim)
+		(primitive ("-") substract-prim)
+		(primitive ("*") mult-prim)
+		(primitive ("add1") incr-prim)
+		(primitive ("sub1") decr-prim)
 	))
 	```
 
@@ -142,11 +142,11 @@ La especificación que agregaríamos a la gramática es la siguiente:
 
 	```RKT
 	(define grammar '(
-			...
+		...
 		(expression ("letrec"
 			(arbno identifier "(" (separated-list identifier ",") ")" "=" expression) "in" expression)
 			letrec-exp)
-			...
+		...
 	))
 	```
 

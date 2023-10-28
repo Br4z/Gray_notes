@@ -2,7 +2,7 @@
 id: j8rc6g2iu2hjtnqzmlhl4nd
 title: 5-Primer interpretador simple
 desc: ''
-updated: 1696100420791
+updated: 1698431940474
 created: 1695345812525
 ---
 
@@ -198,19 +198,17 @@ La especificación léxica para el lenguaje será con la que ya trabajamos anter
 - SLLGEN.
 
 	```RKT
-	(define grammar
-		'(
-			(program (expression) a-program)
-			(expression (number) lit-exp)
-			(expression (identifier) var-exp)
-			(expression (primitive "(" (separated-list expression ",") ")" ) primapp-exp)
-			(primitive ("+") add-prim)
-			(primitive ("-") substract-prim)
-			(primitive ("*") multi-prim)
-			(primitive ("add1") incr-prim)
-			(primitive ("sub1") decr-prim)
-		)
-	)
+	(define grammar '(
+		(program (expression) a-program)
+		(expression (number) lit-exp)
+		(expression (identifier) var-exp)
+		(expression (primitive "(" (separated-list expression ",") ")" ) primapp-exp)
+		(primitive ("+") add-prim)
+		(primitive ("-") substract-prim)
+		(primitive ("*") multi-prim)
+		(primitive ("add1") incr-prim)
+		(primitive ("sub1") decr-prim)
+	))
 	```
 
 - `define-datatype`.

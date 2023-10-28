@@ -2,7 +2,7 @@
 id: i4nyaiu69zwpf6dh80x0r9w
 title: '1'
 desc: ''
-updated: 1696097665959
+updated: 1697761563984
 created: 1695171994066
 ---
 
@@ -11,7 +11,7 @@ created: 1695171994066
 	- La fuerza única que es equivalente a las dos fuerzas que se muestran.
 
 		$$
-		F_{ 1x } = \cos{ 60 \degree } * 120 = 60 \quad F_{ 2y } = \sin{ 60 \degree } * 120 \approx 104 \\[10 pt]
+		F_{ 2x } = \cos{ 60 \degree } * 120 = 60 \quad F_{ 2y } = \sin{ 60 \degree } * 120 \approx 104 \\[10 pt]
 
 		F_{ 1x } = \cos{ 105 \degree } * 80 \approx -20,7 \quad F_{ 2y } = \sin{ 105 \degree } * 80 \approx 77 \\[10 pt]
 
@@ -42,15 +42,15 @@ created: 1695171994066
 
 	- ¿A qué distancia está el comprador de su posición original?
 
-		1. $\vec{ R }_1 = (40 , 0) + (0 , 15) + (20, 0) = (60, 15) \quad | \vec{ R }_1 | = \sqrt{ { 60 }^2 + { 15 }^2 }$.
+		1. $\vec{ R }_1 = (40 , 0) + (0 , 15) + (-20, 0) = (20, 15) \quad | \vec{ R }_1 | = \sqrt{ { 20 }^2 + { 15 }^2 }$.
 
-		2. $\vec{ R }_2 = (40 , 0) + (0 , 15) + (-20, 0) = (20, 15) \quad | \vec{ R }_2 | = \sqrt{ { 20 }^2 + { 15 }^2 }$.
-
-		3. $\vec{ R }_3 = (40 , 0) + (0 , -15) + (20, 0) = (60, -15) \quad | \vec{ R }_3 | = \sqrt{ { 60 }^2 + { -15 }^2 }$.
-
-		4. $\vec{ R }_4 = (40 , 0) + (0 , -15) + (-20, 0) = (20, -15) \quad | \vec{ R }_4 | = \sqrt{ { 20 }^2 + { -15 }^2 }$.
+		2. $\vec{ R }_1 = (40 , 0) + (0 , -15) + (20, 0) = (60, -15) \quad | \vec{ R }_2 | = \sqrt{ { 60 }^2 + { -15 }^2 }$.
 
 	- ¿Qué ángulo forma su desplazamiento total con su posición original?
+
+		1. $\theta_1 = \arctan{ \frac{ 15 }{ 20 } } = 36,9 \degree$
+
+		2. $\theta_1 = \arctan{ \frac{ -15 }{ 60 } } = -14,0 \degree$
 
 4. ![Fourth problem](./assets/University/Física%20I%20+%20laboratorio/2_1-4%20Problem.jpg).
 
@@ -69,12 +69,8 @@ created: 1695171994066
 		Para esta situación en particular $\alpha = 35,08$ y $w_x \leq 550N$.
 
 		$$
-		\sum{ F_x } = 0 \\[10 pt]
-
-		w \sin{ 35,08 \degree } - 550 = 0 \quad w = \frac{ 550 }{ \sin{ 35,08 \degree } } \approx 959N
+		w \sin{ 35,08 \degree } = 550 \quad w = \frac{ 550 }{ \sin{ 35,08 \degree } } \approx 959N
 		$$
-
-		Como máximo el peso puede ser de $959N$, si se reduce el peso, se debe ajustar $w_x$ para que la sumatoria de las fuerzas siga siendo 0.
 
 5. .
 
@@ -176,8 +172,16 @@ created: 1695171994066
 
 9. .
 
+	Entre los dos objetos tenemos la relación $x^2 + y^2 = L^2$.
+
 	$$
-	x(t) =
+	\vec{ v } = \frac{ dx }{ dt } = -v \\[10 pt]
+
+	\text{ Derivando la relación respecto a $t$ } 2 x \frac{ d x }{ dt } + 2 y \frac{ d y }{ dt } = 0 \quad 2 x (-v) + 2 y \frac{ d y }{ dt } = 0 \\[10 pt]
+
+	\frac{ d y }{ dt } = \frac{2 x v}{ 2 y } = \frac{ x }{ y } v = \frac{ 1 }{ \tan{ \theta } } v \\[10 pt]
+
+	\text{ Con $\theta = 60 \degree$ } \frac{ d y }{ dt } = \frac{ 1 }{ \tan{ 60 \degree } } v = \frac{ \sqrt{ 3 }}{ 3 } v
 	$$
 
 10. .
@@ -287,9 +291,9 @@ created: 1695171994066
 		$$
 		x(t) = \left \{
 			\begin{array}{ll}
-				\frac{ 5 }{ 3 } t^2                 & 0 \leq t < 15 \\[5 pt]
-				50t - 375                           & 15 \leq t < 40 \\[5 pt]
-				-\frac{ 5 }{ 2 } t^2 + 250t - 4375  & 40 \leq t \leq 50 \\
+				\frac{ 5 }{ 3 } t^2                 & 0 \leq t \leq 15 \\[5 pt]
+				50t - 375                           & 15 < t \leq 40 \\[5 pt]
+				-\frac{ 5 }{ 2 } t^2 + 250t - 4375  & 40 < t \leq 50 \\
 			\end{array}
 		\right .
 		$$
