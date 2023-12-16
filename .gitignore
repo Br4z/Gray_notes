@@ -1,2 +1,5 @@
 notes/.vscode/
 .dendron.*
+.backup
+pending.md
+*ASES*

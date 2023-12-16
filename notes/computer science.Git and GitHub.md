@@ -2,7 +2,7 @@
 id: l0sk48zvo2y1ymlzbx0cr0r
 title: Git and GitHub
 desc: ''
-updated: 1691022897909
+updated: 1699831457592
 created: 1688233264399
 ---
 
@@ -144,7 +144,7 @@ En cada commit veremos fecha, hora, usuario y correo.
 
 - `git reset --soft HEAD~1`: deshacer el último commit hecho, dejando los cambios de ese commit (entre el último y el penúltimo) en el área de preparación.
 
-	> `--soft` hace solo se deshaga el registro del commit y no cambie (modificar o eliminar) archivos.
+	> `--soft` hace que solo se deshaga el registro del commit y no cambie (modificar o eliminar) archivos.
 
 	> `HEAD~1` hace referencia al último commit.
 
@@ -230,9 +230,9 @@ En `Settings > Developer settings > Personal access tokes > Tokens` podemos crea
 
 ### git pull vs. git fetch
 
-- `git fect <source>`.
+- `git fetch <source>`.
 
-	**Verificar** los cambios realizados en el repositorio remoto sin combinar esos cambio con el repositorio local.
+	**Verificar** los cambios realizados en el repositorio remoto sin combinar esos cambios con el repositorio local.
 
 	Te permite saber **si se han realizado cambios** en el repositorio remoto desde la última vez que actualizaste tu repositorio local con **git pull**.
 

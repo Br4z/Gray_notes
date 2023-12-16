@@ -2,11 +2,11 @@
 id: cu1zhflxg3hwya5p2wukosd
 title: Classes
 desc: ''
-updated: 1696961182338
+updated: 1699905276024
 created: 1694992932429
 ---
 
-## Week 4
+## Nouns: countable and uncountable
 
 - Countable nouns.
 
@@ -44,9 +44,7 @@ created: 1694992932429
 
 - "too" is used to express a lot of a bad thing.
 
-## Week 6
-
-### Conditionals
+## Conditionals
 
 In a general way, we can describe them with the following form "**condition** + **result**".
 
