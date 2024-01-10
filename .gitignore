@@ -1,4 +1,4 @@
-notes/.vscode/
+.vscode
 .dendron.*
 .backup
 pending.md

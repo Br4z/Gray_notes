@@ -2,7 +2,7 @@
 id: x75rgdnzup4xfzopeef4tuz
 title: Pangram
 desc: ''
-updated: 1702756305966
+updated: 1704514297734
 created: 1702749655260
 ---
 
@@ -15,7 +15,10 @@ created: 1702749655260
 
 	bool is_pangram(std::string str) {
 		int32_t f = 0;
-		for (char &c : str) f |= 1 << ((c & ~32) ^ 64);
+
+		for (char &c : str)
+			f |= 1 << ((c & ~32) ^ 64);
+
 		return !(~f & ((1 << 27) - 2));
 	}
 	```
