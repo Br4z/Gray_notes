@@ -2,16 +2,17 @@
 id: x75rgdnzup4xfzopeef4tuz
 title: Pangram
 desc: ''
-updated: 1704514297734
+author: akkanath-1863715
+source: https://exercism.org/tracks/cpp/exercises/pangram/solutions/akkanath-1863715
+updated: 1705262614341
 created: 1702749655260
 ---
-
-- [Source](https://exercism.org/tracks/cpp/exercises/pangram/solutions/akkanath-1863715).
 
 - Code.
 
 	```CPP
 	#include <iostream>
+
 
 	bool is_pangram(std::string str) {
 		int32_t f = 0;

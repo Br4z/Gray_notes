@@ -4,7 +4,7 @@ title: CURSO de HTML5 desde CERO 2021
 desc: ''
 author: Dorian Desings
 source: https://www.youtube.com/playlist?list=PLROIqh_5RZeB92ME1GFyeqDVOa-gL0Ybd
-updated: 1704685591845
+updated: 1705110270430
 created: 1703983410606
 ---
 
@@ -105,13 +105,13 @@ estructura.
 
 Son valores adicionales que configuran los elementos y/o ajustan su comportamiento. En términos generales hay dos tipos de atributos:
 
-1. Comunes: `<attribute>=<value>`.
+1. Comunes: `<attribute>=...`.
 
 2. Booleanos: `<attribute>`.
 
 ## 21 - Atributos globales
 
-- `class=<value>`: es una lista de las clases del elemento separada por espacios. Las clases permiten a CSS y Javascript seleccionar y acceder a elementos específicos a través de los selectores de clase o funciones como el método `document.getElementsByClassName` del DOM.
+- `class=...`: es una lista de las clases del elemento separada por espacios. Las clases permiten a CSS y Javascript seleccionar y acceder a elementos específicos a través de los selectores de clase o funciones como el método `document.getElementsByClassName` del DOM.
 
 - `id=<id>`: define un identificador único (ID) el cual no debe repetirse en todo el documento. Su propósito es identificar el elemento al vincularlo (usando un identificador de fragmento), en scripts u hojas de estilo (con CSS).
 
@@ -173,13 +173,13 @@ Supongamos que las URL se invocan desde el documento ubicado en la siguiente URL
 
 ## 24 - Atributos de los enlaces
 
-- `target=<value>`: especifica en donde desplegar la URL enlazada.
+- `target=...`: especifica en donde desplegar la URL enlazada.
 
 	- `_self`: carga la URL en el mismo contexto de navegación que el actual. Este es el comportamiento por defecto.
 
 	- `_blank`: carga la URL en un nuevo contexto de navegación. Usualmente, es una pestaña, sin embargo, los usuarios pueden configurar los navegadores para utilizar una ventana nueva en lugar de la pestaña.
 
-- `download=<value?>`: indica descargar a los navegadores una URL en lugar de navegar hacia ella, por lo que el usuario será dirigido para guardarla como un archivo local. Si el atributo tiene un valor, este se utilizará como nombre de archivo por defecto en el mensaje Guardar que se abre cuando el usuario hace clic en el enlace.
+- `download=?...`: indica descargar a los navegadores una URL en lugar de navegar hacia ella, por lo que el usuario será dirigido para guardarla como un archivo local. Si el atributo tiene un valor, este se utilizará como nombre de archivo por defecto en el mensaje Guardar que se abre cuando el usuario hace clic en el enlace.
 
 ## 27 - Listas desordenadas
 
@@ -199,7 +199,7 @@ Supongamos que las URL se invocan desde el documento ubicado en la siguiente URL
 
 - `<ul>`.
 
-	- `type=<value>`: estilo de numeración.
+	- `type=...`: estilo de numeración.
 
 		- `circle`.
 
@@ -209,7 +209,7 @@ Supongamos que las URL se invocan desde el documento ubicado en la siguiente URL
 
 - `<ol>`.
 
-	- `type=<value>`: estilo de numeración.
+	- `type=...`: estilo de numeración.
 
 		- `a`: letras minúsculas.
 
@@ -221,7 +221,7 @@ Supongamos que las URL se invocan desde el documento ubicado en la siguiente URL
 
 		- `1`: números (por defecto).
 
-	- `start=<value>`: número inicial de la secuencia.
+	- `start=...`: número inicial de la secuencia.
 
 ## 32 - Estructura básica de una tabla
 
@@ -243,15 +243,15 @@ Supongamos que las URL se invocan desde el documento ubicado en la siguiente URL
 
 ## 34 - Atributos de las tablas
 
-- `rowspan=<value>`: indica el número de filas que abarca la celda.
+- `rowspan=...`: indica el número de filas que abarca la celda.
 
-- `colspan=<value>`: indica el número de columnas que abarca la celda.
+- `colspan=...`: indica el número de columnas que abarca la celda.
 
 ## 35 - Seleccionar columnas
 
 - `<colgroup> ... </colgroup>`: define un grupo de columnas dentro de una tabla.
 
-	- `span=<value>`: indica el número de columnas consecutivas que abarca el elemento `<colgroup>`.
+	- `span=...`: indica el número de columnas consecutivas que abarca el elemento `<colgroup>`.
 
 ## 37 - Más etiquetas importantes de bloque
 
@@ -259,7 +259,7 @@ Supongamos que las URL se invocan desde el documento ubicado en la siguiente URL
 
 - `<blockquote>...</blockquote>`: crea citas en bloque, marca las citas a otros autores o documentos.
 
-	- `cite=<value>`: proporciona un enlace al documento original o fuente.
+	- `cite=...`: proporciona un enlace al documento original o fuente.
 
 - `<pre>...</pre>`: representa texto preformateado. El texto en este elemento típicamente se muestra en una fuente fija, no proporcional, exactamente como es mostrado en el archivo.
 
@@ -307,7 +307,7 @@ Una **entidad** es un conjunto de caracteres ("string") que comienza con un ampe
 
 - `<input>`.
 
-	- `type=<value>`.
+	- `type=...`.
 
 		- `button`: botón sin un comportamiento específico.
 
@@ -317,7 +317,7 @@ Una **entidad** es un conjunto de caracteres ("string") que comienza con un ampe
 
 - `<input>`.
 
-	- `type=<value>`.
+	- `type=...`.
 
 		- `datetime-local`: control para introducir fecha y hora, sin zona horaria específica.
 
@@ -335,7 +335,7 @@ Una **entidad** es un conjunto de caracteres ("string") que comienza con un ampe
 
 - `<input>`.
 
-	- `type=<value>`.
+	- `type=...`.
 
 		- `search`: campo para introducir textos de búsqueda.
 
@@ -361,7 +361,7 @@ Una **entidad** es un conjunto de caracteres ("string") que comienza con un ampe
 
 - `<input>`.
 
-	- `type=<value>`.
+	- `type=...`.
 
 		- `color`: control para especificar un color.
 
@@ -387,7 +387,7 @@ Una **entidad** es un conjunto de caracteres ("string") que comienza con un ampe
 
 - `<input>`.
 
-	- `type=<value>`.
+	- `type=...`.
 
 		- `radio`: botón radio.
 
@@ -403,7 +403,7 @@ Una **entidad** es un conjunto de caracteres ("string") que comienza con un ampe
 
 - `<input>`.
 
-	- `type=<value>`.
+	- `type=...`.
 
 		- `checkbox`: casilla de selección.
 
@@ -419,7 +419,7 @@ Una **entidad** es un conjunto de caracteres ("string") que comienza con un ampe
 
 - `<datalist>...</datalist>`: contiene un conjunto de elementos `<option>` que representan los valores disponibles para otros controles.
 
-	> Tiene que precederle un `<input>` con un atributo `name=<value>` o `list=<value>` para que, con un atributo `id=<value>` se vincule a la lista.
+	> Tiene que precederle un `<input>` con un atributo `name=...` o `list=...` para que, con un atributo `id=...` se vincule a la lista.
 
 ## 51 - Más elementos para formularios
 
@@ -429,49 +429,49 @@ Una **entidad** es un conjunto de caracteres ("string") que comienza con un ampe
 
 - `<input>`.
 
-	- `type=<value>`.
+	- `type=...`.
 
 		- `file`: control que permite al usuario seleccionar un archivo. Se puede usar el atributo `accept` para definir los tipos de archivo que el control podrá seleccionar.
 
 - `<progress>...</progress>`: se utiliza para visualizar el progreso de una tarea.
 
-	- `max=<value>`: este atributo indica la cantidad numérica que demora la finalización de la tarea.
+	- `max=...`: indica la cantidad numérica que demora la finalización de la tarea.
 
-	- `value=<value>`: este atributo indica la cantidad numérica de la tarea que ya se ha completado.
+	- `value=...`: indica la cantidad numérica de la tarea que ya se ha completado.
 
 - `<meter>...</meter>`: representa un valor escalar dentro de un rango conocido o un valor fraccionario.
 
-	- `value=<value>`: el valor numérico actual.
+	- `value=...`: el valor numérico actual.
 
-	- `min=<value>`: el límite numérico inferior del intervalo medido.
+	- `min=...`: el límite numérico inferior del intervalo medido.
 
-	- `max=<value>`: el límite numérico superior del intervalo medido.
+	- `max=...`: el límite numérico superior del intervalo medido.
 
-	- `low=<value>`: el límite numérico superior del extremo inferior del rango medido.
+	- `low=...`: el límite numérico superior del extremo inferior del rango medido.
 
 		> Si no se especifica, o si es menor que el valor mínimo, el valor `low` es igual al valor mínimo.
 
-	- `high=<value>`: el límite numérico inferior del extremo superior del rango medido.
+	- `high=...`: el límite numérico inferior del extremo superior del rango medido.
 
 		> Si no se especifica, o si es mayor que el valor máximo, el valor `high` es igual al valor máximo.
 
-	- `optimum=<value>`: este atributo indica el valor numérico óptimo.
+	- `optimum=...`: indica el valor numérico óptimo.
 
 		> Cuando se utiliza con el atributo `low` y el atributo `high`, da una indicación de en qué punto del intervalo se considera preferible.
 
 - `<textarea>...</textarea>`: representa un control para la edición multilínea de texto sin formato.
 
-	- `cols=<value>`: la anchura visible del control de texto, en caracteres de anchura media.
+	- `cols=...`: la anchura visible del control de texto, en caracteres de anchura media.
 
 		> Si está definido debe ser positivo. Si no, por defecto, el valor es 20 (HTML 5).
 
-	- `rows=<value>`: el número de líneas visibles en el control.
+	- `rows=...`: el número de líneas visibles en el control.
 
 ## 52 - Atributos para formularios
 
 - `<input>`.
 
-	- `placeholder=<value>`: una pista para el usuario sobre lo que puede introducir en el control.
+	- `placeholder=...`: una pista para el usuario sobre lo que puede introducir en el control.
 
 	- `readonly`: indica que el usuario no puede modificar el valor del control.
 
@@ -483,9 +483,9 @@ Una **entidad** es un conjunto de caracteres ("string") que comienza con un ampe
 
 	- `type=<number, range, date, month, week, time, datetime-local>`.
 
-		- `min=<value>`: el valor mínimo.
+		- `min=...`: el valor mínimo.
 
-		- `max=<value>`: el valor máximo.
+		- `max=...`: el valor máximo.
 
 	- `type=<text, email, search, password, tel, o url>`.
 
@@ -503,7 +503,7 @@ Una **entidad** es un conjunto de caracteres ("string") que comienza con un ampe
 
 - `<input>`.
 
-	- `name=<value>`: el nombre del control, el cual es enviado con los datos del formulario.
+	- `name=...`: el nombre del control, el cual es enviado con los datos del formulario.
 
 ## 54 - ¿Qué es el contenido embebido?
 
@@ -527,10 +527,152 @@ Los formatos de imágenes para web los podemos clasificar en 2 tipos:
 
 			> Si se necesita transparencia.
 
-		- gif
+		- gif.
 
 			> Si necesitáis una imagen animada.
 
-		- webp
+		- webp.
 
 			> El formato que menos pesa.
+
+## 57 - Insertar imágenes en HTML
+
+- `<img>`: representa una imagen en el documento.
+
+	- `src=...`: la URL de la imagen.
+
+		> Este atributo es obligatorio.
+
+	- `alt=...`: define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un formato no soportado o si la imagen aún no se ha descargado.
+
+		> Omitir este atributo indica que la imagen es una parte clave del contenido, y no tiene equivalencia textual. Establecer este atributo como cadena vacía indica que la imagen no es una parte clave del contenido; los navegadores no gráficos pueden omitirlo.
+
+---
+
+Para cargar una imagen SVG podemos usar la etiqueta `<img>` o también `<svg>`, por practicidad se usa la primera, pero si se quieren hacer cambios a la imagen, debemos usar la segunda.
+
+> El contenido de las imágenes SVG directamente es una etiqueta `<svg>`.
+
+## 58 - Device Pixel Ratio
+
+### DPR (Device Pixel Ratio)
+
+Es la relación entre los píxeles físicos y los píxeles lógicos (píxeles CSSo del viewport) de una pantalla.
+
+> En PC podemos cambiar nuestro DPR cambiando el zoom del navegador.
+
+> Para obtener nuestro DPR podemos escribir `deviceViewPort` en la consola (una vez se haya recargado la pagina con el zoom deseado).
+
+## 59 - Atributo srcset
+
+- `<img>`.
+
+	- `srcset=...`: una lista de una o más cadenas separadas por comas indicando las posibles fuentes para usar.
+
+		Cada cadena está compuesta por:
+
+		1. URL de la imagen.
+
+		2. Opcionalmente, espacios en blanco seguidos de:
+
+			- Un ancho, que es un entero positivo seguido directamente por `w`. El ancho está dividido por el tamaño de la fuente dada en el atributo sizes para calcular la densidad del píxel.
+
+			- Densidad del píxel, un positivo decimal seguido directamente de `x`.
+
+			> Solo podemos escoger **uno**.
+
+## 60 - Etiqueta Picture
+
+- `<picture>...</picture>`: es un contenedor usado para especificar múltiples elementos `<source>` y un elemento `<img>` contenido en él para proveer versiones de una imagen para diferentes escenarios de dispositivos.
+
+	- `media=...`: permite especificar una media query que el agente de usuario evaluará para seleccionar un elemento `<source>`.
+
+- `<source>`: especifica recursos de medios múltiples para los elementos `<picture>`, `<audio>`, o `<video>`.
+
+	- [[`srcset=...` | courses.CURSO de HTML5 desde CERO 2021#59---atributo-srcset]].
+
+## 61 - Etiqueta Audio
+
+- `<audio>...</audio>`: se usa para insertar contenido de audio.
+
+	- `src=..`: la URL del audio.
+
+	- `autoplay`: el sonido comenzará a reproducirse automáticamente en cuanto sea posible.
+
+		> Sin esperar a que termine de descargarse todo el archivo de audio.
+
+	- `controls`: el navegador ofrecerá controles para permitir que el usuario controle la reproducción de audio.
+
+	- `muted`: el audio se silenciará inicialmente.
+
+	- `loop`: el navegador volverá automáticamente al principio al llegar al final del audio.
+
+## 62 - Etiqueta video
+
+- `<video>...</video>`: se usa para incrustar vídeos.
+
+	- `src=..`: la URL del video.
+
+	- `autoplay`: el video comenzará a reproducirse automáticamente en cuanto sea posible.
+
+		> Sin esperar a que termine de descargarse todo el archivo de video.
+
+	- `controls`: el navegador ofrecerá controles para permitir que el usuario controle la reproducción de video.
+
+	- `muted`: el audio del video se silenciará inicialmente.
+
+	- `loop`: el navegador volverá automáticamente al principio al llegar al final del vídeo.
+
+	- `poster=...`: la URL de la imagen que se mostrara mientras se descarga el vídeo (o no se reproduzca).
+
+## 63 - Iframes
+
+- `<iframe>...</iframe>` (inline frame): representa un **contexto de navegación** (es el entorno en el que un navegador muestra un `Document`) anidado, el cual permite incrustar otra página HTML en la página actual.
+
+	- `height=...`: la altura del frame en píxeles CSS.
+
+	- `width=...`: el ancho del frame en píxeles CSS.
+
+## 64 - Etiqueta Figure
+
+- `<figure>...</figure>`: representa contenido independiente, a menudo con un título. Si bien se relaciona con el flujo principal, su posición es independiente de este.
+
+- `<figcaption>...</figcaption>`: representa un subtítulo o leyenda asociado al contenido del elemento padre `<figure>`.
+
+	> Puede ser colocado como primer o último hijo.
+
+## 65 - Etiquetas meta
+
+- `<meta>...</meta>`:
+
+	- `name=... content=...`: pueden utilizarse conjuntamente para proporcionar metadatos de documentos en términos de pares key-value.
+
+		- `author`: el nombre del autor del documento.
+
+		- `description`: resumen breve y preciso del contenido de la página.
+
+## 66 - Favicon - Creación y uso
+
+### Favicon (favorite icon)
+
+Es un icono diminuto que se incluye junto a un sitio web y que se muestra en lugares como la barra de direcciones del navegador, las pestañas de las páginas y el menú de favoritos.
+
+> Una página útil para crear un favicon automáticamente es [esta](https://favicon.io).
+
+## 68 - Atributos de accesibilidad
+
+### ARIA (Accessible Rich Internet Applications)
+
+es una colección de atributos que definen como realizar contenido y aplicaciones web (especialmente las desarrolladas con JavaScript) más accesibles para las personas con discapacidades.
+
+Complementa HTML para que las interacciones y los widgets que se usan comúnmente en las aplicaciones puedan ser correctamente interpretadas por las tecnologías de asistencia cuando no existe otro mecanismo.
+
+> No utilizar ARIA es mejor que utilizar una mala ARIA.
+
+### Clase
+
+- `tabindex=...`: indica si su elemento puede ser enfocado, y si participa en la navegación secuencial del teclado (usualmente con la tecla `TAB`, de ahí el nombre).
+
+- `aria-label=...`: se utiliza para definir una cadena que etiqueta el elemento actual.
+
+	> Se usa en los casos en que no haya una etiqueta de texto visible en pantalla.
